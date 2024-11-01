@@ -3,144 +3,97 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:marah_practic"
         mc:Ignorable="d"
         Title="howLongMarathon" Height="550" Width="800" ResizeMode="NoResize">
     <Grid>
         <Canvas>
-            <Border Height="44" Width="800" Background="#FF6F6D6D" HorizontalAlignment="Center" VerticalAlignment="Top" />
-            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81"
-                    Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
+            <Border Height="44" Width="800" Background="#FF6F6D6D" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold"
-                       HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">
-                MARATHON SKILL 2024
-            </TextBlock>
-            <Border Height="50" Width="800" Canvas.Top="484" Background="Gray" HorizontalAlignment="Left"
-                    VerticalAlignment="Center" />
+            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">MARATHON SKILL 2024</TextBlock>
+            <Border Height="50" Width="800" Canvas.Top="484" Background="Gray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
-            <TextBlock FontSize="30" Canvas.Left="191" Canvas.Top="70" HorizontalAlignment="Left"
-                       VerticalAlignment="Top">
-                Насколько долгий марафон?
-            </TextBlock>
+            <TextBlock FontSize="30"  Canvas.Left="191" Canvas.Top="70" HorizontalAlignment="Left" VerticalAlignment="Top">Насколько долгий марафон?</TextBlock>
 
-            <TextBlock x:Name="bigText_text" FontSize="25" Foreground="#FF9C9999" Canvas.Left="50" Canvas.Top="145"
-                       HorizontalAlignment="Left" VerticalAlignment="Top">
-                Имя выбранного пункта
-            </TextBlock>
-            <Image x:Name="bigImage_image" Height="173" Width="270" Canvas.Left="50" Canvas.Top="197"
-                   HorizontalAlignment="Left" VerticalAlignment="Top" />
-            <TextBlock x:Name="bigAbout_text" FontSize="15" Foreground="#FF9C9999" Canvas.Left="24" Canvas.Top="392"
-                       TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Center" Width="323"
-                       Height="73">
-                Информация о выбранном объекте
-            </TextBlock>
+            <TextBlock x:Name="bigText_text" FontSize="25" Foreground="#FF9C9999"  Canvas.Left="50" Canvas.Top="145" HorizontalAlignment="Left" VerticalAlignment="Top">Имя выбранного пункта</TextBlock>
+            <Image x:Name="bigImage_image" Height="173" Width="270" Canvas.Left="50" Canvas.Top="197" HorizontalAlignment="Left" VerticalAlignment="Top"></Image>
+            <TextBlock x:Name="bigAbout_text" FontSize="15" Foreground="#FF9C9999" Canvas.Left="24" Canvas.Top="392" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Center" Width="323" Height="73">Информация о выбранном объекте</TextBlock>
 
-            <TabControl Canvas.Left="492" Canvas.Top="145" Height="320" Width="281" HorizontalAlignment="Center"
-                        VerticalAlignment="Top">
+            <TabControl Canvas.Left="492" Canvas.Top="145" Height="320" Width="281" HorizontalAlignment="Center" VerticalAlignment="Top">
                 <TabItem Header="Скорость">
                     <Grid>
-                        <ScrollViewer>
+                        <ScrollViewer >
                             <Canvas Height="400">
-                                <Button x:Name="f1_button" Height="60" Width="60" Canvas.Left="19" Canvas.Top="17"
-                                        Click="f1_button_Click">
+                                <Button x:Name="f1_button" Height="60" Width="60" Canvas.Left="19" Canvas.Top="17" Click="f1_button_Click">
                                     <Button.Template>
                                         <ControlTemplate>
-                                            <Image x:Name="f1_image" Source="images/f1-car.jpg" />
+                                            <Image x:Name="f1_image" Source="images/f1-car.jpg" ></Image>
                                         </ControlTemplate>
                                     </Button.Template>
                                 </Button>
-                                <TextBlock FontSize="15" Canvas.Left="107" Canvas.Top="32" HorizontalAlignment="Left"
-                                           VerticalAlignment="Center">
-                                    Формула 1
-                                </TextBlock>
+                                <TextBlock FontSize="15" Canvas.Left="107" Canvas.Top="32" HorizontalAlignment="Left" VerticalAlignment="Center">Формула 1</TextBlock>
 
-                                <Button x:Name="slug_button" Height="30" Width="60" Canvas.Left="19" Canvas.Top="82"
-                                        Click="slug_button_Click">
+                                <Button x:Name="slug_button" Height="30" Width="60" Canvas.Left="19" Canvas.Top="82" Click="slug_button_Click">
                                     <Button.Template>
                                         <ControlTemplate>
-                                            <Image Height="60" Width="60" Source="/images/slug.jpg"
-                                                   HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                            <Image Height="60" Width="60" Canvas.Left="19" Canvas.Top="77" Source="/images/slug.jpg" HorizontalAlignment="Left" VerticalAlignment="Top" />
                                         </ControlTemplate>
                                     </Button.Template>
                                 </Button>
-                                <TextBlock FontSize="15" Canvas.Left="107" Canvas.Top="87" HorizontalAlignment="Left"
-                                           VerticalAlignment="Center">
-                                    <Run Text="Слизняк" />
-                                </TextBlock>
+                                <TextBlock FontSize="15" Canvas.Left="107" Canvas.Top="87" HorizontalAlignment="Left" VerticalAlignment="Center"><Run Text="Слизняк"/></TextBlock>
 
-                                <Button x:Name="horse_button" Height="60" Width="60" Canvas.Left="19" Canvas.Top="125"
-                                        HorizontalAlignment="Center" VerticalAlignment="Top" Click="horse_button_Click">
+                                <Button x:Name="horse_button" Height="60" Width="60" Canvas.Left="19" Canvas.Top="125" HorizontalAlignment="Center" VerticalAlignment="Top" Click="horse_button_Click">
                                     <Button.Template>
                                         <ControlTemplate>
-                                            <Image Source="/images/horse.png" />
+                                            <Image Source="/images/horse.png"/>
                                         </ControlTemplate>
                                     </Button.Template>
                                 </Button>
-                                <TextBlock FontSize="15" Canvas.Left="107" Canvas.Top="139"
-                                           HorizontalAlignment="Center" VerticalAlignment="Top">
-                                    <Run Text="Лошадь" />
-                                </TextBlock>
+                                <TextBlock FontSize="15" Canvas.Left="107" Canvas.Top="139" HorizontalAlignment="Center" VerticalAlignment="Top"><Run Text="Лошадь"/></TextBlock>
 
-                                <Button x:Name="sloth_button" Height="40" Width="60" Canvas.Left="19" Canvas.Top="190"
-                                        Click="sloth_button_Click">
+                                <Button x:Name="sloth_button" Height="40" Width="60" Canvas.Left="19" Canvas.Top="190" Click="sloth_button_Click">
                                     <Button.Template>
                                         <ControlTemplate>
-                                            <Image Source="/images/sloth.jpg" />
+                                            <Image Source="/images/sloth.jpg"/>
                                         </ControlTemplate>
                                     </Button.Template>
                                 </Button>
-                                <TextBlock FontSize="15" Canvas.Left="107" Canvas.Top="194"
-                                           HorizontalAlignment="Center" VerticalAlignment="Top">
-                                    <Run Text="Ленивец" />
-                                </TextBlock>
+                                <TextBlock FontSize="15" Canvas.Left="107" Canvas.Top="194" HorizontalAlignment="Center" VerticalAlignment="Top"><Run Text="Ленивец"/></TextBlock>
 
-                                <Button x:Name="capybara_button" Height="47" Width="60" Canvas.Left="19"
-                                        Canvas.Top="235" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                        Click="capybara_button_Click">
+                                <Button x:Name="capybara_button" Height="47" Width="60" Canvas.Left="19" Canvas.Top="235" HorizontalAlignment="Center" VerticalAlignment="Center" Click="capybara_button_Click">
                                     <Button.Template>
                                         <ControlTemplate>
-                                            <Image Source="images/capybara.jpg" />
+                                            <Image Source="images/capybara.jpg"/>
                                         </ControlTemplate>
                                     </Button.Template>
                                 </Button>
-                                <TextBlock FontSize="15" Canvas.Left="107" Canvas.Top="242"
-                                           HorizontalAlignment="Center" VerticalAlignment="Top">
-                                    <Run Text="Капибара" />
-                                </TextBlock>
+                                <TextBlock FontSize="15" Canvas.Left="107" Canvas.Top="242" HorizontalAlignment="Center" VerticalAlignment="Top"><Run Text="Капибара"/></TextBlock>
 
-                                <Button x:Name="jaguar_button" Height="43" Width="60" Canvas.Left="19" Canvas.Top="287"
-                                        HorizontalAlignment="Center" VerticalAlignment="Center"
-                                        Click="jaguar_button_Click">
+                                <Button x:Name="jaguar_button" Height="43" Width="60" Canvas.Left="19" Canvas.Top="287" HorizontalAlignment="Center" VerticalAlignment="Center" Click="jaguar_button_Click">
                                     <Button.Template>
                                         <ControlTemplate>
-                                            <Image Source="images/jaguar.jpg" />
+                                            <Image Source="images/jaguar.jpg"/>
                                         </ControlTemplate>
                                     </Button.Template>
                                 </Button>
-                                <TextBlock FontSize="15" Canvas.Left="107" Canvas.Top="292" HorizontalAlignment="Left"
-                                           VerticalAlignment="Top">
-                                    <Run Text="Ягуар" />
-                                </TextBlock>
+                                <TextBlock FontSize="15" Canvas.Left="107" Canvas.Top="292" HorizontalAlignment="Left" VerticalAlignment="Top"><Run Text="Ягуар"/></TextBlock>
 
-                                <Button x:Name="worm_button" Height="60" Width="60" Canvas.Left="19" Canvas.Top="338"
-                                        HorizontalAlignment="Center" VerticalAlignment="Top" Click="worm_button_Click">
+                                <Button x:Name="worm_button" Height="60" Width="60" Canvas.Left="19" Canvas.Top="338" HorizontalAlignment="Center" VerticalAlignment="Top" Click="worm_button_Click">
                                     <Button.Template>
                                         <ControlTemplate>
-                                            <Image Source="images/worm.jpg" />
+                                            <Image Source="images/worm.jpg"/>
                                         </ControlTemplate>
                                     </Button.Template>
                                 </Button>
-                                <TextBlock FontSize="15" Canvas.Left="105" Canvas.Top="344" HorizontalAlignment="Left"
-                                           VerticalAlignment="Top">
-                                    <Run Language="ru-ru" Text="Червь" />
-                                </TextBlock>
+                                <TextBlock FontSize="15" Canvas.Left="105" Canvas.Top="344" HorizontalAlignment="Left" VerticalAlignment="Top"><Run Language="ru-ru" Text="Червь"/></TextBlock>
 
                             </Canvas>
                         </ScrollViewer>
@@ -148,71 +101,50 @@
                 </TabItem>
                 <TabItem Header="Дистанция">
                     <Canvas>
-                        <Button x:Name="bus_button" Height="60" Width="60" Canvas.Left="19" Canvas.Top="17"
-                                Click="bus_button_Click">
+                        <Button x:Name="bus_button" Height="60" Width="60" Canvas.Left="19" Canvas.Top="17" Click="bus_button_Click">
                             <Button.Template>
                                 <ControlTemplate>
-                                    <Image Source="images/bus.jpg" />
+                                    <Image  Source="images/bus.jpg" ></Image>
                                 </ControlTemplate>
                             </Button.Template>
                         </Button>
-                        <TextBlock FontSize="15" Canvas.Left="107" Canvas.Top="32" HorizontalAlignment="Left"
-                                   VerticalAlignment="Center">
-                            Автобус
-                        </TextBlock>
+                        <TextBlock FontSize="15" Canvas.Left="107" Canvas.Top="32" HorizontalAlignment="Left" VerticalAlignment="Center">Автобус</TextBlock>
 
-                        <Button x:Name="pair_button" Height="60" Width="60" Canvas.Left="19" Canvas.Top="82"
-                                Click="pair_button_Click">
+                        <Button x:Name="pair_button" Height="60" Width="60" Canvas.Left="19" Canvas.Top="82" Click="pair_button_Click">
                             <Button.Template>
                                 <ControlTemplate>
-                                    <Image Height="60" Width="60" Source="/images/pair-of-havaianas.jpg"
-                                           HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                    <Image Height="60" Width="60" Canvas.Left="19" Canvas.Top="77" Source="/images/pair-of-havaianas.jpg" HorizontalAlignment="Left" VerticalAlignment="Top" />
                                 </ControlTemplate>
                             </Button.Template>
                         </Button>
-                        <TextBlock FontSize="15" Canvas.Left="107" Canvas.Top="102" HorizontalAlignment="Left"
-                                   VerticalAlignment="Center">
-                            <Run Text="Гавайские тапки" />
-                        </TextBlock>
+                        <TextBlock FontSize="15" Canvas.Left="107" Canvas.Top="102" HorizontalAlignment="Left" VerticalAlignment="Center"><Run Text="Гавайские тапки"/></TextBlock>
 
-                        <Button x:Name="aibus_button" Height="45" Width="60" Canvas.Left="19" Canvas.Top="147"
-                                HorizontalAlignment="Center" VerticalAlignment="Top" Click="aibus_button_Click">
+                        <Button x:Name="aibus_button" Height="45" Width="60" Canvas.Left="19" Canvas.Top="147" HorizontalAlignment="Center" VerticalAlignment="Top" Click="aibus_button_Click">
                             <Button.Template>
                                 <ControlTemplate>
-                                    <Image Source="/images/airbus-a380.jpg" />
+                                    <Image Source="/images/airbus-a380.jpg"/>
                                 </ControlTemplate>
                             </Button.Template>
                         </Button>
-                        <TextBlock FontSize="15" Canvas.Left="107" Canvas.Top="160" HorizontalAlignment="Center"
-                                   VerticalAlignment="Top">
-                            <Run Text="Самолет А380" />
-                        </TextBlock>
+                        <TextBlock FontSize="15" Canvas.Left="107" Canvas.Top="160" HorizontalAlignment="Center" VerticalAlignment="Top"><Run Text="Самолет А380"/></TextBlock>
 
-                        <Button x:Name="footballField_button" Height="40" Width="60" Canvas.Left="19" Canvas.Top="197"
-                                HorizontalAlignment="Center" VerticalAlignment="Top" Click="footballField_button_Click">
+                        <Button x:Name="footballField_button" Height="40" Width="60" Canvas.Left="19" Canvas.Top="197" HorizontalAlignment="Center" VerticalAlignment="Top" Click="footballField_button_Click">
                             <Button.Template>
                                 <ControlTemplate>
-                                    <Image Source="/images/football-field.jpg" />
+                                    <Image Source="/images/football-field.jpg"/>
                                 </ControlTemplate>
                             </Button.Template>
                         </Button>
-                        <TextBlock FontSize="15" Canvas.Left="107" Canvas.Top="207" HorizontalAlignment="Center"
-                                   VerticalAlignment="Top">
-                            <Run Text="Футбольное поле" />
-                        </TextBlock>
+                        <TextBlock FontSize="15" Canvas.Left="107" Canvas.Top="207" HorizontalAlignment="Center" VerticalAlignment="Top"><Run Text="Футбольное поле"/></TextBlock>
 
-                        <Button x:Name="ronaldinho_button" Height="47" Width="60" Canvas.Left="19" Canvas.Top="235"
-                                HorizontalAlignment="Center" VerticalAlignment="Center" Click="ronaldinho_button_Click">
+                        <Button x:Name="ronaldinho_button" Height="47" Width="60" Canvas.Left="19" Canvas.Top="235" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ronaldinho_button_Click">
                             <Button.Template>
                                 <ControlTemplate>
-                                    <Image Source="images/ronaldinho.jpg" />
+                                    <Image Source="images/ronaldinho.jpg"/>
                                 </ControlTemplate>
                             </Button.Template>
                         </Button>
-                        <TextBlock FontSize="15" Canvas.Left="111" Canvas.Top="242" HorizontalAlignment="Left"
-                                   VerticalAlignment="Center">
-                            <Run Text="Рональдинио" />
-                        </TextBlock>
+                        <TextBlock FontSize="15" Canvas.Left="111" Canvas.Top="242" HorizontalAlignment="Left" VerticalAlignment="Center"><Run Text="Рональдинио"/></TextBlock>
 
                     </Canvas>
                 </TabItem>

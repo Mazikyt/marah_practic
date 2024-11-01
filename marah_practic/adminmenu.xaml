@@ -3,88 +3,73 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:marah_practic"
         mc:Ignorable="d"
         Title="adminmenu" Height="550" Width="800" ResizeMode="NoResize">
     <Grid>
         <Canvas>
-            <Border Height="44" Width="800" Background="#FF6F6D6D" HorizontalAlignment="Left"
-                    VerticalAlignment="Center" />
-            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81"
-                    Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
+            <Border Height="44" Width="800" Background="#FF6F6D6D" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold"
-                       HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">
-                MARATHON SKILL 2024
-            </TextBlock>
-            <Button Content="Logout" HorizontalAlignment="Center" VerticalAlignment="Top" Width="81" Height="24"
-                    Canvas.Left="709" Canvas.Top="10" FontSize="14" Click="back_button_Click">
+            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">MARATHON SKILL 2024</TextBlock>
+            <Button Content="Logout" HorizontalAlignment="Center" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="709" Canvas.Top="10" FontSize="14" Click="back_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="24" Foreground="#FF9C9999" Canvas.Left="263" Canvas.Top="69"
-                       HorizontalAlignment="Center" VerticalAlignment="Top" Height="39" TextWrapping="WrapWithOverflow"
-                       TextAlignment="Center" Width="271">
-                Меню администратора
-            </TextBlock>
-            <Button x:Name="user_adminButton" Content="Пользователи" HorizontalAlignment="Left" VerticalAlignment="Top"
-                    Width="272" Height="81" Canvas.Left="73" Canvas.Top="148" FontSize="22" FontStyle="Italic"
-                    Click="user_adminButton_Click">
+            <TextBlock FontSize="24" Foreground="#FF9C9999" Canvas.Left="263" Canvas.Top="69" HorizontalAlignment="Center" VerticalAlignment="Top" Height="39" TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="271">Меню администратора</TextBlock>
+            <Button x:Name="user_adminButton" Content="Пользователи" HorizontalAlignment="Left" VerticalAlignment="Top" Width="272" Height="81" Canvas.Left="73" Canvas.Top="148" FontSize="22" FontStyle="Italic" Click="user_adminButton_Click" >
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="10">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button x:Name="volonteuprav_button" Content="Волонтеры" HorizontalAlignment="Left"
-                    VerticalAlignment="Center" Width="272" Height="81" Canvas.Left="400" Canvas.Top="148" FontSize="22"
-                    FontStyle="Italic" Click="volonteuprav_button_Click">
+            <Button x:Name="volonteuprav_button" Content="Волонтеры" HorizontalAlignment="Left" VerticalAlignment="Center" Width="272" Height="81" Canvas.Left="400" Canvas.Top="148" FontSize="22" FontStyle="Italic" Click="volonteuprav_button_Click" >
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="10">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button Content="Благотворительные&#x0a;      организации" HorizontalAlignment="Left"
-                    VerticalAlignment="Top" Width="272" Height="81" Canvas.Left="73" Canvas.Top="248" FontSize="22"
-                    FontStyle="Italic" Click="Button_Click">
+            <Button Content="Благотворительные&#x0a;      организации" HorizontalAlignment="Left" VerticalAlignment="Top" Width="272" Height="81" Canvas.Left="73" Canvas.Top="248" FontSize="22" FontStyle="Italic" Click="Button_Click" >
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="10">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button Content="Инвентать" HorizontalAlignment="Center" VerticalAlignment="Top" Width="272" Height="81"
-                    Canvas.Left="400" Canvas.Top="248" FontSize="22" FontStyle="Italic">
+            <Button Content="Инвентать" HorizontalAlignment="Center" VerticalAlignment="Top" Width="272" Height="81" Canvas.Left="400" Canvas.Top="248" FontSize="22" FontStyle="Italic" >
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="10">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
 
 
-            <Border Height="50" Width="800" Canvas.Top="484" Background="Gray" HorizontalAlignment="Center"
-                    VerticalAlignment="Top" />
+
+
+            <Border Height="50" Width="800" Canvas.Top="484" Background="Gray" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         </Canvas>
 
 

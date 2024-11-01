@@ -3,125 +3,98 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:marah_practic"
         mc:Ignorable="d"
         Title="menurunner" Height="550" Width="800" ResizeMode="NoResize">
     <Grid>
         <Canvas>
-            <Border Height="44" Width="800" Background="#FF6F6D6D" HorizontalAlignment="Left"
-                    VerticalAlignment="Center" />
-            <Button Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Height="24"
-                    Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="logout_button_Click">
+            <Border Height="44" Width="800" Background="#FF6F6D6D" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="logout_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold"
-                       HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">
-                MARATHON SKILL 2024
-            </TextBlock>
-            <Button x:Name="logout_button" Content="Logout" HorizontalAlignment="Center" VerticalAlignment="Top"
-                    Width="81" Height="24" Canvas.Left="709" Canvas.Top="10" FontSize="14" Click="logout_button_Click">
+            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">MARATHON SKILL 2024</TextBlock>
+            <Button x:Name="logout_button" Content="Logout" HorizontalAlignment="Center" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="709" Canvas.Top="10" FontSize="14" Click="logout_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="24" Foreground="#FF9C9999" Canvas.Left="289" Canvas.Top="78"
-                       HorizontalAlignment="Left" VerticalAlignment="Top" Height="39" TextWrapping="WrapWithOverflow"
-                       TextAlignment="Center" Width="202">
-                Меню бегуна
-            </TextBlock>
-            <Button x:Name="registrOnMa_button" Content="Регистрация на&#x0a;    марафон" HorizontalAlignment="Left"
-                    VerticalAlignment="Center" Width="272" Height="81" Canvas.Left="92" Canvas.Top="136" FontSize="22"
-                    FontStyle="Italic" Click="registrOnMa_button_Click">
+            <TextBlock FontSize="24" Foreground="#FF9C9999" Canvas.Left="289" Canvas.Top="78" HorizontalAlignment="Left" VerticalAlignment="Top" Height="39" TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="202">Меню бегуна</TextBlock>
+            <Button x:Name="registrOnMa_button" Content="Регистрация на&#x0a;    марафон" HorizontalAlignment="Left" VerticalAlignment="Center" Width="272" Height="81" Canvas.Left="92" Canvas.Top="136" FontSize="22" FontStyle="Italic" Click="registrOnMa_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="10">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button x:Name="myResults_button" Content="Мои результаты" HorizontalAlignment="Left"
-                    VerticalAlignment="Center" Width="273" Height="81" Canvas.Left="440" Canvas.Top="136" FontSize="22"
-                    FontStyle="Italic" Click="myResults_button_Click">
+            <Button x:Name="myResults_button" Content="Мои результаты"  HorizontalAlignment="Left" VerticalAlignment="Center" Width="273" Height="81" Canvas.Left="440" Canvas.Top="136" FontSize="22" FontStyle="Italic" Click="myResults_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="10">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button x:Name="runnerProfileRedact_button" Content="Редактирование &#x0a;      профиля"
-                    HorizontalAlignment="Center" VerticalAlignment="Center" Width="273" Height="81" Canvas.Left="91"
-                    Canvas.Top="227" FontSize="22" FontStyle="Italic" Click="runnerProfileRedact_button_Click">
+            <Button x:Name="runnerProfileRedact_button" Content="Редактирование &#x0a;      профиля"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="273" Height="81" Canvas.Left="91" Canvas.Top="227" FontSize="22" FontStyle="Italic" Click="runnerProfileRedact_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="10">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button x:Name="runnersSponsors_button" Content="Мой спонсор" HorizontalAlignment="Left"
-                    VerticalAlignment="Top" Width="273" Height="81" Canvas.Left="440" Canvas.Top="227" FontSize="22"
-                    FontStyle="Italic" Click="runnersSponsors_button_Click">
+            <Button x:Name="runnersSponsors_button" Content="Мой спонсор"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="273" Height="81" Canvas.Left="440" Canvas.Top="227" FontSize="22" FontStyle="Italic" Click="runnersSponsors_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="10">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Border Height="50" Width="800" Canvas.Top="484" Background="Gray" HorizontalAlignment="Center"
-                    VerticalAlignment="Top" />
-            <Button x:Name="Contacts_button" Content="Контакты" Width="273" Height="81" Canvas.Left="91"
-                    Canvas.Top="319" FontSize="22" FontStyle="Italic" HorizontalAlignment="Left"
-                    VerticalAlignment="Center" Click="Contacts_button_Click">
+            <Border Height="50" Width="800" Canvas.Top="484" Background="Gray" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="Contacts_button" Content="Контакты" Width="273" Height="81" Canvas.Left="91" Canvas.Top="319" FontSize="22" FontStyle="Italic" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Contacts_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="10">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
 
-            <GroupBox Visibility="Visible" x:Name="ContactPage" Height="350" Width="450" Background="White"
-                      Canvas.Left="175" Canvas.Top="65">
+            <GroupBox Visibility="Visible" x:Name="ContactPage" Height="350" Width="450" Background="White" Canvas.Left="175" Canvas.Top="65">
                 <Canvas>
                     <TextBlock FontSize="32" Canvas.Left="151" Canvas.Top="10">Контакты</TextBlock>
-                    <TextBlock FontSize="18" HorizontalAlignment="Left" Canvas.Top="81" VerticalAlignment="Top"
-                               Canvas.Left="10">
-                        <Run Text="Для получения дополнительной информации" />
-                        <LineBreak />
-                        <Run Text="пожалуйста свяжитесь с координаторами" />
+                    <TextBlock FontSize="18" HorizontalAlignment="Left" Canvas.Top="81" VerticalAlignment="Top" Canvas.Left="10">
+            <Run Text="Для получения дополнительной информации"/>
+            <LineBreak/>
+            <Run Text="пожалуйста свяжитесь с координаторами"/>
                     </TextBlock>
-                    <TextBlock FontSize="18" FontWeight="Bold" Canvas.Top="148" Canvas.Left="10"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        <Run Text="Телефон:" />
+                    <TextBlock FontSize="18" FontWeight="Bold" Canvas.Top="148" Canvas.Left="10" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Run Text="Телефон:"/>
                     </TextBlock>
-                    <TextBlock FontSize="18" Canvas.Top="148" Canvas.Left="95" HorizontalAlignment="Left"
-                               VerticalAlignment="Center">
-                        <Run Text="+55 11 9988 7766" />
+                    <TextBlock FontSize="18" Canvas.Top="148" Canvas.Left="95" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Run Text="+55 11 9988 7766"/>
                     </TextBlock>
-                    <TextBlock FontSize="18" Canvas.Top="192" Canvas.Left="69" HorizontalAlignment="Left"
-                               VerticalAlignment="Center">
-                        <Run Text="coordinators@marathonskills.org" />
+                    <TextBlock FontSize="18" Canvas.Top="192" Canvas.Left="69" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Run Text="coordinators@marathonskills.org"/>
                     </TextBlock>
-                    <TextBlock FontSize="18" FontWeight="Bold" Canvas.Top="192" Canvas.Left="10"
-                               HorizontalAlignment="Center" VerticalAlignment="Top" Text="Email:" />
-                    <Button Content="Закрыть" Width="100" Height="30" Canvas.Left="175" Canvas.Top="300"
-                            Click="CloseContactPage_Click" />
+                    <TextBlock FontSize="18" FontWeight="Bold" Canvas.Top="192" Canvas.Left="10" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Email:"/>
+                    <Button Content="Закрыть" Width="100" Height="30" Canvas.Left="175" Canvas.Top="300" Click="CloseContactPage_Click"/>
                 </Canvas>
             </GroupBox>
 

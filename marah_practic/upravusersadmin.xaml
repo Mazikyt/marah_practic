@@ -3,75 +3,55 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:marah_practic"
         mc:Ignorable="d"
         Title="upravusersadmin" Height="550" Width="800" ResizeMode="NoResize">
     <Grid>
         <Canvas>
-            <Border Height="44" Width="800" Background="#FF6F6D6D" HorizontalAlignment="Center" VerticalAlignment="Top" />
-            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81"
-                    Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
+            <Border Height="44" Width="800" Background="#FF6F6D6D" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold"
-                       HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">
-                MARATHON SKILL 2024
-            </TextBlock>
-            <Button x:Name="logout_button" Content="Logout" HorizontalAlignment="Center" VerticalAlignment="Top"
-                    Width="81" Height="24" Canvas.Left="709" Canvas.Top="10" FontSize="14" Click="logout_button_Click">
+            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">MARATHON SKILL 2024</TextBlock>
+            <Button x:Name="logout_button" Content="Logout" HorizontalAlignment="Center" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="709" Canvas.Top="10" FontSize="14" Click="logout_button_Click" >
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="24" Foreground="#FF9C9999" Canvas.Left="206" Canvas.Top="68"
-                       HorizontalAlignment="Left" VerticalAlignment="Top" Height="39" TextWrapping="WrapWithOverflow"
-                       TextAlignment="Center" Width="385">
-                Управлениепользователями
-            </TextBlock>
-            <Button x:Name="addUser_button" Content="+ Добавление&#x0a;      нового" HorizontalAlignment="Left"
-                    VerticalAlignment="Top" Width="272" Height="60" Canvas.Left="50" Canvas.Top="126" FontSize="22"
-                    Click="addUser_button_Click">
+            <TextBlock FontSize="24" Foreground="#FF9C9999" Canvas.Left="206" Canvas.Top="68" HorizontalAlignment="Left" VerticalAlignment="Top" Height="39" TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="385">Управлениепользователями</TextBlock>
+            <Button x:Name="addUser_button" Content="+ Добавление&#x0a;      нового" HorizontalAlignment="Left" VerticalAlignment="Top" Width="272" Height="60" Canvas.Left="50" Canvas.Top="126" FontSize="22" Click="addUser_button_Click" >
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="10">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock Height="34" Width="151" FontSize="18" Foreground="Gray" HorizontalAlignment="Left"
-                       VerticalAlignment="Center" Canvas.Left="462" Canvas.Top="126">
-                Фильтр по ролям:
-            </TextBlock>
-            <ComboBox x:Name="role_comboBox" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="159"
-                      Canvas.Left="618" Canvas.Top="132" IsEditable="True" />
-            <TextBlock Height="34" Width="140" FontSize="18" Foreground="Gray" HorizontalAlignment="Left"
-                       VerticalAlignment="Center" Canvas.Left="473" Canvas.Top="162">
-                Сортировать по:
-            </TextBlock>
-            <ComboBox x:Name="sort_comboBox" HorizontalAlignment="Center" Height="22" VerticalAlignment="Top"
-                      Width="159" Canvas.Left="618" Canvas.Top="164" IsEditable="True" />
-            <TextBlock Height="34" Width="67" FontSize="18" Foreground="Gray" HorizontalAlignment="Center"
-                       VerticalAlignment="Top" Canvas.Left="553" Canvas.Top="191">
-                Поиск:
-            </TextBlock>
-            <TextBox x:Name="search_text" Width="157" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center"
-                     BorderBrush="Black" BorderThickness="1" Padding="5" Canvas.Left="620" Canvas.Top="195">
+            <TextBlock Height="34" Width="151" FontSize="18" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="462" Canvas.Top="126">Фильтр по ролям:</TextBlock>
+            <ComboBox x:Name="role_comboBox" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="159" Canvas.Left="618" Canvas.Top="132" IsEditable="True">
+            </ComboBox>
+            <TextBlock Height="34" Width="140" FontSize="18" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="473" Canvas.Top="162">Сортировать по:</TextBlock>
+            <ComboBox x:Name="sort_comboBox" HorizontalAlignment="Center" Height="22" VerticalAlignment="Top" Width="159" Canvas.Left="618" Canvas.Top="164" IsEditable="True">
+            </ComboBox>
+            <TextBlock Height="34" Width="67" FontSize="18" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="553" Canvas.Top="191">Поиск:</TextBlock>
+            <TextBox x:Name="search_text" Width="157" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center" BorderBrush="Black" BorderThickness="1" Padding="5" Canvas.Left="620" Canvas.Top="195">
                 <TextBox.Style>
                     <Style TargetType="TextBox">
-                        <Setter Property="Background" Value="White" />
-                        <Setter Property="BorderBrush" Value="Black" />
-                        <Setter Property="BorderThickness" Value="1" />
-                        <Setter Property="Padding" Value="5" />
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="BorderBrush" Value="Black"/>
+                        <Setter Property="BorderThickness" Value="1"/>
+                        <Setter Property="Padding" Value="5"/>
                         <Style.Triggers>
                             <!-- Триггер для отображения подсказки, если поле пустое -->
                             <Trigger Property="Text" Value="">
@@ -81,16 +61,16 @@
                                             <Grid>
                                                 <!-- Само поле для ввода -->
                                                 <Border BorderBrush="{TemplateBinding BorderBrush}"
-                                                        BorderThickness="{TemplateBinding BorderThickness}"
-                                                        Background="{TemplateBinding Background}">
+                                   BorderThickness="{TemplateBinding BorderThickness}"
+                                   Background="{TemplateBinding Background}">
                                                     <ScrollViewer x:Name="PART_ContentHost" />
                                                 </Border>
                                                 <!-- Подсказка -->
-                                                <TextBlock Text="Поиск"
-                                                           Foreground="Gray"
-                                                           VerticalAlignment="Center"
-                                                           IsHitTestVisible="False"
-                                                           Margin="5,0,0,0" />
+                                                <TextBlock Text="Поиск" 
+                                      Foreground="Gray" 
+                                      VerticalAlignment="Center" 
+                                      IsHitTestVisible="False"
+                                      Margin="5,0,0,0"/>
                                             </Grid>
                                         </ControlTemplate>
                                     </Setter.Value>
@@ -100,44 +80,34 @@
                     </Style>
                 </TextBox.Style>
             </TextBox>
-            <Button x:Name="refresh_button" Content="Обновить" HorizontalAlignment="Left" VerticalAlignment="Top"
-                    Width="119" Height="29" Canvas.Left="620" Canvas.Top="224" FontSize="16"
-                    Click="refresh_button_Click">
+            <Button x:Name="refresh_button" Content="Обновить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="29" Canvas.Left="620" Canvas.Top="224" FontSize="16" Click="refresh_button_Click" >
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock Height="34" Width="193" FontSize="18" Foreground="Gray" HorizontalAlignment="Center"
-                       VerticalAlignment="Center" Canvas.Left="50" Canvas.Top="267" FontWeight="Bold">
-                Всего пользователей:
-            </TextBlock>
-            <TextBlock x:Name="usersCount_text" Height="34" Width="67" FontSize="18" Foreground="Gray"
-                       HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="248" Canvas.Top="267">
-                0
-            </TextBlock>
-            <ListView x:Name="users_ListView" Height="183" Width="757" HorizontalAlignment="Center" Canvas.Left="22"
-                      VerticalAlignment="Top" Background="#FFDDDDDD" BorderBrush="#FF383737" Canvas.Top="300"
-                      Foreground="#FF8C8C8E">
+            <TextBlock Height="34" Width="193" FontSize="18" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="50" Canvas.Top="267" FontWeight="Bold">Всего пользователей:</TextBlock>
+            <TextBlock x:Name="usersCount_text" Height="34" Width="67" FontSize="18" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="248" Canvas.Top="267">0</TextBlock>
+            <ListView x:Name="users_ListView" Height="183" Width="757" HorizontalAlignment="Center" Canvas.Left="22" VerticalAlignment="Top" Background="#FFDDDDDD" BorderBrush="#FF383737" Canvas.Top="300" Foreground="#FF8C8C8E">
                 <ListView.Resources>
                     <!-- Цвет выделенных строк -->
-                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="LightGray" />
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="LightGray"/>
                     <!-- Стиль для ячеек -->
                     <Style TargetType="ListViewItem">
-                        <Setter Property="BorderBrush" Value="Gray" />
-                        <Setter Property="BorderThickness" Value="1" />
+                        <Setter Property="BorderBrush" Value="Gray"/>
+                        <Setter Property="BorderThickness" Value="1"/>
                     </Style>
                     <!-- Стиль для заголовков столбцов -->
                     <Style TargetType="GridViewColumnHeader">
-                        <Setter Property="Background" Value="LightGray" />
-                        <Setter Property="Foreground" Value="Black" />
-                        <Setter Property="FontWeight" Value="Bold" />
-                        <Setter Property="HorizontalContentAlignment" Value="Center" />
-                        <Setter Property="BorderBrush" Value="Gray" />
-                        <Setter Property="BorderThickness" Value="1" />
+                        <Setter Property="Background" Value="LightGray"/>
+                        <Setter Property="Foreground" Value="Black"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        <Setter Property="BorderBrush" Value="Gray"/>
+                        <Setter Property="BorderThickness" Value="1"/>
                     </Style>
                 </ListView.Resources>
 
@@ -152,7 +122,7 @@
                             <!-- Кнопка "Edit" для каждой строки -->
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button Content="Edit" Width="50" />
+                                    <Button Content="Edit" Width="50"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
@@ -160,8 +130,7 @@
                 </ListView.View>
             </ListView>
 
-            <Border Height="50" Width="800" Canvas.Top="484" Background="Gray" HorizontalAlignment="Left"
-                    VerticalAlignment="Center" />
+            <Border Height="50" Width="800" Canvas.Top="484" Background="Gray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </Canvas>
 
 

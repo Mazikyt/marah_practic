@@ -1,65 +1,77 @@
-﻿using System.Windows;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
 using System.Windows.Threading;
 
-namespace marah_practic;
-
-/// <summary>
-///     Логика взаимодействия для iwantrunner.xaml
-/// </summary>
-public partial class iwantrunner : Window
+namespace marah_practic
 {
-    private readonly DateTime dateOfStart = new(2024, 11, 02, 6, 0, 0);
-    private readonly DispatcherTimer timer; // Объявляем таймер
-
-    public iwantrunner()
+    /// <summary>
+    /// Логика взаимодействия для iwantrunner.xaml
+    /// </summary>
+    public partial class iwantrunner : Window
     {
-        InitializeComponent();
-        timer = new DispatcherTimer();
-        timer.Interval = TimeSpan.FromSeconds(1); // Устанавливаем интервал в 1 секунду
-        timer.Tick += timer_Tick; // Привязываем событие Tick к функции timer_Tick
-        timer.Start(); // Запускаем таймер
-    }
+        public iwantrunner()
+        {
+            InitializeComponent();
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1); // Устанавливаем интервал в 1 секунду
+            timer.Tick += timer_Tick; // Привязываем событие Tick к функции timer_Tick
+            timer.Start(); // Запускаем таймер
+        }
 
-    private void timer_Tick(object sender, EventArgs e)
-    {
-        var different = dateOfStart.Subtract(DateTime.Now);
-        timerLabel.Text =
-            $"{different.Days} дней {different.Hours} часов и {different.Minutes} минут до старта марафона!";
-    }
+        private DateTime dateOfStart = new DateTime(2024, 11, 02, 6, 0, 0);
+        private DispatcherTimer timer; // Объявляем таймер
 
-    private void back_button_Click(object sender, RoutedEventArgs e)
-    {
-        var mainWindow = new MainWindow();
-        mainWindow.Left = Left;
-        mainWindow.Top = Top;
-        mainWindow.Show();
-        Close();
-    }
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            TimeSpan different = dateOfStart.Subtract(DateTime.Now);
+            timerLabel.Text = $"{different.Days} дней {different.Hours} часов и {different.Minutes} минут до старта марафона!";
+        }
 
-    private void newRunner_button_Click(object sender, RoutedEventArgs e)
-    {
-        var newrunner = new newrunner();
-        newrunner.Left = Left;
-        newrunner.Top = Top;
-        newrunner.Show();
-        Close();
-    }
+        private void back_button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Left = this.Left;
+            mainWindow.Top = this.Top;
+            mainWindow.Show();
+            this.Close();
+        }
 
-    private void oldRunner_button_Click(object sender, RoutedEventArgs e)
-    {
-        var login = new Login();
-        login.Left = Left;
-        login.Top = Top;
-        login.Show();
-        Close();
-    }
+        private void newRunner_button_Click(object sender, RoutedEventArgs e)
+        {
+            newrunner newrunner = new newrunner();
+            newrunner.Left = this.Left;
+            newrunner.Top = this.Top;
+            newrunner.Show();
+            this.Close();
+        }
 
-    private void login_button_Click(object sender, RoutedEventArgs e)
-    {
-        var login = new Login();
-        login.Left = Left;
-        login.Top = Top;
-        login.Show();
-        Close();
+        private void oldRunner_button_Click(object sender, RoutedEventArgs e)
+        {
+            Login login = new Login();
+            login.Left = this.Left;
+            login.Top = this.Top;
+            login.Show();
+            this.Close();
+        }
+
+        private void login_button_Click(object sender, RoutedEventArgs e)
+        {
+            Login login = new Login();
+            login.Left = this.Left;
+            login.Top = this.Top;
+            login.Show();
+            this.Close();
+        }
     }
 }

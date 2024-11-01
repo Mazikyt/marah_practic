@@ -3,81 +3,40 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:marah_practic"
         mc:Ignorable="d"
         Title="aboutMarathon" Height="550" Width="800" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition Width="0*" />
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
         <Canvas>
-            <Border Height="44" Width="800" Background="#FF6F6D6D" HorizontalAlignment="Center" VerticalAlignment="Top" />
-            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81"
-                    Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
+            <Border Height="44" Width="800" Background="#FF6F6D6D" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold"
-                       HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">
-                MARATHON SKILL 2024
-            </TextBlock>
-            <TextBlock FontSize="24" Canvas.Left="149" Canvas.Top="78" HorizontalAlignment="Center"
-                       VerticalAlignment="Center" Height="39" TextWrapping="WrapWithOverflow" TextAlignment="Center"
-                       Width="482">
-                Информация о Marathon Skills 2024
-            </TextBlock>
-            <Border Height="50" Width="800" Canvas.Top="484" Background="Gray" HorizontalAlignment="Left"
-                    VerticalAlignment="Center" />
+            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">MARATHON SKILL 2024</TextBlock>
+            <TextBlock FontSize="24" Canvas.Left="149" Canvas.Top="78" HorizontalAlignment="Center" VerticalAlignment="Center" Height="39" TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="482">Информация о Marathon Skills 2024</TextBlock>
+            <Border Height="50" Width="800" Canvas.Top="484" Background="Gray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
-            <Image Height="175" Canvas.Left="74" Source="/images/image_2024-09-27_14-48-13.png" Stretch="Fill"
-                   Canvas.Top="145" Width="176" HorizontalAlignment="Center" VerticalAlignment="Top" />
-            <Image Height="73" Canvas.Left="74" Source="/images/banco-banespa.jpg" Stretch="Fill" Canvas.Top="325"
-                   Width="88" HorizontalAlignment="Center" VerticalAlignment="Top" />
-            <Image Height="73" Canvas.Left="167" Source="/images/ibirapuera-park-lake.jpg" Stretch="Fill"
-                   Canvas.Top="325" Width="88" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5"
-                   VerticalAlignment="Top" />
-            <Image Height="73" Canvas.Left="74" Source="/images/marathon-image.jpg" Stretch="Fill" Canvas.Top="403"
-                   Width="88" />
-            <Image Height="73" Canvas.Left="167" Source="/images/teatro-municipal.jpg" Stretch="Fill" Canvas.Top="403"
-                   Width="88" />
+            <Image Height="175" Canvas.Left="74" Source="/images/image_2024-09-27_14-48-13.png" Stretch="Fill" Canvas.Top="145" Width="176" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Image Height="73" Canvas.Left="74" Source="/images/banco-banespa.jpg" Stretch="Fill" Canvas.Top="325" Width="88" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Image Height="73" Canvas.Left="167" Source="/images/ibirapuera-park-lake.jpg" Stretch="Fill" Canvas.Top="325" Width="88" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top"/>
+            <Image Height="73" Canvas.Left="74" Source="/images/marathon-image.jpg" Stretch="Fill" Canvas.Top="403" Width="88"/>
+            <Image Height="73" Canvas.Left="167" Source="/images/teatro-municipal.jpg" Stretch="Fill" Canvas.Top="403" Width="88"/>
 
-            <Button x:Name="interactMap_button" Background="Transparent" Height="175" Width="181" Canvas.Left="74"
-                    Canvas.Top="145" Click="interactMap_button_Click" />
+            <Button x:Name="interactMap_button" Background="Transparent" Height="175" Width="181" Canvas.Left="74" Canvas.Top="145" Click="interactMap_button_Click"></Button>
 
-            <Grid Width="467" Canvas.Left="299" Canvas.Top="145" HorizontalAlignment="Left" Height="331"
-                  VerticalAlignment="Center">
-                <ScrollViewer CanContentScroll="True" VerticalScrollBarVisibility="Visible"
-                              HorizontalAlignment="Center" VerticalAlignment="Center" Height="331" Width="467">
-                    <TextBlock Height="606" TextWrapping="Wrap" Width="440">
-                        <Run
-                            Text="Marathon Skills - фестиваль бега, проводимый каждый год в разных частях мира. Может быть три зачета: Полный Марафон, Полумарафон и  забег для новичков - таким образом фестиваль подходит всем." />
-                        <LineBreak /><Run /><LineBreak />
-                        <Run
-                            Text="В прошлых годах марафон был проведен в Осаке, Япония (2014); Лейпциг, Германия (2013); Ханой, Вьетнам (2012) и Йорк, Англия (2011)." />
-                        <LineBreak /><Run /><LineBreak />
-                        <Run
-                            Text="В этом году, Marathon Skills очень зрелищно, продет в  Сан-Паоло, Бразилия, он должен быть самым большим фестивалем бега. Это финансовый центр Бразилии и самый большой город в Южной Америке.Сан-Пауло увидят тысячи бегунов, которые будут бежать мимо небоскребов, зеленые парки и великолепная архитектура." />
-                        <LineBreak /><Run /><LineBreak />
-                        <Run
-                            Text="Этот фестиваль привлек рекордное количество бегунов со всего мира.  особое внимание будет обращено на участников из Кении и Ямайки, поскольку мы надеемся увидеть победителя 2014 года. (Эфиоп закончил гонку за 45 минут 4 секунды.)" />
-                        <LineBreak /><Run /><LineBreak />
-                        <Run Text="Атмосфера праздника обещает развлечения для всех зрителей." /><LineBreak /><Run />
-                        <LineBreak /><Run Text="События:" /><LineBreak /><Run /><LineBreak />
-                        <Run Text="- Программа &quot;Самба&quot; Полный Марафон начнется в Руа-Ду-Американо в 6 утра." />
-                        <LineBreak /><Run /><LineBreak />
-                        <Run
-                            Text="- Программа &quot;Джонго&quot; Полумарафон начнет в 7 утра Бегуны будут стартовать от недалеко от пересечения улицы Руа Ciniciata и Авенида." />
-                        <LineBreak /><Run /><LineBreak />
-                        <Run
-                            Text="- Программа &quot;Капоэйра&quot; в 5 км забег для новичков начнется в 15 часов Наши новички побегут от Мемориала Унинове." />
-                        <LineBreak /><Run /><LineBreak />
-                        <Run Text="Спасибо всем волонтерам, которые будут помогать нам проводить марафон!" />
-                    </TextBlock>
+            <Grid Width="467" Canvas.Left="299" Canvas.Top="145" HorizontalAlignment="Left" Height="331" VerticalAlignment="Center">
+                <ScrollViewer CanContentScroll="True" VerticalScrollBarVisibility="Visible" Canvas.Left="284" Canvas.Top="145" HorizontalAlignment="Center" VerticalAlignment="Center" Height="331" Width="467">
+                    <TextBlock Height="606" TextWrapping="Wrap" Width="440"><Run Text="Marathon Skills - фестиваль бега, проводимый каждый год в разных частях мира. Может быть три зачета: Полный Марафон, Полумарафон и  забег для новичков - таким образом фестиваль подходит всем."/><LineBreak/><Run/><LineBreak/><Run Text="В прошлых годах марафон был проведен в Осаке, Япония (2014); Лейпциг, Германия (2013); Ханой, Вьетнам (2012) и Йорк, Англия (2011)."/><LineBreak/><Run/><LineBreak/><Run Text="В этом году, Marathon Skills очень зрелищно, продет в  Сан-Паоло, Бразилия, он должен быть самым большим фестивалем бега. Это финансовый центр Бразилии и самый большой город в Южной Америке.Сан-Пауло увидят тысячи бегунов, которые будут бежать мимо небоскребов, зеленые парки и великолепная архитектура."/><LineBreak/><Run/><LineBreak/><Run Text="Этот фестиваль привлек рекордное количество бегунов со всего мира.  особое внимание будет обращено на участников из Кении и Ямайки, поскольку мы надеемся увидеть победителя 2014 года. (Эфиоп закончил гонку за 45 минут 4 секунды.)"/><LineBreak/><Run/><LineBreak/><Run Text="Атмосфера праздника обещает развлечения для всех зрителей."/><LineBreak/><Run/><LineBreak/><Run Text="События:"/><LineBreak/><Run/><LineBreak/><Run Text="- Программа &quot;Самба&quot; Полный Марафон начнется в Руа-Ду-Американо в 6 утра."/><LineBreak/><Run/><LineBreak/><Run Text="- Программа &quot;Джонго&quot; Полумарафон начнет в 7 утра Бегуны будут стартовать от недалеко от пересечения улицы Руа Ciniciata и Авенида."/><LineBreak/><Run/><LineBreak/><Run Text="- Программа &quot;Капоэйра&quot; в 5 км забег для новичков начнется в 15 часов Наши новички побегут от Мемориала Унинове."/><LineBreak/><Run/><LineBreak/><Run Text="Спасибо всем волонтерам, которые будут помогать нам проводить марафон!"/></TextBlock>
                 </ScrollViewer>
             </Grid>
 
