@@ -1,0 +1,110 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="inventar.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="images\airbus-a380.jpg" />
+    <None Remove="images\arise-logo.png" />
+    <None Remove="images\aves-do-brazil-logo.png" />
+    <None Remove="images\banco-banespa.jpg" />
+    <None Remove="images\bus.jpg" />
+    <None Remove="images\cancel.png" />
+    <None Remove="images\capybara.jpg" />
+    <None Remove="images\clara-santos-oliveira-institute-logo.png" />
+    <None Remove="images\conquer-cancer-brazil.png" />
+    <None Remove="images\diabetes-brazil-logo.png" />
+    <None Remove="images\f1-car.jpg" />
+    <None Remove="images\football-field.jpg" />
+    <None Remove="images\heart-health-sao-paulo-logo.png" />
+    <None Remove="images\horse.png" />
+    <None Remove="images\human-rights-centre-logo.png" />
+    <None Remove="images\ibirapuera-park-lake.jpg" />
+    <None Remove="images\image_2024-09-27_14-48-13.png" />
+    <None Remove="images\info1.jpg" />
+    <None Remove="images\jaguar.jpg" />
+    <None Remove="images\map-icon-drinks.png" />
+    <None Remove="images\map-icon-energy-bars.png" />
+    <None Remove="images\map-icon-information.png" />
+    <None Remove="images\map-icon-medical.png" />
+    <None Remove="images\map-icon-start.png" />
+    <None Remove="images\map-icon-toilets.png" />
+    <None Remove="images\marathon-image.jpg" />
+    <None Remove="images\oxfam-international-logo.png" />
+    <None Remove="images\pair-of-havaianas.jpg" />
+    <None Remove="images\querstadtein-logo.png" />
+    <None Remove="images\ronaldinho.jpg" />
+    <None Remove="images\save-the-children-fund-logo.png" />
+    <None Remove="images\sloth.jpg" />
+    <None Remove="images\slug.jpg" />
+    <None Remove="images\stay-pumped-logo.png" />
+    <None Remove="images\teatro-municipal.jpg" />
+    <None Remove="images\the-red-cross-logo.png" />
+    <None Remove="images\upbeat-logo.png" />
+    <None Remove="images\worm.jpg" />
+    <None Remove="images\wwsm-rescue-logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="inventar.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="8.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\airbus-a380.jpg" />
+    <Resource Include="images\arise-logo.png" />
+    <Resource Include="images\aves-do-brazil-logo.png" />
+    <Resource Include="images\bus.jpg" />
+    <Resource Include="images\capybara.jpg" />
+    <Resource Include="images\clara-santos-oliveira-institute-logo.png" />
+    <Resource Include="images\conquer-cancer-brazil.png" />
+    <Resource Include="images\diabetes-brazil-logo.png" />
+    <Resource Include="images\f1-car.jpg" />
+    <Resource Include="images\football-field.jpg" />
+    <Resource Include="images\heart-health-sao-paulo-logo.png" />
+    <Resource Include="images\horse.png" />
+    <Resource Include="images\human-rights-centre-logo.png" />
+    <Resource Include="images\ibirapuera-park-lake.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\banco-banespa.jpg" />
+    <Resource Include="images\cancel.png" />
+    <Resource Include="images\image_2024-09-27_14-48-13.png" />
+    <Resource Include="images\info1.jpg" />
+    <Resource Include="images\jaguar.jpg" />
+    <Resource Include="images\map-icon-drinks.png" />
+    <Resource Include="images\map-icon-energy-bars.png" />
+    <Resource Include="images\map-icon-information.png" />
+    <Resource Include="images\map-icon-medical.png" />
+    <Resource Include="images\map-icon-start.png" />
+    <Resource Include="images\map-icon-toilets.png" />
+    <Resource Include="images\marathon-image.jpg" />
+    <Resource Include="images\oxfam-international-logo.png" />
+    <Resource Include="images\pair-of-havaianas.jpg" />
+    <Resource Include="images\querstadtein-logo.png" />
+    <Resource Include="images\ronaldinho.jpg" />
+    <Resource Include="images\save-the-children-fund-logo.png" />
+    <Resource Include="images\sloth.jpg" />
+    <Resource Include="images\slug.jpg" />
+    <Resource Include="images\stay-pumped-logo.png" />
+    <Resource Include="images\teatro-municipal.jpg" />
+    <Resource Include="images\the-red-cross-logo.png" />
+    <Resource Include="images\upbeat-logo.png" />
+    <Resource Include="images\worm.jpg" />
+    <Resource Include="images\wwsm-rescue-logo.png" />
+  </ItemGroup>
+
+</Project>
