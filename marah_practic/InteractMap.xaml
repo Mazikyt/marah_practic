@@ -3,54 +3,38 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:marah_practic"
         mc:Ignorable="d"
         Title="InteractMap" Height="550" Width="800" ResizeMode="NoResize">
     <Grid>
         <Canvas>
-            <Border Height="44" Width="800" Background="#FF6F6D6D" HorizontalAlignment="Center" VerticalAlignment="Top" />
-            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81"
-                    Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
+            <Border Height="44" Width="800" Background="#FF6F6D6D" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold"
-                       HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">
-                MARATHON SKILL 2016
-            </TextBlock>
-            <Border Height="50" Width="800" Canvas.Top="484" Background="Gray" HorizontalAlignment="Center"
-                    VerticalAlignment="Top" />
+            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">MARATHON SKILL 2016</TextBlock>
+            <Border Height="50" Width="800" Canvas.Top="484" Background="Gray" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
-            <Image Height="400" Canvas.Left="19" Source="/images/image_2024-09-27_14-48-13.png" Stretch="Fill"
-                   Canvas.Top="63" Width="403" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <Image Height="400" Canvas.Left="19" Source="/images/image_2024-09-27_14-48-13.png" Stretch="Fill" Canvas.Top="63" Width="403" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
-            <GroupBox x:Name="check1_groupBox" Visibility="Hidden" Background="White" Width="350" Height="400"
-                      Canvas.Left="422" Canvas.Top="67">
+            <GroupBox  x:Name="check1_groupBox" Visibility="Hidden" Background="White" Width="350" Height="400" Canvas.Left="422" Canvas.Top="67">
                 <Canvas>
-                    <TextBlock Foreground="#FF9C9999" FontSize="40" Canvas.Left="64" Canvas.Top="10">Чекпоинт 1</TextBlock>
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="10" Canvas.Top="68">Название: Avenida Rudge</TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-drinks.png" Stretch="Fill"
-                           Canvas.Top="106" Width="50" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="118"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        Напитки
-                    </TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-energy-bars.png" Stretch="Fill"
-                           Canvas.Top="161" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="173"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        Энергитические батончики
-                    </TextBlock>
-                    <Button x:Name="closeCheck1_button" Height="25" Width="25" Canvas.Left="303"
-                            HorizontalAlignment="Center" Canvas.Top="10" VerticalAlignment="Top"
-                            Click="hide_button_Click">
+                    <TextBlock Foreground="#FF9C9999" FontSize="40" Canvas.Left="64" Canvas.Top="10" >Чекпоинт 1</TextBlock>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="10" Canvas.Top="68" >Название: Avenida Rudge</TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-drinks.png" Stretch="Fill" Canvas.Top="106" Width="50"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="118" HorizontalAlignment="Center" VerticalAlignment="Top" >Напитки</TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-energy-bars.png" Stretch="Fill" Canvas.Top="161" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="173" HorizontalAlignment="Center" VerticalAlignment="Top" >Энергитические батончики</TextBlock>
+                    <Button x:Name="closeCheck1_button" Height="25" Width="25" Canvas.Left="303" HorizontalAlignment="Center" Canvas.Top="10" VerticalAlignment="Top" Click="hide_button_Click">
                         <Button.Template>
                             <ControlTemplate>
-                                <Image Source="images/cancel.png" />
+                                <Image Source="images/cancel.png"/>
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
@@ -58,375 +42,222 @@
                 </Canvas>
             </GroupBox>
 
-            <GroupBox x:Name="check2_groupBox" Visibility="Hidden" Background="White" Width="350" Height="400"
-                      Canvas.Left="422" Canvas.Top="67">
+            <GroupBox  x:Name="check2_groupBox" Visibility="Hidden" Background="White" Width="350" Height="400" Canvas.Left="422" Canvas.Top="67">
                 <Canvas>
-                    <TextBlock Foreground="#FF9C9999" FontSize="40" Canvas.Left="64" Canvas.Top="10">Чекпоинт 2</TextBlock>
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="10" Canvas.Top="68">Название: Theatro Minicipal</TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-drinks.png" Stretch="Fill"
-                           Canvas.Top="106" Width="50" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="118"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        Напитки
-                    </TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-energy-bars.png" Stretch="Fill"
-                           Canvas.Top="161" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="173"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        Энергитические батончики
-                    </TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-toilets.png" Stretch="Fill"
-                           Canvas.Top="216" Width="50" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="228"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        <Run Text="Туалеты" />
-                    </TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-information.png" Stretch="Fill"
-                           Canvas.Top="271" Width="50" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="283"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        <Run Text="Информация" />
-                    </TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-medical.png" Stretch="Fill"
-                           Canvas.Top="326" Width="50" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="338"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        <Run Text="Мед. помощь" />
-                    </TextBlock>
-                    <Button x:Name="closeCheck2_button" Height="25" Width="25" Canvas.Left="303"
-                            HorizontalAlignment="Center" Canvas.Top="10" VerticalAlignment="Top"
-                            Click="hide_button_Click">
+                    <TextBlock Foreground="#FF9C9999" FontSize="40" Canvas.Left="64" Canvas.Top="10" >Чекпоинт 2</TextBlock>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="10" Canvas.Top="68" >Название: Theatro Minicipal</TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-drinks.png" Stretch="Fill" Canvas.Top="106" Width="50"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="118" HorizontalAlignment="Center" VerticalAlignment="Top" >Напитки</TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-energy-bars.png" Stretch="Fill" Canvas.Top="161" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="173" HorizontalAlignment="Center" VerticalAlignment="Top" >Энергитические батончики</TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-toilets.png" Stretch="Fill" Canvas.Top="216" Width="50"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="228" HorizontalAlignment="Center" VerticalAlignment="Top" ><Run Text="Туалеты"/></TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-information.png" Stretch="Fill" Canvas.Top="271" Width="50"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="283" HorizontalAlignment="Center" VerticalAlignment="Top" ><Run Text="Информация"/></TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-medical.png" Stretch="Fill" Canvas.Top="326" Width="50"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="338" HorizontalAlignment="Center" VerticalAlignment="Top" ><Run Text="Мед. помощь"/></TextBlock>
+                    <Button x:Name="closeCheck2_button" Height="25" Width="25" Canvas.Left="303" HorizontalAlignment="Center" Canvas.Top="10" VerticalAlignment="Top" Click="hide_button_Click">
                         <Button.Template>
                             <ControlTemplate>
-                                <Image Source="images/cancel.png" />
+                                <Image Source="images/cancel.png"/>
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
                 </Canvas>
             </GroupBox>
 
-            <GroupBox x:Name="check3_groupBox" Visibility="Hidden" Background="White" Width="350" Height="400"
-                      Canvas.Left="422" Canvas.Top="67">
+            <GroupBox  x:Name="check3_groupBox" Visibility="Hidden" Background="White" Width="350" Height="400" Canvas.Left="422" Canvas.Top="67">
                 <Canvas>
-                    <TextBlock Foreground="#FF9C9999" FontSize="40" Canvas.Left="64" Canvas.Top="10">Чекпоинт 3</TextBlock>
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="10" Canvas.Top="68">Название: Parque do Ibirapuera</TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-drinks.png" Stretch="Fill"
-                           Canvas.Top="106" Width="50" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="118"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        Напитки
-                    </TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-energy-bars.png" Stretch="Fill"
-                           Canvas.Top="161" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="173"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        Энергитические батончики
-                    </TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-toilets.png" Stretch="Fill"
-                           Canvas.Top="216" Width="50" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="228"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        <Run Text="Туалеты" />
-                    </TextBlock>
-                    <Button x:Name="closeCheck3_button" Height="25" Width="25" Canvas.Left="303"
-                            HorizontalAlignment="Center" Canvas.Top="10" VerticalAlignment="Top"
-                            Click="hide_button_Click">
+                    <TextBlock Foreground="#FF9C9999" FontSize="40" Canvas.Left="64" Canvas.Top="10" >Чекпоинт 3</TextBlock>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="10" Canvas.Top="68" >Название: Parque do Ibirapuera</TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-drinks.png" Stretch="Fill" Canvas.Top="106" Width="50"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="118" HorizontalAlignment="Center" VerticalAlignment="Top" >Напитки</TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-energy-bars.png" Stretch="Fill" Canvas.Top="161" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="173" HorizontalAlignment="Center" VerticalAlignment="Top" >Энергитические батончики</TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-toilets.png" Stretch="Fill" Canvas.Top="216" Width="50"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="228" HorizontalAlignment="Center" VerticalAlignment="Top" ><Run Text="Туалеты"/></TextBlock>
+                    <Button x:Name="closeCheck3_button" Height="25" Width="25" Canvas.Left="303" HorizontalAlignment="Center" Canvas.Top="10" VerticalAlignment="Top" Click="hide_button_Click">
                         <Button.Template>
                             <ControlTemplate>
-                                <Image Source="images/cancel.png" />
+                                <Image Source="images/cancel.png"/>
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
                 </Canvas>
             </GroupBox>
 
-            <GroupBox x:Name="check4_groupBox" Visibility="Hidden" Background="White" Width="350" Height="400"
-                      Canvas.Left="422" Canvas.Top="67">
+            <GroupBox  x:Name="check4_groupBox" Visibility="Hidden" Background="White" Width="350" Height="400" Canvas.Left="422" Canvas.Top="67">
                 <Canvas>
-                    <TextBlock Foreground="#FF9C9999" FontSize="40" Canvas.Left="64" Canvas.Top="10">Чекпоинт 4</TextBlock>
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="10" Canvas.Top="68">Название: Jardim Luzitania</TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-drinks.png" Stretch="Fill"
-                           Canvas.Top="106" Width="50" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="118"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        Напитки
-                    </TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-energy-bars.png" Stretch="Fill"
-                           Canvas.Top="161" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="173"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        Энергитические батончики
-                    </TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-toilets.png" Stretch="Fill"
-                           Canvas.Top="216" Width="50" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="228"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        <Run Text="Туалеты" />
-                    </TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-medical.png" Stretch="Fill"
-                           Canvas.Top="271" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="283"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        <Run Text="Мед. помощь" />
-                    </TextBlock>
-                    <Button x:Name="closeCheck4_button" Height="25" Width="25" Canvas.Left="303"
-                            HorizontalAlignment="Center" Canvas.Top="10" VerticalAlignment="Top"
-                            Click="hide_button_Click">
+                    <TextBlock Foreground="#FF9C9999" FontSize="40" Canvas.Left="64" Canvas.Top="10" >Чекпоинт 4</TextBlock>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="10" Canvas.Top="68" >Название: Jardim Luzitania</TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-drinks.png" Stretch="Fill" Canvas.Top="106" Width="50"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="118" HorizontalAlignment="Center" VerticalAlignment="Top" >Напитки</TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-energy-bars.png" Stretch="Fill" Canvas.Top="161" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="173" HorizontalAlignment="Center" VerticalAlignment="Top" >Энергитические батончики</TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-toilets.png" Stretch="Fill" Canvas.Top="216" Width="50"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="228" HorizontalAlignment="Center" VerticalAlignment="Top" ><Run Text="Туалеты"/></TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-medical.png" Stretch="Fill" Canvas.Top="271" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="283" HorizontalAlignment="Center" VerticalAlignment="Top" ><Run Text="Мед. помощь"/></TextBlock>
+                    <Button x:Name="closeCheck4_button" Height="25" Width="25" Canvas.Left="303" HorizontalAlignment="Center" Canvas.Top="10" VerticalAlignment="Top" Click="hide_button_Click">
                         <Button.Template>
                             <ControlTemplate>
-                                <Image Source="images/cancel.png" />
+                                <Image Source="images/cancel.png"/>
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
                 </Canvas>
             </GroupBox>
 
-            <GroupBox x:Name="check5_groupBox" Visibility="Hidden" Background="White" Width="350" Height="400"
-                      Canvas.Left="422" Canvas.Top="67">
+            <GroupBox  x:Name="check5_groupBox" Visibility="Hidden" Background="White" Width="350" Height="400" Canvas.Left="422" Canvas.Top="67">
                 <Canvas>
-                    <TextBlock Foreground="#FF9C9999" FontSize="40" Canvas.Left="64" Canvas.Top="10">Чекпоинт 5</TextBlock>
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="10" Canvas.Top="68">Название: Iguatemi</TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-drinks.png" Stretch="Fill"
-                           Canvas.Top="106" Width="50" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="118"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        Напитки
-                    </TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-energy-bars.png" Stretch="Fill"
-                           Canvas.Top="161" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="173"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        Энергитические батончики
-                    </TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-toilets.png" Stretch="Fill"
-                           Canvas.Top="216" Width="50" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="228"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        <Run Text="Туалеты" />
-                    </TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-information.png" Stretch="Fill"
-                           Canvas.Top="271" Width="50" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="283"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        <Run Text="Информация" />
-                    </TextBlock>
-                    <Button x:Name="closeCheck5_button" Height="25" Width="25" Canvas.Left="303"
-                            HorizontalAlignment="Center" Canvas.Top="10" VerticalAlignment="Top"
-                            Click="hide_button_Click">
+                    <TextBlock Foreground="#FF9C9999" FontSize="40" Canvas.Left="64" Canvas.Top="10" >Чекпоинт 5</TextBlock>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="10" Canvas.Top="68" >Название: Iguatemi</TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-drinks.png" Stretch="Fill" Canvas.Top="106" Width="50"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="118" HorizontalAlignment="Center" VerticalAlignment="Top" >Напитки</TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-energy-bars.png" Stretch="Fill" Canvas.Top="161" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="173" HorizontalAlignment="Center" VerticalAlignment="Top" >Энергитические батончики</TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-toilets.png" Stretch="Fill" Canvas.Top="216" Width="50"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="228" HorizontalAlignment="Center" VerticalAlignment="Top" ><Run Text="Туалеты"/></TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-information.png" Stretch="Fill" Canvas.Top="271" Width="50"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="283" HorizontalAlignment="Center" VerticalAlignment="Top" ><Run Text="Информация"/></TextBlock>
+                    <Button x:Name="closeCheck5_button" Height="25" Width="25" Canvas.Left="303" HorizontalAlignment="Center" Canvas.Top="10" VerticalAlignment="Top" Click="hide_button_Click">
                         <Button.Template>
                             <ControlTemplate>
-                                <Image Source="images/cancel.png" />
+                                <Image Source="images/cancel.png"/>
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
                 </Canvas>
             </GroupBox>
 
-            <GroupBox x:Name="check6_groupBox" Visibility="Hidden" Background="White" Width="350" Height="400"
-                      Canvas.Left="422" Canvas.Top="67">
+            <GroupBox  x:Name="check6_groupBox" Visibility="Hidden" Background="White" Width="350" Height="400" Canvas.Left="422" Canvas.Top="67">
                 <Canvas>
-                    <TextBlock Foreground="#FF9C9999" FontSize="40" Canvas.Left="64" Canvas.Top="10">Чекпоинт 6</TextBlock>
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="10" Canvas.Top="68">Название: Rua Lisboa</TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-drinks.png" Stretch="Fill"
-                           Canvas.Top="106" Width="50" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="118"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        Напитки
-                    </TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-energy-bars.png" Stretch="Fill"
-                           Canvas.Top="161" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="173"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        Энергитические батончики
-                    </TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-toilets.png" Stretch="Fill"
-                           Canvas.Top="216" Width="50" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="228"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        <Run Text="Туалеты" />
-                    </TextBlock>
-                    <Button x:Name="closeCheck6_button" Height="25" Width="25" Canvas.Left="303"
-                            HorizontalAlignment="Center" Canvas.Top="10" VerticalAlignment="Top"
-                            Click="hide_button_Click">
+                    <TextBlock Foreground="#FF9C9999" FontSize="40" Canvas.Left="64" Canvas.Top="10" >Чекпоинт 6</TextBlock>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="10" Canvas.Top="68" >Название: Rua Lisboa</TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-drinks.png" Stretch="Fill" Canvas.Top="106" Width="50"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="118" HorizontalAlignment="Center" VerticalAlignment="Top" >Напитки</TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-energy-bars.png" Stretch="Fill" Canvas.Top="161" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="173" HorizontalAlignment="Center" VerticalAlignment="Top" >Энергитические батончики</TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-toilets.png" Stretch="Fill" Canvas.Top="216" Width="50"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="228" HorizontalAlignment="Center" VerticalAlignment="Top" ><Run Text="Туалеты"/></TextBlock>
+                    <Button x:Name="closeCheck6_button" Height="25" Width="25" Canvas.Left="303" HorizontalAlignment="Center" Canvas.Top="10" VerticalAlignment="Top" Click="hide_button_Click">
                         <Button.Template>
                             <ControlTemplate>
-                                <Image Source="images/cancel.png" />
+                                <Image Source="images/cancel.png"/>
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
                 </Canvas>
             </GroupBox>
 
-            <GroupBox x:Name="check7_groupBox" Visibility="Hidden" Background="White" Width="350" Height="400"
-                      Canvas.Left="422" Canvas.Top="67">
+            <GroupBox  x:Name="check7_groupBox" Visibility="Hidden" Background="White" Width="350" Height="400" Canvas.Left="422" Canvas.Top="67">
                 <Canvas>
-                    <TextBlock Foreground="#FF9C9999" FontSize="40" Canvas.Left="64" Canvas.Top="10">Чекпоинт 7</TextBlock>
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="10" Canvas.Top="68">Название: Cemitério da Consolação</TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-drinks.png" Stretch="Fill"
-                           Canvas.Top="106" Width="50" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="118"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        Напитки
-                    </TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-energy-bars.png" Stretch="Fill"
-                           Canvas.Top="161" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="173"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        Энергитические батончики
-                    </TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-toilets.png" Stretch="Fill"
-                           Canvas.Top="216" Width="50" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="228"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        <Run Text="Туалеты" />
-                    </TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-information.png" Stretch="Fill"
-                           Canvas.Top="271" Width="50" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="283"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        <Run Text="Информация" />
-                    </TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-medical.png" Stretch="Fill"
-                           Canvas.Top="326" Width="50" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="338"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        <Run Text="Мед. помощь" />
-                    </TextBlock>
-                    <Button x:Name="closeCheck7_button" Height="25" Width="25" Canvas.Left="303"
-                            HorizontalAlignment="Center" Canvas.Top="10" VerticalAlignment="Top"
-                            Click="hide_button_Click">
+                    <TextBlock Foreground="#FF9C9999" FontSize="40" Canvas.Left="64" Canvas.Top="10" >Чекпоинт 7</TextBlock>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="10" Canvas.Top="68" >Название: Cemitério da Consolação</TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-drinks.png" Stretch="Fill" Canvas.Top="106" Width="50"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="118" HorizontalAlignment="Center" VerticalAlignment="Top" >Напитки</TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-energy-bars.png" Stretch="Fill" Canvas.Top="161" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="173" HorizontalAlignment="Center" VerticalAlignment="Top" >Энергитические батончики</TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-toilets.png" Stretch="Fill" Canvas.Top="216" Width="50"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="228" HorizontalAlignment="Center" VerticalAlignment="Top" ><Run Text="Туалеты"/></TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-information.png" Stretch="Fill" Canvas.Top="271" Width="50"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="283" HorizontalAlignment="Center" VerticalAlignment="Top" ><Run Text="Информация"/></TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-medical.png" Stretch="Fill" Canvas.Top="326" Width="50"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="338" HorizontalAlignment="Center" VerticalAlignment="Top" ><Run Text="Мед. помощь"/></TextBlock>
+                    <Button x:Name="closeCheck7_button" Height="25" Width="25" Canvas.Left="303" HorizontalAlignment="Center" Canvas.Top="10" VerticalAlignment="Top" Click="hide_button_Click">
                         <Button.Template>
                             <ControlTemplate>
-                                <Image Source="images/cancel.png" />
+                                <Image Source="images/cancel.png"/>
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
                 </Canvas>
             </GroupBox>
 
-            <GroupBox x:Name="check8_groupBox" Visibility="Hidden" Background="White" Width="350" Height="400"
-                      Canvas.Left="422" Canvas.Top="67">
+            <GroupBox  x:Name="check8_groupBox" Visibility="Hidden" Background="White" Width="350" Height="400" Canvas.Left="422" Canvas.Top="67">
                 <Canvas>
-                    <TextBlock Foreground="#FF9C9999" FontSize="40" Canvas.Left="64" Canvas.Top="10">Чекпоинт 8</TextBlock>
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="10" Canvas.Top="68">Название: Cemitério da Consolação</TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-drinks.png" Stretch="Fill"
-                           Canvas.Top="106" Width="50" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="118"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        Напитки
-                    </TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-energy-bars.png" Stretch="Fill"
-                           Canvas.Top="161" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="173"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        Энергитические батончики
-                    </TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-toilets.png" Stretch="Fill"
-                           Canvas.Top="216" Width="50" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="228"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        <Run Text="Туалеты" />
-                    </TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-information.png" Stretch="Fill"
-                           Canvas.Top="271" Width="50" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="283"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        <Run Text="Информация" />
-                    </TextBlock>
-                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-medical.png" Stretch="Fill"
-                           Canvas.Top="326" Width="50" />
-                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="338"
-                               HorizontalAlignment="Center" VerticalAlignment="Top">
-                        <Run Text="Мед. помощь" />
-                    </TextBlock>
-                    <Button x:Name="closeCheck8_button" Height="25" Width="25" Canvas.Left="303"
-                            HorizontalAlignment="Center" Canvas.Top="10" VerticalAlignment="Top"
-                            Click="hide_button_Click">
+                    <TextBlock Foreground="#FF9C9999" FontSize="40" Canvas.Left="64" Canvas.Top="10" >Чекпоинт 8</TextBlock>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="10" Canvas.Top="68" >Название: Cemitério da Consolação</TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-drinks.png" Stretch="Fill" Canvas.Top="106" Width="50"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="118" HorizontalAlignment="Center" VerticalAlignment="Top" >Напитки</TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-energy-bars.png" Stretch="Fill" Canvas.Top="161" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="173" HorizontalAlignment="Center" VerticalAlignment="Top" >Энергитические батончики</TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-toilets.png" Stretch="Fill" Canvas.Top="216" Width="50"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="228" HorizontalAlignment="Center" VerticalAlignment="Top" ><Run Text="Туалеты"/></TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-information.png" Stretch="Fill" Canvas.Top="271" Width="50"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="283" HorizontalAlignment="Center" VerticalAlignment="Top" ><Run Text="Информация"/></TextBlock>
+                    <Image Height="50" Canvas.Left="10" Source="/images/map-icon-medical.png" Stretch="Fill" Canvas.Top="326" Width="50"/>
+                    <TextBlock Foreground="#FF9C9999" FontSize="20" Canvas.Left="72" Canvas.Top="338" HorizontalAlignment="Center" VerticalAlignment="Top" ><Run Text="Мед. помощь"/></TextBlock>
+                    <Button x:Name="closeCheck8_button" Height="25" Width="25" Canvas.Left="303" HorizontalAlignment="Center" Canvas.Top="10" VerticalAlignment="Top" Click="hide_button_Click">
                         <Button.Template>
                             <ControlTemplate>
-                                <Image Source="images/cancel.png" />
+                                <Image Source="images/cancel.png"/>
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
                 </Canvas>
             </GroupBox>
 
-            <Button x:Name="check1_button" BorderBrush="Transparent" Background="Transparent" Width="38" Height="40"
-                    Canvas.Left="242" Canvas.Top="72" HorizontalAlignment="Center" VerticalAlignment="Top"
-                    Click="check1_button_Click">
+            <Button x:Name="check1_button" BorderBrush="Transparent" Background="Transparent" Width="38" Height="40" Canvas.Left="242" Canvas.Top="72" HorizontalAlignment="Center" VerticalAlignment="Top" Click="check1_button_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="20" />
+                        <Setter Property="CornerRadius" Value="20"/>
                     </Style>
                 </Button.Resources>
             </Button>
 
-            <Button x:Name="check2_button" BorderBrush="Transparent" Background="Transparent" Width="38" Height="40"
-                    Canvas.Left="286" Canvas.Top="192" HorizontalAlignment="Left" VerticalAlignment="Top"
-                    Click="check2_button_Click">
+            <Button x:Name="check2_button" BorderBrush="Transparent" Background="Transparent" Width="38" Height="40" Canvas.Left="286" Canvas.Top="192" HorizontalAlignment="Left" VerticalAlignment="Top" Click="check2_button_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="20" />
+                        <Setter Property="CornerRadius" Value="20"/>
                     </Style>
                 </Button.Resources>
             </Button>
 
-            <Button x:Name="check3_button" BorderBrush="Transparent" Background="Transparent" Width="38" Height="40"
-                    Canvas.Left="277" Canvas.Top="276" HorizontalAlignment="Center" VerticalAlignment="Top"
-                    Click="check3_button_Click">
+            <Button x:Name="check3_button" BorderBrush="Transparent" Background="Transparent" Width="38" Height="40" Canvas.Left="277" Canvas.Top="276" HorizontalAlignment="Center" VerticalAlignment="Top" Click="check3_button_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="20" />
+                        <Setter Property="CornerRadius" Value="20"/>
                     </Style>
                 </Button.Resources>
             </Button>
 
-            <Button x:Name="check4_button" BorderBrush="Transparent" Background="Transparent" Width="38" Height="40"
-                    Canvas.Left="373" Canvas.Top="370" HorizontalAlignment="Left" VerticalAlignment="Top"
-                    Click="check4_button_Click">
+            <Button x:Name="check4_button" BorderBrush="Transparent" Background="Transparent" Width="38" Height="40" Canvas.Left="373" Canvas.Top="370" HorizontalAlignment="Left" VerticalAlignment="Top" Click="check4_button_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="20" />
+                        <Setter Property="CornerRadius" Value="20"/>
                     </Style>
                 </Button.Resources>
             </Button>
 
-            <Button x:Name="check5_button" BorderBrush="Transparent" Background="Transparent" Width="38" Height="40"
-                    Canvas.Left="220" Canvas.Top="431" HorizontalAlignment="Center" VerticalAlignment="Top"
-                    Click="check5_button_Click">
+            <Button x:Name="check5_button" BorderBrush="Transparent" Background="Transparent" Width="38" Height="40" Canvas.Left="220" Canvas.Top="431" HorizontalAlignment="Center" VerticalAlignment="Top" Click="check5_button_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="20" />
+                        <Setter Property="CornerRadius" Value="20"/>
                     </Style>
                 </Button.Resources>
             </Button>
 
-            <Button x:Name="check6_button" BorderBrush="Transparent" Background="Transparent" Width="38" Height="40"
-                    Canvas.Left="97" Canvas.Top="386" HorizontalAlignment="Center" VerticalAlignment="Top"
-                    Click="check6_button_Click">
+            <Button x:Name="check6_button" BorderBrush="Transparent" Background="Transparent" Width="38" Height="40" Canvas.Left="97" Canvas.Top="386" HorizontalAlignment="Center" VerticalAlignment="Top" Click="check6_button_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="20" />
+                        <Setter Property="CornerRadius" Value="20"/>
                     </Style>
                 </Button.Resources>
             </Button>
 
-            <Button x:Name="check7_button" BorderBrush="Transparent" Background="Transparent" Width="38" Height="40"
-                    Canvas.Left="60" Canvas.Top="313" HorizontalAlignment="Center" VerticalAlignment="Center"
-                    Click="check7_button_Click">
+            <Button x:Name="check7_button" BorderBrush="Transparent" Background="Transparent" Width="38" Height="40" Canvas.Left="60" Canvas.Top="313" HorizontalAlignment="Center" VerticalAlignment="Center" Click="check7_button_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="20" />
+                        <Setter Property="CornerRadius" Value="20"/>
                     </Style>
                 </Button.Resources>
             </Button>
 
-            <Button x:Name="check8_button" BorderBrush="Transparent" Background="Transparent" Width="38" Height="40"
-                    Canvas.Left="50" Canvas.Top="188" HorizontalAlignment="Center" VerticalAlignment="Top"
-                    Click="check8_button_Click">
+            <Button x:Name="check8_button" BorderBrush="Transparent" Background="Transparent" Width="38" Height="40" Canvas.Left="50" Canvas.Top="188" HorizontalAlignment="Center" VerticalAlignment="Top" Click="check8_button_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="20" />
+                        <Setter Property="CornerRadius" Value="20"/>
                     </Style>
                 </Button.Resources>
             </Button>

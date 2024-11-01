@@ -3,87 +3,52 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:marah_practic"
         mc:Ignorable="d"
         Title="registrationonma" Height="550" Width="800" ResizeMode="NoResize">
     <Grid>
         <Canvas>
-            <Border Height="44" Width="800" Background="#FF6F6D6D" HorizontalAlignment="Left"
-                    VerticalAlignment="Center" />
-            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81"
-                    Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="cancel_button_Click">
+            <Border Height="44" Width="800" Background="#FF6F6D6D" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="cancel_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold"
-                       HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">
-                MARATHON SKILL 2024
-            </TextBlock>
-            <Button x:Name="logout_button" Content="Logout" HorizontalAlignment="Center" VerticalAlignment="Top"
-                    Width="81" Height="24" Canvas.Left="709" Canvas.Top="10" FontSize="14" Click="logout_button_Click">
+            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">MARATHON SKILL 2024</TextBlock>
+            <Button x:Name="logout_button" Content="Logout" HorizontalAlignment="Center" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="709" Canvas.Top="10" FontSize="14" Click="logout_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="24" Foreground="#FF9C9999" Canvas.Left="250" Canvas.Top="72"
-                       HorizontalAlignment="Center" VerticalAlignment="Top">
-                Регистрация на марафон
-            </TextBlock>
-            <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center" Height="104" Width="750" FontSize="20"
-                       HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="25" Canvas.Top="109"
-                       Foreground="#FF9C9999">
-                Пожалуйста заполните всю информацию, чтобы зарегистрироваться на Skills Marathon 2024 проводимом в Москве. Russia. С вами свяжутся после регистрации для уточнения оплаты и другой информации.
-            </TextBlock>
-            <TextBlock Height="22" Width="141" FontSize="18" FontWeight="Bold" Foreground="#FF9C9999" Canvas.Left="50"
-                       Canvas.Top="213" HorizontalAlignment="Left" VerticalAlignment="Center">
-                Вид марафона
-            </TextBlock>
-            <CheckBox x:Name="fullMar" Height="50" Width="50" Canvas.Left="26" Canvas.Top="250" FontSize="16"
-                      BorderBrush="Black" Background="White" IsChecked="False" HorizontalAlignment="Left"
-                      VerticalAlignment="Top" Click="fullMar_Checked" />
+            <TextBlock FontSize="24" Foreground="#FF9C9999" Canvas.Left="250" Canvas.Top="72" HorizontalAlignment="Center" VerticalAlignment="Top">Регистрация на марафон</TextBlock>
+            <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center" Height="104" Width="750" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="25" Canvas.Top="109" Foreground="#FF9C9999">Пожалуйста заполните всю информацию, чтобы зарегистрироваться на Skills Marathon 2024 проводимом в Москве. Russia. С вами свяжутся после регистрации для уточнения оплаты и другой информации.</TextBlock>
+            <TextBlock Height="22" Width="141" FontSize="18" FontWeight="Bold" Foreground="#FF9C9999" Canvas.Left="50" Canvas.Top="213" HorizontalAlignment="Left" VerticalAlignment="Center">Вид марафона</TextBlock>
+            <CheckBox x:Name="fullMar" Height="50" Width="50" Canvas.Left="26" Canvas.Top="250" FontSize="16" BorderBrush="Black" Background="White" IsChecked="False" HorizontalAlignment="Left" VerticalAlignment="Top" Click="fullMar_Checked"/>
             <TextBlock Canvas.Left="51" Canvas.Top="250" Foreground="#FF9C9999">42km Полный марафон($145)</TextBlock>
-            <CheckBox x:Name="halfMar" Height="50" Width="50" Canvas.Left="26" Canvas.Top="271" FontSize="16"
-                      BorderBrush="Black" Background="White" IsChecked="False" HorizontalAlignment="Center"
-                      VerticalAlignment="Top" Click="halfMar_Checked" />
+            <CheckBox x:Name="halfMar" Height="50" Width="50" Canvas.Left="26" Canvas.Top="271" FontSize="16" BorderBrush="Black" Background="White" IsChecked="False" HorizontalAlignment="Center" VerticalAlignment="Top" Click="halfMar_Checked"/>
             <TextBlock Canvas.Left="51" Canvas.Top="271" Foreground="#FF9C9999">21km Поуламафон ($75)</TextBlock>
-            <CheckBox x:Name="miniMar" Height="50" Width="50" Canvas.Left="26" Canvas.Top="292" FontSize="16"
-                      BorderBrush="Black" Background="White" IsChecked="False" HorizontalAlignment="Center"
-                      VerticalAlignment="Top" Click="miniMar_Checked" />
-            <TextBlock Canvas.Left="51" Canvas.Top="292" Foreground="#FF9C9999" HorizontalAlignment="Center"
-                       VerticalAlignment="Top">
-                5km Малая дистанция ($20)
-            </TextBlock>
+            <CheckBox x:Name="miniMar" Height="50" Width="50" Canvas.Left="26" Canvas.Top="292" FontSize="16" BorderBrush="Black" Background="White" IsChecked="False" HorizontalAlignment="Center" VerticalAlignment="Top" Click="miniMar_Checked"/>
+            <TextBlock Canvas.Left="51" Canvas.Top="292" Foreground="#FF9C9999" HorizontalAlignment="Center" VerticalAlignment="Top">5km Малая дистанция ($20)</TextBlock>
             <TextBlock Canvas.Left="51" Canvas.Top="333" FontSize="18" FontWeight="Bold" Foreground="#FF9C9999">Детали спонсорства</TextBlock>
-            <TextBlock Canvas.Left="10" Canvas.Top="382" Height="19" Width="50" FontSize="14" Foreground="#FF9C9999"
-                       HorizontalAlignment="Left" VerticalAlignment="Center">
-                Взнос:
-            </TextBlock>
-            <ComboBox x:Name="charityComboBox" Canvas.Left="54" Canvas.Top="382" HorizontalAlignment="Left"
-                      VerticalAlignment="Center" Width="166" RenderTransformOrigin="0.5,0.5" Height="18" FontSize="11"
-                      IsEditable="True" IsReadOnly="True" Foreground="#FF9C9999"
-                      SelectionChanged="charityComboBox_SelectionChanged" />
+            <TextBlock Canvas.Left="10" Canvas.Top="382" Height="19" Width="50" FontSize="14" Foreground="#FF9C9999" HorizontalAlignment="Left" VerticalAlignment="Center">Взнос:</TextBlock>
+            <ComboBox x:Name="charityComboBox" Canvas.Left="54" Canvas.Top="382" HorizontalAlignment="Left" VerticalAlignment="Center" Width="166" RenderTransformOrigin="0.5,0.5" Height="18" FontSize="11" IsEditable="True" IsReadOnly="True" Foreground="#FF9C9999" SelectionChanged="charityComboBox_SelectionChanged"/>
 
-            <TextBlock Canvas.Top="406" FontSize="14" Foreground="#FF9C9999" HorizontalAlignment="Left" Canvas.Left="4"
-                       VerticalAlignment="Center">
-                Сумма взноса:
-            </TextBlock>
-            <TextBox x:Name="charityAmount" Width="118" Height="20" VerticalAlignment="Top"
-                     HorizontalAlignment="Center" BorderBrush="Black" BorderThickness="1" Padding="5" Canvas.Left="102"
-                     Canvas.Top="409">
+            <TextBlock Canvas.Top="406" FontSize="14" Foreground="#FF9C9999" HorizontalAlignment="Left" Canvas.Left="4" VerticalAlignment="Center">Сумма взноса:</TextBlock>
+            <TextBox x:Name="charityAmount" Width="118" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center" BorderBrush="Black" BorderThickness="1" Padding="5" Canvas.Left="102" Canvas.Top="409">
                 <TextBox.Style>
                     <Style TargetType="TextBox">
-                        <Setter Property="Background" Value="White" />
-                        <Setter Property="BorderBrush" Value="Black" />
-                        <Setter Property="BorderThickness" Value="1" />
-                        <Setter Property="Padding" Value="5" />
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="BorderBrush" Value="Black"/>
+                        <Setter Property="BorderThickness" Value="1"/>
+                        <Setter Property="Padding" Value="5"/>
                         <Style.Triggers>
                             <!-- Триггер для отображения подсказки, если поле пустое -->
                             <Trigger Property="Text" Value="">
@@ -93,16 +58,16 @@
                                             <Grid>
                                                 <!-- Само поле для ввода -->
                                                 <Border BorderBrush="{TemplateBinding BorderBrush}"
-                                                        BorderThickness="{TemplateBinding BorderThickness}"
-                                                        Background="{TemplateBinding Background}">
+                                   BorderThickness="{TemplateBinding BorderThickness}"
+                                   Background="{TemplateBinding Background}">
                                                     <ScrollViewer x:Name="PART_ContentHost" />
                                                 </Border>
                                                 <!-- Подсказка -->
-                                                <TextBlock
-                                                    Foreground="Gray"
-                                                    VerticalAlignment="Center"
-                                                    IsHitTestVisible="False"
-                                                    Margin="5,0,0,0" />
+                                                <TextBlock 
+                                      Foreground="Gray" 
+                                      VerticalAlignment="Center" 
+                                      IsHitTestVisible="False"
+                                      Margin="5,0,0,0"/>
                                             </Grid>
                                         </ControlTemplate>
                                     </Setter.Value>
@@ -112,109 +77,61 @@
                     </Style>
                 </TextBox.Style>
             </TextBox>
-            <Button x:Name="registr_button" Content="Регистрация" HorizontalAlignment="Center" VerticalAlignment="Top"
-                    Width="102" Height="24" Canvas.Left="38" Canvas.Top="449" FontSize="14"
-                    Click="registr_button_Click">
+            <Button x:Name="registr_button" Content="Регистрация" HorizontalAlignment="Center" VerticalAlignment="Top" Width="102" Height="24" Canvas.Left="38" Canvas.Top="449" FontSize="14" Click="registr_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button x:Name="cancel_button" Content="Отмена" HorizontalAlignment="Center" VerticalAlignment="Top"
-                    Width="86" Height="24" Canvas.Left="164" Canvas.Top="449" FontSize="14" Click="cancel_button_Click">
+            <Button x:Name="cancel_button" Content="Отмена" HorizontalAlignment="Center" VerticalAlignment="Top" Width="86" Height="24" Canvas.Left="164" Canvas.Top="449" FontSize="14" Click="cancel_button_Click" >
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
             <TextBlock FontSize="18" Canvas.Left="493" Canvas.Top="213" FontWeight="Bold" Foreground="#FF9C9999">Варианты комплектов</TextBlock>
-            <RadioButton x:Name="varA" GroupName="variants" Height="15" Width="16" Canvas.Left="476" Canvas.Top="257"
-                         HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"
-                         Checked="varA_Checked" IsChecked="True" />
+            <RadioButton x:Name="varA" GroupName="variants" Height="15" Width="16" Canvas.Left="476" Canvas.Top="257" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Checked="varA_Checked" IsChecked="True"/>
 
-            <TextBlock Canvas.Left="499" Canvas.Top="254" FontWeight="Bold" Foreground="#FF9C9999"
-                       HorizontalAlignment="Left" VerticalAlignment="Top" Width="90">
-                Варинат А ($0):
-            </TextBlock>
-            <TextBlock Canvas.Left="592" Canvas.Top="257" Foreground="#FF9C9999" TextWrapping="WrapWithOverflow"
-                       HorizontalAlignment="Center" VerticalAlignment="Top" Height="34" Width="92">
-                Номер бегуна+
-            </TextBlock>
-            <TextBlock Canvas.Left="498" Canvas.Top="267" Foreground="#FF9C9999" TextWrapping="WrapWithOverflow"
-                       HorizontalAlignment="Center" VerticalAlignment="Top" Height="19" Width="92">
-                RFID браслет.
-            </TextBlock>
-            <RadioButton x:Name="varB" GroupName="variants" Height="16" Width="14" Canvas.Left="476" Canvas.Top="288"
-                         HorizontalAlignment="Center" VerticalAlignment="Top" Checked="varB_Checked" IsChecked="False" />
-            <TextBlock Canvas.Left="501" Canvas.Top="285" FontWeight="Bold" Foreground="#FF9C9999"
-                       HorizontalAlignment="Left" VerticalAlignment="Top" Width="96">
-                Варинат B ($20):
-            </TextBlock>
-            <TextBlock Canvas.Left="599" Canvas.Top="285" Foreground="#FF9C9999" TextWrapping="WrapWithOverflow"
-                       HorizontalAlignment="Left" VerticalAlignment="Top" Height="16" Width="92">
-                Вариант А +
-            </TextBlock>
-            <TextBlock Canvas.Left="501" Canvas.Top="300" Foreground="#FF9C9999" TextWrapping="WrapWithOverflow"
-                       HorizontalAlignment="Left" VerticalAlignment="Top" Height="16" Width="167">
-                бейсболка + бутылка воды.
-            </TextBlock>
-            <RadioButton x:Name="varC" GroupName="variants" Height="16" Width="14" Canvas.Left="476" Canvas.Top="320"
-                         HorizontalAlignment="Center" VerticalAlignment="Top" Checked="varC_Checked" IsChecked="False" />
-            <TextBlock Canvas.Left="498" Canvas.Top="320" FontWeight="Bold" Foreground="#FF9C9999"
-                       HorizontalAlignment="Left" VerticalAlignment="Top" Width="96">
-                Варинат C ($45):
-            </TextBlock>
-            <TextBlock Canvas.Left="595" Canvas.Top="320" Foreground="#FF9C9999" TextWrapping="WrapWithOverflow"
-                       HorizontalAlignment="Center" VerticalAlignment="Top" Height="16" Width="92">
-                Вариант В
-            </TextBlock>
-            <TextBlock Canvas.Left="497" Canvas.Top="336" Foreground="#FF9C9999" TextWrapping="WrapWithOverflow"
-                       HorizontalAlignment="Center" VerticalAlignment="Top" Height="16" Width="187">
-                +футболка + сувенирный буклет.
-            </TextBlock>
-            <TextBlock Canvas.Left="476" Canvas.Top="372" Height="23" Width="260" FontSize="18" Foreground="Gray"
-                       FontWeight="Bold">
-                Регистрационный взнос
-            </TextBlock>
-            <Border Height="50" Width="800" Canvas.Top="484" Background="Gray" HorizontalAlignment="Left"
-                    VerticalAlignment="Center" />
-            <Button x:Name="charityInfo_button" Height="18" Width="32" Canvas.Left="225" Canvas.Top="382"
-                    Click="openCharityInfo_button_Click">
+            <TextBlock Canvas.Left="499" Canvas.Top="254" FontWeight="Bold" Foreground="#FF9C9999" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90">Варинат А ($0):</TextBlock>
+            <TextBlock Canvas.Left="592" Canvas.Top="257" Foreground="#FF9C9999" TextWrapping="WrapWithOverflow" HorizontalAlignment="Center" VerticalAlignment="Top" Height="34" Width="92">Номер бегуна+</TextBlock>
+            <TextBlock Canvas.Left="498" Canvas.Top="267" Foreground="#FF9C9999" TextWrapping="WrapWithOverflow" HorizontalAlignment="Center" VerticalAlignment="Top" Height="19" Width="92"> RFID браслет.</TextBlock>
+            <RadioButton x:Name="varB" GroupName="variants" Height="16" Width="14" Canvas.Left="476" Canvas.Top="288" HorizontalAlignment="Center" VerticalAlignment="Top" Checked="varB_Checked" IsChecked="False" />
+            <TextBlock Canvas.Left="501" Canvas.Top="285" FontWeight="Bold" Foreground="#FF9C9999" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96">Варинат B ($20):</TextBlock>
+            <TextBlock Canvas.Left="599" Canvas.Top="285" Foreground="#FF9C9999" TextWrapping="WrapWithOverflow" HorizontalAlignment="Left" VerticalAlignment="Top" Height="16" Width="92">Вариант А +</TextBlock>
+            <TextBlock Canvas.Left="501" Canvas.Top="300" Foreground="#FF9C9999" TextWrapping="WrapWithOverflow" HorizontalAlignment="Left" VerticalAlignment="Top" Height="16" Width="167"> бейсболка + бутылка воды.</TextBlock>
+            <RadioButton x:Name="varC" GroupName="variants" Height="16" Width="14" Canvas.Left="476" Canvas.Top="320" HorizontalAlignment="Center" VerticalAlignment="Top" Checked="varC_Checked" IsChecked="False"/>
+            <TextBlock Canvas.Left="498" Canvas.Top="320" FontWeight="Bold" Foreground="#FF9C9999" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96">Варинат C ($45):</TextBlock>
+            <TextBlock Canvas.Left="595" Canvas.Top="320" Foreground="#FF9C9999" TextWrapping="WrapWithOverflow" HorizontalAlignment="Center" VerticalAlignment="Top" Height="16" Width="92">Вариант В</TextBlock>
+            <TextBlock Canvas.Left="497" Canvas.Top="336" Foreground="#FF9C9999" TextWrapping="WrapWithOverflow" HorizontalAlignment="Center" VerticalAlignment="Top" Height="16" Width="187"> +футболка + сувенирный буклет.</TextBlock>
+            <TextBlock Canvas.Left="476" Canvas.Top="372" Height="23" Width="260" FontSize="18" Foreground="Gray" FontWeight="Bold">Регистрационный взнос</TextBlock>
+            <Border Height="50" Width="800" Canvas.Top="484" Background="Gray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button x:Name="charityInfo_button" Height="18" Width="32" Canvas.Left="225" Canvas.Top="382" Click="openCharityInfo_button_Click">
                 <Button.Template>
                     <ControlTemplate>
-                        <Image Source="images/info1.jpg" />
+                        <Image Source="images/info1.jpg"/>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock x:Name="totalAmount" Text="$0" Foreground="#FF9C9999" FontSize="40" TextAlignment="Center"
-                       HorizontalAlignment="Center" VerticalAlignment="Top" Width="121" Canvas.Left="524"
-                       Canvas.Top="406" Height="55" />
+            <TextBlock x:Name="totalAmount" Text="$0" Foreground="#FF9C9999" FontSize="40" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" Width="121" Canvas.Left="524" Canvas.Top="406" Height="55"/>
 
-            <GroupBox x:Name="charityInfo" Visibility="Hidden" Height="350" Width="450" Background="White"
-                      Canvas.Left="162" Canvas.Top="75">
+            <GroupBox x:Name="charityInfo" Visibility="Hidden" Height="350" Width="450" Background="White" Canvas.Left="162" Canvas.Top="75">
                 <Canvas>
-                    <Button x:Name="closeDebug_button" Height="25" Width="25" Canvas.Left="398" Canvas.Top="10"
-                            Click="closeCharityInfo_button_Click">
+                    <Button x:Name="closeDebug_button" Height="25" Width="25" Canvas.Left="398" Canvas.Top="10" Click="closeCharityInfo_button_Click">
                         <Button.Template>
                             <ControlTemplate>
-                                <Image Source="images/cancel.png" />
+                                <Image Source="images/cancel.png"/>
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
                     <TextBlock x:Name="charityName" FontSize="24" Canvas.Left="81" Canvas.Top="38">Наименование спонсора</TextBlock>
-                    <Image x:Name="charityLogo" Height="117" Canvas.Left="103" Canvas.Top="80" Width="233"
-                           Stretch="Fill" />
-                    <TextBlock x:Name="charityDiscription" FontSize="16" Canvas.Left="63" Canvas.Top="210" Height="123"
-                               TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="312"
-                               HorizontalAlignment="Left" VerticalAlignment="Top">
-                        <Run Text="Описание" />
-                    </TextBlock>
+                    <Image x:Name="charityLogo" Height="117" Canvas.Left="103" Canvas.Top="80" Width="233" Stretch="Fill"/>
+                    <TextBlock x:Name="charityDiscription" FontSize="16" Canvas.Left="63" Canvas.Top="210" Height="123" TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="312" HorizontalAlignment="Left" VerticalAlignment="Top"><Run Text="Описание"/></TextBlock>
 
                 </Canvas>
             </GroupBox>
