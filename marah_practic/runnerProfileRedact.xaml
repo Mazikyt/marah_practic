@@ -3,65 +3,123 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:marah_practic"
         mc:Ignorable="d"
         Title="runnerProfileRedact" Height="550" Width="800" ResizeMode="NoResize">
     <Grid>
         <Canvas Margin="1,0,-1,0">
-            <Border Height="44" Width="800" Background="#FF6F6D6D" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Button Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
+            <Border Height="44" Width="800" Background="#FF6F6D6D" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Button Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Height="24"
+                    Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">MARATHON SKILL 2024</TextBlock>
-            <Button x:Name="logout_button" Content="Logout" HorizontalAlignment="Center" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="709" Canvas.Top="10" FontSize="14" Click="logout_button_Click">
+            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold"
+                       HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">
+                MARATHON SKILL 2024
+            </TextBlock>
+            <Button x:Name="logout_button" Content="Logout" HorizontalAlignment="Center" VerticalAlignment="Top"
+                    Width="81" Height="24" Canvas.Left="709" Canvas.Top="10" FontSize="14" Click="logout_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Border Height="50" Width="800" Canvas.Top="484" Background="Gray" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBlock FontSize="24" Foreground="#FF9C9999" Canvas.Left="96" Canvas.Top="68" Height="39" TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="304" HorizontalAlignment="Left" VerticalAlignment="Center"><Run Language="ru-ru" Text="Редактирование профиля"/></TextBlock>
-            <TextBlock FontSize="18" Canvas.Left="34" Canvas.Top="132" Height="29" TextWrapping="WrapWithOverflow" TextAlignment="Right" Width="112" HorizontalAlignment="Left" VerticalAlignment="Top"><Run Language="ru-ru" Text="Email:"/></TextBlock>
-            <TextBlock FontSize="18" Canvas.Left="34" Canvas.Top="166" Height="29" TextWrapping="WrapWithOverflow" TextAlignment="Right" Width="112" HorizontalAlignment="Center" VerticalAlignment="Top"><Run Language="ru-ru" Text="Имя"/><Run Text=":"/></TextBlock>
-            <TextBlock FontSize="18" Canvas.Left="34" Canvas.Top="200" Height="29" TextWrapping="WrapWithOverflow" TextAlignment="Right" Width="112" HorizontalAlignment="Center" VerticalAlignment="Top"><Run Language="ru-ru" Text="Фамилия"/><Run Text=":"/></TextBlock>
-            <TextBlock FontSize="18" Canvas.Left="34" Canvas.Top="234" Height="29" TextWrapping="WrapWithOverflow" TextAlignment="Right" Width="112" HorizontalAlignment="Center" VerticalAlignment="Top"><Run Language="ru-ru" Text="Пол"/><Run Text=":"/></TextBlock>
-            <TextBlock FontSize="18" Canvas.Left="-14" Canvas.Top="268" Height="29" TextWrapping="WrapWithOverflow" TextAlignment="Right" Width="160" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Дата рождения:"/>
-            <TextBlock FontSize="18" Canvas.Left="-14" Canvas.Top="302" Height="29" TextWrapping="WrapWithOverflow" TextAlignment="Right" Width="160" HorizontalAlignment="Center" VerticalAlignment="Top"><Run Language="ru-ru" Text="Страна"/><Run Text=":"/></TextBlock>
-            <TextBlock x:Name="userEmailText" FontSize="18" Foreground="#FF9C9999" Canvas.Left="170" Canvas.Top="132" Height="30" TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="210" HorizontalAlignment="Left" VerticalAlignment="Center"><Run Language="ru-ru" Text="the.email@address.com"/></TextBlock>
-            <TextBox x:Name="userFirstName" FontSize="18" Foreground="#FF9C9999" Canvas.Left="170" TextWrapping="Wrap" Text="Имя" Canvas.Top="167" Width="210" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBox x:Name="userLastName" FontSize="18" Foreground="#FF9C9999" Canvas.Left="170" TextWrapping="Wrap" Text="Фамилия" Canvas.Top="202" Width="210" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <ComboBox x:Name="genderComboBox" FontSize="18" Foreground="#FF9C9999" Canvas.Left="170" Text="Фамилия" Canvas.Top="237" Width="120" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <DatePicker x:Name="userBirthDay" Canvas.Left="170" Canvas.Top="273" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150"/>
-            <ComboBox x:Name="countryComboBox" FontSize="18" Foreground="#FF9C9999" Canvas.Left="170" Text="Фамилия" Canvas.Top="301" Width="210" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <TextBlock FontSize="24" Foreground="#FF9C9999" Canvas.Left="541" Canvas.Top="230" Height="38" TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="168" HorizontalAlignment="Left" VerticalAlignment="Top"><Run Language="ru-ru" Text="Смена пароля"/></TextBlock>
-            <TextBlock FontSize="18" Foreground="#FF9C9999" Canvas.Left="465" Canvas.Top="273" Height="53" TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="311" HorizontalAlignment="Center" VerticalAlignment="Top"><Run Text="Оставьте эти поля, незаполненными"/><Run Language="ru-ru" Text=", если не хотите изменять пароль."/><Run Text=" "/></TextBlock>
-            <TextBlock FontSize="18" Canvas.Left="487" Canvas.Top="331" Height="29" TextWrapping="WrapWithOverflow" TextAlignment="Right" Width="112" HorizontalAlignment="Left" VerticalAlignment="Top"><Run Language="ru-ru" Text="Пароль"/><Run Text=":"/></TextBlock>
-            <TextBlock FontSize="18" Canvas.Left="443" Canvas.Top="379" Height="29" TextWrapping="WrapWithOverflow" TextAlignment="Right" Width="156" HorizontalAlignment="Center" VerticalAlignment="Top"><Run Language="ru-ru" Text="Повтор пароля"/><Run Text=":"/></TextBlock>
-            <TextBox x:Name="userPassword" FontSize="18" Foreground="#FF9C9999" Canvas.Left="604" TextWrapping="Wrap" Text="Password" Canvas.Top="331" Width="172" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <TextBox x:Name="userRePassword" FontSize="18" Foreground="#FF9C9999" Canvas.Left="604" TextWrapping="Wrap" Text="Re-enter password" Canvas.Top="378" Width="172" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Button x:Name="save_button" Content="Сохранить" Width="90" Height="29" Canvas.Left="245" Canvas.Top="444" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Click="save_button_Click">
+            <Border Height="50" Width="800" Canvas.Top="484" Background="Gray" HorizontalAlignment="Center"
+                    VerticalAlignment="Top" />
+            <TextBlock FontSize="24" Foreground="#FF9C9999" Canvas.Left="96" Canvas.Top="68" Height="39"
+                       TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="304" HorizontalAlignment="Left"
+                       VerticalAlignment="Center">
+                <Run Language="ru-ru" Text="Редактирование профиля" />
+            </TextBlock>
+            <TextBlock FontSize="18" Canvas.Left="34" Canvas.Top="132" Height="29" TextWrapping="WrapWithOverflow"
+                       TextAlignment="Right" Width="112" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Run Language="ru-ru" Text="Email:" />
+            </TextBlock>
+            <TextBlock FontSize="18" Canvas.Left="34" Canvas.Top="166" Height="29" TextWrapping="WrapWithOverflow"
+                       TextAlignment="Right" Width="112" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Run Language="ru-ru" Text="Имя" /><Run Text=":" />
+            </TextBlock>
+            <TextBlock FontSize="18" Canvas.Left="34" Canvas.Top="200" Height="29" TextWrapping="WrapWithOverflow"
+                       TextAlignment="Right" Width="112" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Run Language="ru-ru" Text="Фамилия" /><Run Text=":" />
+            </TextBlock>
+            <TextBlock FontSize="18" Canvas.Left="34" Canvas.Top="234" Height="29" TextWrapping="WrapWithOverflow"
+                       TextAlignment="Right" Width="112" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Run Language="ru-ru" Text="Пол" /><Run Text=":" />
+            </TextBlock>
+            <TextBlock FontSize="18" Canvas.Left="-14" Canvas.Top="268" Height="29" TextWrapping="WrapWithOverflow"
+                       TextAlignment="Right" Width="160" HorizontalAlignment="Left" VerticalAlignment="Center"
+                       Text="Дата рождения:" />
+            <TextBlock FontSize="18" Canvas.Left="-14" Canvas.Top="302" Height="29" TextWrapping="WrapWithOverflow"
+                       TextAlignment="Right" Width="160" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Run Language="ru-ru" Text="Страна" /><Run Text=":" />
+            </TextBlock>
+            <TextBlock x:Name="userEmailText" FontSize="18" Foreground="#FF9C9999" Canvas.Left="170" Canvas.Top="132"
+                       Height="30" TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="210"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Run Language="ru-ru" Text="the.email@address.com" />
+            </TextBlock>
+            <TextBox x:Name="userFirstName" FontSize="18" Foreground="#FF9C9999" Canvas.Left="170" TextWrapping="Wrap"
+                     Text="Имя" Canvas.Top="167" Width="210" Height="30" HorizontalAlignment="Center"
+                     VerticalAlignment="Center" />
+            <TextBox x:Name="userLastName" FontSize="18" Foreground="#FF9C9999" Canvas.Left="170" TextWrapping="Wrap"
+                     Text="Фамилия" Canvas.Top="202" Width="210" Height="30" HorizontalAlignment="Center"
+                     VerticalAlignment="Top" />
+            <ComboBox x:Name="genderComboBox" FontSize="18" Foreground="#FF9C9999" Canvas.Left="170" Text="Фамилия"
+                      Canvas.Top="237" Width="120" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <DatePicker x:Name="userBirthDay" Canvas.Left="170" Canvas.Top="273" HorizontalAlignment="Left"
+                        VerticalAlignment="Center" Width="150" />
+            <ComboBox x:Name="countryComboBox" FontSize="18" Foreground="#FF9C9999" Canvas.Left="170" Text="Фамилия"
+                      Canvas.Top="301" Width="210" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <TextBlock FontSize="24" Foreground="#FF9C9999" Canvas.Left="541" Canvas.Top="230" Height="38"
+                       TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="168" HorizontalAlignment="Left"
+                       VerticalAlignment="Top">
+                <Run Language="ru-ru" Text="Смена пароля" />
+            </TextBlock>
+            <TextBlock FontSize="18" Foreground="#FF9C9999" Canvas.Left="465" Canvas.Top="273" Height="53"
+                       TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="311" HorizontalAlignment="Center"
+                       VerticalAlignment="Top">
+                <Run Text="Оставьте эти поля, незаполненными" />
+                <Run Language="ru-ru" Text=", если не хотите изменять пароль." /><Run Text=" " />
+            </TextBlock>
+            <TextBlock FontSize="18" Canvas.Left="487" Canvas.Top="331" Height="29" TextWrapping="WrapWithOverflow"
+                       TextAlignment="Right" Width="112" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Run Language="ru-ru" Text="Пароль" /><Run Text=":" />
+            </TextBlock>
+            <TextBlock FontSize="18" Canvas.Left="443" Canvas.Top="379" Height="29" TextWrapping="WrapWithOverflow"
+                       TextAlignment="Right" Width="156" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Run Language="ru-ru" Text="Повтор пароля" /><Run Text=":" />
+            </TextBlock>
+            <TextBox x:Name="userPassword" FontSize="18" Foreground="#FF9C9999" Canvas.Left="604" TextWrapping="Wrap"
+                     Text="Password" Canvas.Top="331" Width="172" Height="30" HorizontalAlignment="Left"
+                     VerticalAlignment="Center" />
+            <TextBox x:Name="userRePassword" FontSize="18" Foreground="#FF9C9999" Canvas.Left="604" TextWrapping="Wrap"
+                     Text="Re-enter password" Canvas.Top="378" Width="172" Height="30" HorizontalAlignment="Center"
+                     VerticalAlignment="Top" />
+            <Button x:Name="save_button" Content="Сохранить" Width="90" Height="29" Canvas.Left="245" Canvas.Top="444"
+                    FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Click="save_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button x:Name="back_button" Content="Отмена" Width="90" Height="29" Canvas.Left="353" Canvas.Top="444" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Click="back_button_Click">
+            <Button x:Name="back_button" Content="Отмена" Width="90" Height="29" Canvas.Left="353" Canvas.Top="444"
+                    FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Click="back_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </ControlTemplate>
                 </Button.Template>

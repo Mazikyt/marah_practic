@@ -1,153 +1,131 @@
-﻿using Npgsql;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using Npgsql;
 
-namespace marah_practic
+namespace marah_practic;
+
+/// <summary>
+///     Логика взаимодействия для Login.xaml
+/// </summary>
+public partial class Login : Window
 {
-    /// <summary>
-    /// Логика взаимодействия для Login.xaml
-    /// </summary>
-    public partial class Login : Window
+    private static readonly string connStr = "Host=84.21.173.156:5435;Username=postgres;Password=DBDfJN3Vz9;Database=wss";
+
+    private static readonly NpgsqlConnection conn = new(connStr);
+
+    private readonly User user1 = new();
+
+    public Login()
     {
-        private static string connStr = "Host=Localhost;Username=postgres;Password=1204;Database=wss";
+        if (conn.State == ConnectionState.Closed) conn.Open();
+        InitializeComponent();
+        DebugPage.Visibility = Visibility.Hidden;
+    }
 
-        private static NpgsqlConnection conn = new NpgsqlConnection(connStr);
+    private void back_button_Click(object sender, RoutedEventArgs e)
+    {
+        var mainWindow = new MainWindow();
+        mainWindow.Left = Left;
+        mainWindow.Top = Top;
+        mainWindow.Show();
+        Close();
+    }
 
-        User user1 = new User();
+    private void cancel_button_Click(object sender, RoutedEventArgs e)
+    {
+        var mainWindow = new MainWindow();
+        mainWindow.Left = Left;
+        mainWindow.Top = Top;
+        mainWindow.Show();
+        Close();
+    }
 
-        public Login()
+    private void login_button_Click(object sender, RoutedEventArgs e)
+    {
+        var cmd = new NpgsqlCommand($"select u.id, email, password, r.name from users u " +
+                                    $"join roles r " +
+                                    $"on r.id = u.role_id " +
+                                    $"where u.email = '{user_email.Text}'", conn);
+        var reader = cmd.ExecuteReader();
         {
-            if (conn.State == System.Data.ConnectionState.Closed)
-            {
-                conn.Open();
-            }
-            InitializeComponent();
-            DebugPage.Visibility = Visibility.Hidden;
-        }
-
-        class User
-        {
-            public int id;
-            public string email;
-            public string password;
-            public string role;
-        }
-
-        private void back_button_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Left = this.Left;
-            mainWindow.Top = this.Top;
-            mainWindow.Show();
-            this.Close();
-        }
-
-        private void cancel_button_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Left = this.Left;
-            mainWindow.Top = this.Top;
-            mainWindow.Show();
-            this.Close();
-        }
-
-        private void login_button_Click(object sender, RoutedEventArgs e)
-        {
-
-            var cmd = new NpgsqlCommand($"select u.id, email, password, r.name from users u " +
-                $"join roles r " +
-                $"on r.id = u.role_id " +
-                $"where u.email = '{user_email.Text}'", conn);
-            var reader = cmd.ExecuteReader();
-            {
-                if (reader.HasRows)
+            if (reader.HasRows)
+                while (reader.Read())
                 {
-                    while (reader.Read())
-                    {
-                        user1.id = reader.GetInt32(0);
-                        user1.email = reader.GetString(1);
-                        user1.password = reader.GetString(2);
-                        user1.role = reader.GetString(3);
-                    }
+                    user1.id = reader.GetInt32(0);
+                    user1.email = reader.GetString(1);
+                    user1.password = reader.GetString(2);
+                    user1.role = reader.GetString(3);
                 }
-                else
-                {
-                    MessageBox.Show("Ошибка ввода email", "Ошибка");
-                }
-            }
-            reader.Close();
-
-            if (user_password.Text == user1.password)
-            {
-                if (user1.role == "Runner")
-                {
-                    menurunner menurunner = new menurunner(user1.id);
-                    menurunner.Left = this.Left;
-                    menurunner.Top = this.Top;
-                    menurunner.Show();
-                    this.Close();
-                }
-                else if (user1.role == "Coordinator")
-                {
-                    menukoordinator menukoordinator = new menukoordinator(user1.id);
-                    menukoordinator.Left = this.Left;
-                    menukoordinator.Top = this.Top;
-                    menukoordinator.Show();
-                    this.Close();
-                }
-                else if (user1.role == "Administrator")
-                {
-                    adminmenu adminmenu = new adminmenu();
-                    adminmenu.Left = this.Left;
-                    adminmenu.Top = this.Top;
-                    adminmenu.Show();
-                    this.Close();
-                }
-            }
             else
+                MessageBox.Show("Ошибка ввода email", "Ошибка");
+        }
+        reader.Close();
+
+        if (user_password.Text == user1.password)
+        {
+            if (user1.role == "Runner")
             {
-                MessageBox.Show("Ошибка ввода password", "Ошибка");
+                var menurunner = new menurunner(user1.id);
+                menurunner.Left = Left;
+                menurunner.Top = Top;
+                menurunner.Show();
+                Close();
+            }
+            else if (user1.role == "Coordinator")
+            {
+                var menukoordinator = new menukoordinator(user1.id);
+                menukoordinator.Left = Left;
+                menukoordinator.Top = Top;
+                menukoordinator.Show();
+                Close();
+            }
+            else if (user1.role == "Administrator")
+            {
+                var adminmenu = new adminmenu();
+                adminmenu.Left = Left;
+                adminmenu.Top = Top;
+                adminmenu.Show();
+                Close();
             }
         }
-
-        private void runner_button_Click(object sender, RoutedEventArgs e)
+        else
         {
-            menurunner menurunner = new menurunner(user1.id);
-            menurunner.Top = this.Top;
-            menurunner.Left = this.Left;
-            menurunner.Show();
-            this.Close();
+            MessageBox.Show("Ошибка ввода password", "Ошибка");
         }
+    }
 
-        private void coordinator_button_Click(object sender, RoutedEventArgs e)
-        {
-            menukoordinator menukoordinator = new menukoordinator(user1.id);
-            menukoordinator.Top = this.Top;
-            menukoordinator.Left = this.Left;  
-            menukoordinator.Show();
-            this.Close();
-        }
+    private void runner_button_Click(object sender, RoutedEventArgs e)
+    {
+        var menurunner = new menurunner(user1.id);
+        menurunner.Top = Top;
+        menurunner.Left = Left;
+        menurunner.Show();
+        Close();
+    }
 
-        private void admin_button_Click(object sender, RoutedEventArgs e)
-        {
+    private void coordinator_button_Click(object sender, RoutedEventArgs e)
+    {
+        var menukoordinator = new menukoordinator(user1.id);
+        menukoordinator.Top = Top;
+        menukoordinator.Left = Left;
+        menukoordinator.Show();
+        Close();
+    }
 
-        }
+    private void admin_button_Click(object sender, RoutedEventArgs e)
+    {
+    }
 
-        private void closeDebug_button_Click(object sender, RoutedEventArgs e)
-        {
-            DebugPage.Visibility = Visibility.Hidden;
-        }
+    private void closeDebug_button_Click(object sender, RoutedEventArgs e)
+    {
+        DebugPage.Visibility = Visibility.Hidden;
+    }
+
+    private class User
+    {
+        public string email;
+        public int id;
+        public string password;
+        public string role;
     }
 }

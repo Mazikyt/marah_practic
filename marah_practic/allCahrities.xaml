@@ -3,44 +3,60 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:marah_practic"
         mc:Ignorable="d"
         Title="allCahrities" Height="550" Width="800" ResizeMode="NoResize">
     <Grid>
         <Canvas>
-            <Border Height="44" Width="800" Background="#FF6F6D6D" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
+            <Border Height="44" Width="800" Background="#FF6F6D6D" HorizontalAlignment="Left"
+                    VerticalAlignment="Center" />
+            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81"
+                    Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">MARATHON SKILL 2024</TextBlock>
-            <TextBlock FontSize="24" Foreground="#FF9C9999" Canvas.Left="139" Canvas.Top="78" HorizontalAlignment="Center" VerticalAlignment="Center" Height="39" TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="502">Список благотворительных организаций</TextBlock>
-            <Border Height="52" Width="800" Canvas.Top="484" Background="Gray" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold"
+                       HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">
+                MARATHON SKILL 2024
+            </TextBlock>
+            <TextBlock FontSize="24" Foreground="#FF9C9999" Canvas.Left="139" Canvas.Top="78"
+                       HorizontalAlignment="Center" VerticalAlignment="Center" Height="39"
+                       TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="502">
+                Список благотворительных организаций
+            </TextBlock>
+            <Border Height="52" Width="800" Canvas.Top="484" Background="Gray" HorizontalAlignment="Center"
+                    VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
                 <Border.RenderTransform>
                     <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform AngleX="0.655"/>
-                        <RotateTransform/>
-                        <TranslateTransform X="0.389"/>
+                        <ScaleTransform />
+                        <SkewTransform AngleX="0.655" />
+                        <RotateTransform />
+                        <TranslateTransform X="0.389" />
                     </TransformGroup>
                 </Border.RenderTransform>
             </Border>
-            <TextBlock FontSize="18" Canvas.Left="44" Canvas.Top="122" Height="72" TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="692" HorizontalAlignment="Center" VerticalAlignment="Top"><Run Text="Это - список всех благотворительных учреждений, которые поддерживаются в"/><LineBreak/><Run Text="Marathon Skills 2016. "/><Run Language="ru-ru" Text="Спасибо за помощь, вы поддерживаете их, спонсируя "/><LineBreak/><Run Language="ru-ru" Text="бегунов!"/></TextBlock>
+            <TextBlock FontSize="18" Canvas.Left="44" Canvas.Top="122" Height="72" TextWrapping="WrapWithOverflow"
+                       TextAlignment="Center" Width="692" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Run Text="Это - список всех благотворительных учреждений, которые поддерживаются в" /><LineBreak />
+                <Run Text="Marathon Skills 2016. " />
+                <Run Language="ru-ru" Text="Спасибо за помощь, вы поддерживаете их, спонсируя " /><LineBreak />
+                <Run Language="ru-ru" Text="бегунов!" />
+            </TextBlock>
 
 
-            <ListView x:Name="charities_ListView" ItemsSource="{Binding Items}" Canvas.Left="10" Canvas.Top="210" HorizontalAlignment="Center" VerticalAlignment="Top" Width="780" Height="269">
+            <ListView x:Name="charities_ListView" ItemsSource="{Binding Items}" Canvas.Left="10" Canvas.Top="210"
+                      HorizontalAlignment="Center" VerticalAlignment="Top" Width="780" Height="269">
                 <ListView.View>
                     <GridView>
                         <!-- Первый столбец: изображение -->
                         <GridViewColumn Width="280" Header="Изображение">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Image Source="{Binding logo.Source}" Width="250" Height="250"/>
+                                    <Image Source="{Binding logo.Source}" Width="250" Height="250" />
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
@@ -50,8 +66,8 @@
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel>
-                                        <TextBlock Text="{Binding name}" FontWeight="Bold" FontSize="14"/>
-                                        <TextBlock Text="{Binding description}" FontStyle="Italic" FontSize="12"/>
+                                        <TextBlock Text="{Binding name}" FontWeight="Bold" FontSize="14" />
+                                        <TextBlock Text="{Binding description}" FontStyle="Italic" FontSize="12" />
                                     </StackPanel>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>

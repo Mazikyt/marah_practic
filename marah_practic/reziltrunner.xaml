@@ -3,74 +3,181 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:marah_practic"
         mc:Ignorable="d"
         Title="reziltrunner" Height="550" Width="800" ResizeMode="NoResize">
     <Grid>
         <Canvas>
-            <Border Height="95" Width="860" Background="#FF6F6D6D" HorizontalAlignment="Center" Canvas.Left="-40" VerticalAlignment="Top" Canvas.Top="-51"/>
-            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
+            <Border Height="95" Width="860" Background="#FF6F6D6D" HorizontalAlignment="Center" Canvas.Left="-40"
+                    VerticalAlignment="Top" Canvas.Top="-51" />
+            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81"
+                    Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">MARATHON SKILL 2024</TextBlock>
-            <Button x:Name="logout_button" Content="Logout" HorizontalAlignment="Center" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="709" Canvas.Top="10" FontSize="14" Click="logout_button_Click">
+            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold"
+                       HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">
+                MARATHON SKILL 2024
+            </TextBlock>
+            <Button x:Name="logout_button" Content="Logout" HorizontalAlignment="Center" VerticalAlignment="Top"
+                    Width="81" Height="24" Canvas.Left="709" Canvas.Top="10" FontSize="14" Click="logout_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="24" Foreground="#FF9C9999" Canvas.Left="165" Canvas.Top="61" HorizontalAlignment="Center" VerticalAlignment="Top" Height="40" TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="470">Мои результаты</TextBlock>
-            <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center" Height="54" Width="700" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="48" Canvas.Top="106" Foreground="#FF9C9999">Это - список всех ваших прошлых результатов гонки Marathon Skills. Общее место сравнивает всех бегунов.</TextBlock>
-            <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center" Height="38" Width="750" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="25" Canvas.Top="160" Foreground="#FF9C9999">Место по категории compares runners in the same gender and age categories.</TextBlock>
-            <TextBlock Canvas.Left="198" Canvas.Top="203" Height="29" Width="52" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"> Пол:</TextBlock>
-            <TextBlock Canvas.Left="250" Canvas.Top="206" FontSize="18" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Center">мужской</TextBlock>
-            <TextBlock Height="29" Width="224" FontSize="20" FontWeight="Bold" Canvas.Left="375" Canvas.Top="203" HorizontalAlignment="Center" VerticalAlignment="Top">Возрастная категория:</TextBlock>
-            <TextBlock Height="22" Width="53" FontSize="20" Canvas.Left="604" Canvas.Top="206" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Gray">18-29</TextBlock>
-            <TextBlock Height="31" Width="91" FontSize="20" Foreground="Gray" Canvas.Left="25" Canvas.Top="261" HorizontalAlignment="Center" VerticalAlignment="Top">Марафон</TextBlock>
-            <TextBlock Height="31" Width="104" FontSize="20" Foreground="Gray" Canvas.Left="235" Canvas.Top="261" HorizontalAlignment="Left" VerticalAlignment="Center">Дистанция</TextBlock>
-            <TextBlock Height="31" Width="91" FontSize="20" Foreground="Gray" Canvas.Left="433" Canvas.Top="261" HorizontalAlignment="Left" VerticalAlignment="Center">Время</TextBlock>
-            <TextBlock Height="54" Width="80" FontSize="20" Foreground="Gray" Canvas.Left="577" Canvas.Top="240" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap">Общее место</TextBlock>
-            <TextBlock Height="57" Width="112" FontSize="20" Foreground="Gray" Canvas.Left="678" Canvas.Top="240" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="WrapWithOverflow">Место по категории</TextBlock>
-            <TextBlock Canvas.Left="21" Canvas.Top="298" Height="25" Width="95" FontSize="18" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Top"> 2014 Japan</TextBlock>
-            <TextBlock Canvas.Left="21" Canvas.Top="323" Height="25" Width="125" FontSize="18" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Center"> 2013 Germany</TextBlock>
-            <TextBlock Canvas.Left="21" Canvas.Top="348" Height="25" Width="126" FontSize="18" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Top"> 2012 Vietnam</TextBlock>
-            <TextBlock Canvas.Left="21" Canvas.Top="373" Height="25" Width="177" FontSize="18" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Center"> 2011 United Kingdom</TextBlock>
-            <TextBlock Canvas.Left="235" Canvas.Top="297" Height="25" Width="169" FontSize="18" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Center"> 42km Full Marathon</TextBlock>
-            <TextBlock Canvas.Left="235" Canvas.Top="323" Height="25" Width="169" FontSize="18" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Top"> 42km Full Marathon</TextBlock>
-            <TextBlock Canvas.Left="235" Canvas.Top="348" Height="25" Width="169" FontSize="18" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Top"> 42km Full Marathon</TextBlock>
-            <TextBlock Canvas.Left="235" Canvas.Top="373" Height="25" Width="169" FontSize="18" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Top"> 42km Full Marathon</TextBlock>
-            <TextBlock Canvas.Left="432" Canvas.Top="297" Height="25" Width="94" FontSize="18" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Top"> 4h 04m 12s</TextBlock>
-            <TextBlock Canvas.Left="433" Canvas.Top="323" Height="25" Width="94" FontSize="18" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"> 4h 15m 25s</TextBlock>
-            <TextBlock Canvas.Left="433" Canvas.Top="348" Height="25" Width="94" FontSize="18" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Top"> 4h 34m 16s</TextBlock>
-            <TextBlock Canvas.Left="433" Canvas.Top="373" Height="25" Width="94" FontSize="18" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Top"> 4h 56m 51s</TextBlock>
-            <TextBlock Canvas.Left="576" Canvas.Top="298" Height="25" Width="54" FontSize="18" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Center">#598</TextBlock>
-            <TextBlock Canvas.Left="575" Canvas.Top="323" Height="25" Width="55" FontSize="18" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Center">#604</TextBlock>
-            <TextBlock Canvas.Left="576" Canvas.Top="348" Height="25" Width="55" FontSize="18" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Center">#623</TextBlock>
-            <TextBlock Canvas.Left="577" Canvas.Top="373" Height="25" Width="55" FontSize="18" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Center">#712</TextBlock>
-            <TextBlock Canvas.Left="679" Canvas.Top="298" Height="25" Width="55" FontSize="18" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Center">#184</TextBlock>
-            <TextBlock Canvas.Left="679" Canvas.Top="323" Height="25" Width="55" FontSize="18" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Top">#199</TextBlock>
-            <TextBlock Canvas.Left="679" Canvas.Top="348" Height="25" Width="55" FontSize="18" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Top">#214</TextBlock>
-            <TextBlock Canvas.Left="679" Canvas.Top="373" Height="25" Width="55" FontSize="18" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Top">#254</TextBlock>
-            <Button Content="Показать все результаты" HorizontalAlignment="Left" VerticalAlignment="Top" Width="178" Height="29" Canvas.Left="311" Canvas.Top="429" FontSize="14">
+            <TextBlock FontSize="24" Foreground="#FF9C9999" Canvas.Left="165" Canvas.Top="61"
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Height="40" TextWrapping="WrapWithOverflow"
+                       TextAlignment="Center" Width="470">
+                Мои результаты
+            </TextBlock>
+            <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center" Height="54" Width="700" FontSize="20"
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="48" Canvas.Top="106"
+                       Foreground="#FF9C9999">
+                Это - список всех ваших прошлых результатов гонки Marathon Skills. Общее место сравнивает всех бегунов.
+            </TextBlock>
+            <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center" Height="38" Width="750" FontSize="20"
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="25" Canvas.Top="160"
+                       Foreground="#FF9C9999">
+                Место по категории compares runners in the same gender and age categories.
+            </TextBlock>
+            <TextBlock Canvas.Left="198" Canvas.Top="203" Height="29" Width="52" FontSize="20" FontWeight="Bold"
+                       HorizontalAlignment="Center" VerticalAlignment="Top">
+                Пол:
+            </TextBlock>
+            <TextBlock Canvas.Left="250" Canvas.Top="206" FontSize="18" Foreground="Gray" HorizontalAlignment="Left"
+                       VerticalAlignment="Center">
+                мужской
+            </TextBlock>
+            <TextBlock Height="29" Width="224" FontSize="20" FontWeight="Bold" Canvas.Left="375" Canvas.Top="203"
+                       HorizontalAlignment="Center" VerticalAlignment="Top">
+                Возрастная категория:
+            </TextBlock>
+            <TextBlock Height="22" Width="53" FontSize="20" Canvas.Left="604" Canvas.Top="206"
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Gray">
+                18-29
+            </TextBlock>
+            <TextBlock Height="31" Width="91" FontSize="20" Foreground="Gray" Canvas.Left="25" Canvas.Top="261"
+                       HorizontalAlignment="Center" VerticalAlignment="Top">
+                Марафон
+            </TextBlock>
+            <TextBlock Height="31" Width="104" FontSize="20" Foreground="Gray" Canvas.Left="235" Canvas.Top="261"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">
+                Дистанция
+            </TextBlock>
+            <TextBlock Height="31" Width="91" FontSize="20" Foreground="Gray" Canvas.Left="433" Canvas.Top="261"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">
+                Время
+            </TextBlock>
+            <TextBlock Height="54" Width="80" FontSize="20" Foreground="Gray" Canvas.Left="577" Canvas.Top="240"
+                       HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap">
+                Общее место
+            </TextBlock>
+            <TextBlock Height="57" Width="112" FontSize="20" Foreground="Gray" Canvas.Left="678" Canvas.Top="240"
+                       HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="WrapWithOverflow">
+                Место по категории
+            </TextBlock>
+            <TextBlock Canvas.Left="21" Canvas.Top="298" Height="25" Width="95" FontSize="18" Foreground="Gray"
+                       HorizontalAlignment="Center" VerticalAlignment="Top">
+                2014 Japan
+            </TextBlock>
+            <TextBlock Canvas.Left="21" Canvas.Top="323" Height="25" Width="125" FontSize="18" Foreground="Gray"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">
+                2013 Germany
+            </TextBlock>
+            <TextBlock Canvas.Left="21" Canvas.Top="348" Height="25" Width="126" FontSize="18" Foreground="Gray"
+                       HorizontalAlignment="Center" VerticalAlignment="Top">
+                2012 Vietnam
+            </TextBlock>
+            <TextBlock Canvas.Left="21" Canvas.Top="373" Height="25" Width="177" FontSize="18" Foreground="Gray"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">
+                2011 United Kingdom
+            </TextBlock>
+            <TextBlock Canvas.Left="235" Canvas.Top="297" Height="25" Width="169" FontSize="18" Foreground="Gray"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">
+                42km Full Marathon
+            </TextBlock>
+            <TextBlock Canvas.Left="235" Canvas.Top="323" Height="25" Width="169" FontSize="18" Foreground="Gray"
+                       HorizontalAlignment="Center" VerticalAlignment="Top">
+                42km Full Marathon
+            </TextBlock>
+            <TextBlock Canvas.Left="235" Canvas.Top="348" Height="25" Width="169" FontSize="18" Foreground="Gray"
+                       HorizontalAlignment="Center" VerticalAlignment="Top">
+                42km Full Marathon
+            </TextBlock>
+            <TextBlock Canvas.Left="235" Canvas.Top="373" Height="25" Width="169" FontSize="18" Foreground="Gray"
+                       HorizontalAlignment="Center" VerticalAlignment="Top">
+                42km Full Marathon
+            </TextBlock>
+            <TextBlock Canvas.Left="432" Canvas.Top="297" Height="25" Width="94" FontSize="18" Foreground="Gray"
+                       HorizontalAlignment="Left" VerticalAlignment="Top">
+                4h 04m 12s
+            </TextBlock>
+            <TextBlock Canvas.Left="433" Canvas.Top="323" Height="25" Width="94" FontSize="18" Foreground="Gray"
+                       HorizontalAlignment="Center" VerticalAlignment="Center">
+                4h 15m 25s
+            </TextBlock>
+            <TextBlock Canvas.Left="433" Canvas.Top="348" Height="25" Width="94" FontSize="18" Foreground="Gray"
+                       HorizontalAlignment="Left" VerticalAlignment="Top">
+                4h 34m 16s
+            </TextBlock>
+            <TextBlock Canvas.Left="433" Canvas.Top="373" Height="25" Width="94" FontSize="18" Foreground="Gray"
+                       HorizontalAlignment="Left" VerticalAlignment="Top">
+                4h 56m 51s
+            </TextBlock>
+            <TextBlock Canvas.Left="576" Canvas.Top="298" Height="25" Width="54" FontSize="18" Foreground="Gray"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">
+                #598
+            </TextBlock>
+            <TextBlock Canvas.Left="575" Canvas.Top="323" Height="25" Width="55" FontSize="18" Foreground="Gray"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">
+                #604
+            </TextBlock>
+            <TextBlock Canvas.Left="576" Canvas.Top="348" Height="25" Width="55" FontSize="18" Foreground="Gray"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">
+                #623
+            </TextBlock>
+            <TextBlock Canvas.Left="577" Canvas.Top="373" Height="25" Width="55" FontSize="18" Foreground="Gray"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">
+                #712
+            </TextBlock>
+            <TextBlock Canvas.Left="679" Canvas.Top="298" Height="25" Width="55" FontSize="18" Foreground="Gray"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">
+                #184
+            </TextBlock>
+            <TextBlock Canvas.Left="679" Canvas.Top="323" Height="25" Width="55" FontSize="18" Foreground="Gray"
+                       HorizontalAlignment="Center" VerticalAlignment="Top">
+                #199
+            </TextBlock>
+            <TextBlock Canvas.Left="679" Canvas.Top="348" Height="25" Width="55" FontSize="18" Foreground="Gray"
+                       HorizontalAlignment="Center" VerticalAlignment="Top">
+                #214
+            </TextBlock>
+            <TextBlock Canvas.Left="679" Canvas.Top="373" Height="25" Width="55" FontSize="18" Foreground="Gray"
+                       HorizontalAlignment="Center" VerticalAlignment="Top">
+                #254
+            </TextBlock>
+            <Button Content="Показать все результаты" HorizontalAlignment="Left" VerticalAlignment="Top" Width="178"
+                    Height="29" Canvas.Left="311" Canvas.Top="429" FontSize="14">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Border Height="68" Width="995" Canvas.Top="484" Background="Gray" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="-117"/>
-            <TextBlock x:Name="timerLabel" Canvas.Left="212" Canvas.Top="497" FontSize="18" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" Width="401"/>
+            <Border Height="68" Width="995" Canvas.Top="484" Background="Gray" HorizontalAlignment="Center"
+                    VerticalAlignment="Top" Canvas.Left="-117" />
+            <TextBlock x:Name="timerLabel" Canvas.Left="212" Canvas.Top="497" FontSize="18" Foreground="White"
+                       HorizontalAlignment="Left" VerticalAlignment="Center" Width="401" />
         </Canvas>
 
     </Grid>

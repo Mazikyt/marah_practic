@@ -3,57 +3,88 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:marah_practic"
         mc:Ignorable="d"
         Title="bmi_calc" Height="550" Width="800" ResizeMode="NoResize">
     <Grid>
         <Canvas>
-            <Border Height="47" Width="800" Background="#FF6F6D6D" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
+            <Border Height="47" Width="800" Background="#FF6F6D6D" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81"
+                    Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">MARATHON SKILL 2024</TextBlock>
-            <Button Content="Logout" HorizontalAlignment="Center" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="709" Canvas.Top="10" FontSize="14" Click="back_button_Click">
+            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold"
+                       HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">
+                MARATHON SKILL 2024
+            </TextBlock>
+            <Button Content="Logout" HorizontalAlignment="Center" VerticalAlignment="Top" Width="81" Height="24"
+                    Canvas.Left="709" Canvas.Top="10" FontSize="14" Click="back_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="24" Foreground="#FF9C9999" Canvas.Left="263" Canvas.Top="69" HorizontalAlignment="Center" VerticalAlignment="Top" Height="39" TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="271">BMI калькулятор</TextBlock>
+            <TextBlock FontSize="24" Foreground="#FF9C9999" Canvas.Left="263" Canvas.Top="69"
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Height="39" TextWrapping="WrapWithOverflow"
+                       TextAlignment="Center" Width="271">
+                BMI калькулятор
+            </TextBlock>
 
-            <TextBlock FontSize="16" Foreground="#FF9C9999" Canvas.Left="47" Canvas.Top="113" HorizontalAlignment="Center" VerticalAlignment="Top" Height="85" TextWrapping="WrapWithOverflow" Width="407">BMI (индекс массы тела) — показатель соотношения веса и роста для оценки нормального или избыточного веса. BMI-калькулятор вычисляет индекс на основе веса и роста для оценки весовой категории.</TextBlock>
-            <Border Height="108" Canvas.Left="47" Canvas.Top="219" Width="124" Background="#FFE3E1E1" BorderBrush="#FF404040" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="1,1,1,2"/>
-            <Image Height="80" Canvas.Left="98" Source="/images/male-icon.png" Canvas.Top="227" Width="28" HorizontalAlignment="Center" VerticalAlignment="Top" OpacityMask="Gray" StretchDirection="DownOnly"/>
-            <TextBlock FontSize="16" Foreground="#FF9C9999" Canvas.Left="77" Canvas.Top="293" HorizontalAlignment="Center" VerticalAlignment="Top" Height="24" TextWrapping="WrapWithOverflow" Width="70">Мужской</TextBlock>
-            <Border Height="108" Canvas.Left="188" Canvas.Top="219" Width="124" Background="#FFE3E1E1" BorderBrush="#FF404040" HorizontalAlignment="Center" VerticalAlignment="Top" BorderThickness="1,1,1,2"/>
-            <Image Height="80" Canvas.Left="236" Source="/images/female-icon.png" Canvas.Top="227" Width="28" HorizontalAlignment="Center" VerticalAlignment="Top" OpacityMask="Gray" StretchDirection="DownOnly"/>
-            <TextBlock FontSize="16" Foreground="#FF9C9999" Canvas.Left="215" Canvas.Top="293" HorizontalAlignment="Center" VerticalAlignment="Top" Height="24" TextWrapping="WrapWithOverflow" Width="70">Женский</TextBlock>
-            <TextBlock FontSize="16" Foreground="#FF9C9999" Canvas.Left="82" Canvas.Top="344" HorizontalAlignment="Left" VerticalAlignment="Top" Height="24" TextWrapping="WrapWithOverflow" Width="39">Рост:</TextBlock>
+            <TextBlock FontSize="16" Foreground="#FF9C9999" Canvas.Left="47" Canvas.Top="113"
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Height="85" TextWrapping="WrapWithOverflow"
+                       Width="407">
+                BMI (индекс массы тела) — показатель соотношения веса и роста для оценки нормального или избыточного веса. BMI-калькулятор вычисляет индекс на основе веса и роста для оценки весовой категории.
+            </TextBlock>
+            <Border Height="108" Canvas.Left="47" Canvas.Top="219" Width="124" Background="#FFE3E1E1"
+                    BorderBrush="#FF404040" HorizontalAlignment="Left" VerticalAlignment="Top"
+                    BorderThickness="1,1,1,2" />
+            <Image Height="80" Canvas.Left="98" Source="/images/male-icon.png" Canvas.Top="227" Width="28"
+                   HorizontalAlignment="Center" VerticalAlignment="Top" OpacityMask="Gray" StretchDirection="DownOnly" />
+            <TextBlock FontSize="16" Foreground="#FF9C9999" Canvas.Left="77" Canvas.Top="293"
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Height="24" TextWrapping="WrapWithOverflow"
+                       Width="70">
+                Мужской
+            </TextBlock>
+            <Border Height="108" Canvas.Left="188" Canvas.Top="219" Width="124" Background="#FFE3E1E1"
+                    BorderBrush="#FF404040" HorizontalAlignment="Center" VerticalAlignment="Top"
+                    BorderThickness="1,1,1,2" />
+            <Image Height="80" Canvas.Left="236" Source="/images/female-icon.png" Canvas.Top="227" Width="28"
+                   HorizontalAlignment="Center" VerticalAlignment="Top" OpacityMask="Gray" StretchDirection="DownOnly" />
+            <TextBlock FontSize="16" Foreground="#FF9C9999" Canvas.Left="215" Canvas.Top="293"
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Height="24" TextWrapping="WrapWithOverflow"
+                       Width="70">
+                Женский
+            </TextBlock>
+            <TextBlock FontSize="16" Foreground="#FF9C9999" Canvas.Left="82" Canvas.Top="344"
+                       HorizontalAlignment="Left" VerticalAlignment="Top" Height="24" TextWrapping="WrapWithOverflow"
+                       Width="39">
+                Рост:
+            </TextBlock>
             <TextBox Width="46" Height="24" VerticalAlignment="Top" HorizontalAlignment="Center"
-BorderBrush="Black" BorderThickness="1" Padding="5" Canvas.Left="123" Canvas.Top="348" RenderTransformOrigin="0.5,0.5" FontStyle="Italic">
+                     BorderBrush="Black" BorderThickness="1" Padding="5" Canvas.Left="123" Canvas.Top="348"
+                     RenderTransformOrigin="0.5,0.5" FontStyle="Italic">
                 <TextBox.RenderTransform>
                     <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform AngleY="-0.145"/>
-                        <RotateTransform/>
-                        <TranslateTransform Y="-0.264"/>
+                        <ScaleTransform />
+                        <SkewTransform AngleY="-0.145" />
+                        <RotateTransform />
+                        <TranslateTransform Y="-0.264" />
                     </TransformGroup>
                 </TextBox.RenderTransform>
                 <TextBox.Style>
                     <Style TargetType="TextBox">
-                        <Setter Property="Background" Value="White"/>
-                        <Setter Property="BorderBrush" Value="Black"/>
-                        <Setter Property="BorderThickness" Value="1"/>
-                        <Setter Property="Padding" Value="5"/>
+                        <Setter Property="Background" Value="White" />
+                        <Setter Property="BorderBrush" Value="Black" />
+                        <Setter Property="BorderThickness" Value="1" />
+                        <Setter Property="Padding" Value="5" />
                         <Style.Triggers>
                             <!-- Триггер для отображения подсказки, если поле пустое -->
                             <Trigger Property="Text" Value="">
@@ -63,16 +94,16 @@ BorderBrush="Black" BorderThickness="1" Padding="5" Canvas.Left="123" Canvas.Top
                                             <Grid>
                                                 <!-- Само поле для ввода -->
                                                 <Border BorderBrush="{TemplateBinding BorderBrush}"
-                                   BorderThickness="{TemplateBinding BorderThickness}"
-                                   Background="{TemplateBinding Background}">
+                                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                                        Background="{TemplateBinding Background}">
                                                     <ScrollViewer x:Name="PART_ContentHost" />
                                                 </Border>
                                                 <!-- Подсказка -->
-                                                <TextBlock Text="170" 
-                                      Foreground="Gray" 
-                                      VerticalAlignment="Center" 
-                                      IsHitTestVisible="False"
-                                      Margin="5,0,0,0"/>
+                                                <TextBlock Text="170"
+                                                           Foreground="Gray"
+                                                           VerticalAlignment="Center"
+                                                           IsHitTestVisible="False"
+                                                           Margin="5,0,0,0" />
                                             </Grid>
                                         </ControlTemplate>
                                     </Setter.Value>
@@ -82,25 +113,34 @@ BorderBrush="Black" BorderThickness="1" Padding="5" Canvas.Left="123" Canvas.Top
                     </Style>
                 </TextBox.Style>
             </TextBox>
-            <TextBlock FontSize="16" Foreground="#FF9C9999" Canvas.Left="176" Canvas.Top="351" HorizontalAlignment="Center" VerticalAlignment="Top" Height="24" TextWrapping="WrapWithOverflow" Width="39" RenderTransformOrigin="0.564,0.51">см</TextBlock>
+            <TextBlock FontSize="16" Foreground="#FF9C9999" Canvas.Left="176" Canvas.Top="351"
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Height="24" TextWrapping="WrapWithOverflow"
+                       Width="39" RenderTransformOrigin="0.564,0.51">
+                см
+            </TextBlock>
 
-            <TextBlock FontSize="16" Foreground="#FF9C9999" Canvas.Left="86" Canvas.Top="380" HorizontalAlignment="Center" VerticalAlignment="Top" Height="24" TextWrapping="WrapWithOverflow" Width="30">Вес:</TextBlock>
+            <TextBlock FontSize="16" Foreground="#FF9C9999" Canvas.Left="86" Canvas.Top="380"
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Height="24" TextWrapping="WrapWithOverflow"
+                       Width="30">
+                Вес:
+            </TextBlock>
             <TextBox Width="46" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left"
-BorderBrush="Black" BorderThickness="1" Padding="5" Canvas.Left="123" Canvas.Top="383" RenderTransformOrigin="0.5,0.5" FontStyle="Italic">
+                     BorderBrush="Black" BorderThickness="1" Padding="5" Canvas.Left="123" Canvas.Top="383"
+                     RenderTransformOrigin="0.5,0.5" FontStyle="Italic">
                 <TextBox.RenderTransform>
                     <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform AngleY="-0.145"/>
-                        <RotateTransform/>
-                        <TranslateTransform Y="-0.264"/>
+                        <ScaleTransform />
+                        <SkewTransform AngleY="-0.145" />
+                        <RotateTransform />
+                        <TranslateTransform Y="-0.264" />
                     </TransformGroup>
                 </TextBox.RenderTransform>
                 <TextBox.Style>
                     <Style TargetType="TextBox">
-                        <Setter Property="Background" Value="White"/>
-                        <Setter Property="BorderBrush" Value="Black"/>
-                        <Setter Property="BorderThickness" Value="1"/>
-                        <Setter Property="Padding" Value="5"/>
+                        <Setter Property="Background" Value="White" />
+                        <Setter Property="BorderBrush" Value="Black" />
+                        <Setter Property="BorderThickness" Value="1" />
+                        <Setter Property="Padding" Value="5" />
                         <Style.Triggers>
                             <!-- Триггер для отображения подсказки, если поле пустое -->
                             <Trigger Property="Text" Value="">
@@ -110,16 +150,16 @@ BorderBrush="Black" BorderThickness="1" Padding="5" Canvas.Left="123" Canvas.Top
                                             <Grid>
                                                 <!-- Само поле для ввода -->
                                                 <Border BorderBrush="{TemplateBinding BorderBrush}"
-                                   BorderThickness="{TemplateBinding BorderThickness}"
-                                   Background="{TemplateBinding Background}">
+                                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                                        Background="{TemplateBinding Background}">
                                                     <ScrollViewer x:Name="PART_ContentHost" />
                                                 </Border>
                                                 <!-- Подсказка -->
-                                                <TextBlock Text="70" 
-                                      Foreground="Gray" 
-                                      VerticalAlignment="Center" 
-                                      IsHitTestVisible="False"
-                                      Margin="5,0,0,0"/>
+                                                <TextBlock Text="70"
+                                                           Foreground="Gray"
+                                                           VerticalAlignment="Center"
+                                                           IsHitTestVisible="False"
+                                                           Margin="5,0,0,0" />
                                             </Grid>
                                         </ControlTemplate>
                                     </Setter.Value>
@@ -129,51 +169,85 @@ BorderBrush="Black" BorderThickness="1" Padding="5" Canvas.Left="123" Canvas.Top
                     </Style>
                 </TextBox.Style>
             </TextBox>
-            <TextBlock FontSize="16" Foreground="#FF9C9999" Canvas.Left="176" Canvas.Top="380" HorizontalAlignment="Center" VerticalAlignment="Top" Height="24" TextWrapping="WrapWithOverflow" Width="39">кг</TextBlock>
-            <Button x:Name="bmiClac_button" Content="Рассчитать" HorizontalAlignment="Left" VerticalAlignment="Center" Width="112" Height="29" Canvas.Left="35" Canvas.Top="419" FontSize="16" >
+            <TextBlock FontSize="16" Foreground="#FF9C9999" Canvas.Left="176" Canvas.Top="380"
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Height="24" TextWrapping="WrapWithOverflow"
+                       Width="39">
+                кг
+            </TextBlock>
+            <Button x:Name="bmiClac_button" Content="Рассчитать" HorizontalAlignment="Left" VerticalAlignment="Center"
+                    Width="112" Height="29" Canvas.Left="35" Canvas.Top="419" FontSize="16">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button  Content="Отмена" HorizontalAlignment="Left" VerticalAlignment="Center" Width="112" Height="29" Canvas.Left="166" Canvas.Top="419" FontSize="16" >
+            <Button Content="Отмена" HorizontalAlignment="Left" VerticalAlignment="Center" Width="112" Height="29"
+                    Canvas.Left="166" Canvas.Top="419" FontSize="16">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Border Height="184" Canvas.Left="537" Canvas.Top="113" Width="152" Background="#FFE3E1E1" BorderBrush="#FF404040" HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="1,1,1,2"/>
-            <Image Height="117" Canvas.Left="575" Source="/images/bmi-healthy-icon.png" Canvas.Top="138" Width="76" HorizontalAlignment="Left" VerticalAlignment="Top" OpacityMask="Gray" StretchDirection="DownOnly"/>
-            <TextBlock FontSize="16" Foreground="#FF9C9999" Canvas.Left="580" Canvas.Top="267" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" TextWrapping="WrapWithOverflow" Width="94">Здоровый</TextBlock>
-            <TextBlock Canvas.Left="575" Canvas.Top="368" Height="23" Width="45" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" Foreground="Gray">24.2</TextBlock>
+            <Border Height="184" Canvas.Left="537" Canvas.Top="113" Width="152" Background="#FFE3E1E1"
+                    BorderBrush="#FF404040" HorizontalAlignment="Left" VerticalAlignment="Center"
+                    BorderThickness="1,1,1,2" />
+            <Image Height="117" Canvas.Left="575" Source="/images/bmi-healthy-icon.png" Canvas.Top="138" Width="76"
+                   HorizontalAlignment="Left" VerticalAlignment="Top" OpacityMask="Gray" StretchDirection="DownOnly" />
+            <TextBlock FontSize="16" Foreground="#FF9C9999" Canvas.Left="580" Canvas.Top="267"
+                       HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" TextWrapping="WrapWithOverflow"
+                       Width="94">
+                Здоровый
+            </TextBlock>
+            <TextBlock Canvas.Left="575" Canvas.Top="368" Height="23" Width="45" HorizontalAlignment="Left"
+                       VerticalAlignment="Center" FontSize="18" Foreground="Gray">
+                24.2
+            </TextBlock>
             <Polygon Points="10,0 0,20 20,20"
-                 Stroke="Gray" 
-                 StrokeThickness="1" 
-                 Fill="Gray" Canvas.Left="579" Canvas.Top="394" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="21">
+                     Stroke="Gray"
+                     StrokeThickness="1"
+                     Fill="Gray" Canvas.Left="579" Canvas.Top="394" RenderTransformOrigin="0.5,0.5"
+                     HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="21">
                 <Polygon.RenderTransform>
                     <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="180.859"/>
-                        <TranslateTransform/>
+                        <ScaleTransform />
+                        <SkewTransform />
+                        <RotateTransform Angle="180.859" />
+                        <TranslateTransform />
                     </TransformGroup>
                 </Polygon.RenderTransform>
             </Polygon>
-            <Border Height="9" Width="86" Canvas.Top="419" Background="#FFEEC31B" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="431"/>
-            <TextBlock Foreground="#FF9C9999" Canvas.Left="431" Canvas.Top="433" HorizontalAlignment="Left" VerticalAlignment="Top" Height="24" TextWrapping="WrapWithOverflow" Width="88">Недостаточный</TextBlock>
-            <Border Height="9" Width="86" Canvas.Top="419" Background="#FF00FE30" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="517"/>
-            <TextBlock Foreground="#FF9C9999" Canvas.Left="530" Canvas.Top="432" HorizontalAlignment="Left" VerticalAlignment="Top" Height="24" TextWrapping="WrapWithOverflow" Width="60">Здоровый</TextBlock>
-            <Border Height="9" Width="86" Canvas.Top="419" Background="#FFEEC31B" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="603"/>
-            <TextBlock Foreground="#FF9C9999" Canvas.Left="610" Canvas.Top="432" HorizontalAlignment="Left" VerticalAlignment="Center" Height="24" TextWrapping="WrapWithOverflow" Width="72">Избыточный</TextBlock>
-            <Border Height="9" Width="86" Canvas.Top="419" Background="#FFEE1B1B" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="689"/>
-            <TextBlock Foreground="#FF9C9999" Canvas.Left="702" Canvas.Top="432" HorizontalAlignment="Center" VerticalAlignment="Top" Height="24" TextWrapping="WrapWithOverflow" Width="60">Ожирение</TextBlock>
-            <Border Height="59" Width="800" Canvas.Top="475" Background="Gray" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Border Height="9" Width="86" Canvas.Top="419" Background="#FFEEC31B" HorizontalAlignment="Center"
+                    VerticalAlignment="Top" Canvas.Left="431" />
+            <TextBlock Foreground="#FF9C9999" Canvas.Left="431" Canvas.Top="433" HorizontalAlignment="Left"
+                       VerticalAlignment="Top" Height="24" TextWrapping="WrapWithOverflow" Width="88">
+                Недостаточный
+            </TextBlock>
+            <Border Height="9" Width="86" Canvas.Top="419" Background="#FF00FE30" HorizontalAlignment="Center"
+                    VerticalAlignment="Center" Canvas.Left="517" />
+            <TextBlock Foreground="#FF9C9999" Canvas.Left="530" Canvas.Top="432" HorizontalAlignment="Left"
+                       VerticalAlignment="Top" Height="24" TextWrapping="WrapWithOverflow" Width="60">
+                Здоровый
+            </TextBlock>
+            <Border Height="9" Width="86" Canvas.Top="419" Background="#FFEEC31B" HorizontalAlignment="Center"
+                    VerticalAlignment="Top" Canvas.Left="603" />
+            <TextBlock Foreground="#FF9C9999" Canvas.Left="610" Canvas.Top="432" HorizontalAlignment="Left"
+                       VerticalAlignment="Center" Height="24" TextWrapping="WrapWithOverflow" Width="72">
+                Избыточный
+            </TextBlock>
+            <Border Height="9" Width="86" Canvas.Top="419" Background="#FFEE1B1B" HorizontalAlignment="Center"
+                    VerticalAlignment="Top" Canvas.Left="689" />
+            <TextBlock Foreground="#FF9C9999" Canvas.Left="702" Canvas.Top="432" HorizontalAlignment="Center"
+                       VerticalAlignment="Top" Height="24" TextWrapping="WrapWithOverflow" Width="60">
+                Ожирение
+            </TextBlock>
+            <Border Height="59" Width="800" Canvas.Top="475" Background="Gray" HorizontalAlignment="Center"
+                    VerticalAlignment="Top" />
         </Canvas>
 
     </Grid>

@@ -1,81 +1,64 @@
-﻿using Npgsql;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using Npgsql;
 
-namespace marah_practic
+namespace marah_practic;
+
+/// <summary>
+///     Логика взаимодействия для allCahrities.xaml
+/// </summary>
+public partial class allCahrities : Window
 {
-    /// <summary>
-    /// Логика взаимодействия для allCahrities.xaml
-    /// </summary>
-    public partial class allCahrities : Window
+    private static readonly string connStr = "Host=84.21.173.156:5435;Username=postgres;Password=DBDfJN3Vz9;Database=wss";
+
+    private static readonly NpgsqlConnection conn = new(connStr);
+
+    public allCahrities()
     {
-        private static string connStr = "Host=Localhost;Username=postgres;Password=1204;Database=wss";
+        if (conn.State == ConnectionState.Closed) conn.Open();
+        InitializeComponent();
 
-        private static NpgsqlConnection conn = new NpgsqlConnection(connStr);
+        var charities = new List<Charity>();
 
-        public allCahrities()
+        var cmd = new NpgsqlCommand("select logo, name, description from charities", conn);
+        var reader = cmd.ExecuteReader();
+        if (reader.HasRows)
+            while (reader.Read())
+                charities.Add(new Charity(reader.GetString(0), reader.GetString(1), reader.GetString(2)));
+
+        var ListView = charities.Select(x => new
         {
-            if (conn.State == System.Data.ConnectionState.Closed)
-            {
-                conn.Open();
-            }
-            InitializeComponent();
+            x.logo,
+            x.name,
+            x.description
+        }).ToList();
 
-            List<Charity> charities = new List<Charity>();
+        charities_ListView.ItemsSource = ListView;
+    }
 
-            var cmd = new NpgsqlCommand("select logo, name, description from charities", conn);
-            var reader = cmd.ExecuteReader();
-            if (reader.HasRows)
-            {
-                while(reader.Read())
-                {
-                    charities.Add(new Charity(reader.GetString(0), reader.GetString(1), reader.GetString(2)));
-                }
-            }
+    private void back_button_Click(object sender, RoutedEventArgs e)
+    {
+        var dopInfo = new DopInfo();
+        dopInfo.Left = Left;
+        dopInfo.Top = Top;
+        dopInfo.Show();
+        Close();
+    }
 
-            var ListView = charities.Select(x => new
-            {
-                x.logo,
-                x.name,
-                x.description
-            }).ToList();
+    private class Charity
+    {
+        public readonly string description;
+        public readonly Image logo;
+        public readonly string name;
 
-            charities_ListView.ItemsSource = ListView;
-        }
-
-        class Charity
+        public Charity(string logoPath, string name, string description)
         {
-            public Image logo;
-            public string name;
-            public string description;
-
-            public Charity(string logoPath, string name, string description)
-            {
-                this.logo = new Image();
-                this.logo.Source = new BitmapImage(new Uri($"pack://application:,,,/images/{logoPath}"));
-                this.name = name;
-                this.description = description;
-            }
-        }
-
-        private void back_button_Click(object sender, RoutedEventArgs e)
-        {
-            DopInfo dopInfo = new DopInfo();
-            dopInfo.Left = this.Left;
-            dopInfo.Top = this.Top;
-            dopInfo.Show();
-            this.Close();
+            logo = new Image();
+            logo.Source = new BitmapImage(new Uri($"pack://application:,,,/images/{logoPath}"));
+            this.name = name;
+            this.description = description;
         }
     }
 }

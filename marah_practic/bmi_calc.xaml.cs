@@ -1,32 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
-namespace marah_practic
+namespace marah_practic;
+
+/// <summary>
+///     Логика взаимодействия для bmi_calc.xaml
+/// </summary>
+public partial class bmi_calc : Window
 {
-    /// <summary>
-    /// Логика взаимодействия для bmi_calc.xaml
-    /// </summary>
-    public partial class bmi_calc : Window
+    public bmi_calc()
     {
-        public bmi_calc()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+    }
 
-        private void back_button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+    private void back_button_Click(object sender, RoutedEventArgs e)
+    {
     }
 }
