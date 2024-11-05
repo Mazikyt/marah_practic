@@ -1,33 +1,58 @@
 ﻿using System.Windows;
 using System.Windows.Threading;
 
-namespace marah_practic;
-
-/// <summary>
-///     Логика взаимодействия для addedit.xaml
-/// </summary>
-public partial class addedit : Window
+namespace marah_practic
 {
-    private readonly DateTime dateOfStart = new(2024, 11, 02, 6, 0, 0);
-    private readonly DispatcherTimer timer; // Объявляем таймер
-
-    public addedit()
+    public partial class addedit
     {
-        InitializeComponent();
-        timer = new DispatcherTimer();
-        timer.Interval = TimeSpan.FromSeconds(1); // Устанавливаем интервал в 1 секунду
-        timer.Tick += timer_Tick; // Привязываем событие Tick к функции timer_Tick
-        timer.Start(); // Запускаем таймер
-    }
+        private readonly DateTime dateOfStart = new(2024, 11, 02, 18, 0, 0);
+        private readonly DispatcherTimer timer; 
 
-    private void timer_Tick(object sender, EventArgs e)
-    {
-        var different = dateOfStart.Subtract(DateTime.Now);
-        timerLabel.Text =
-            $"{different.Days} дней {different.Hours} часов и {different.Minutes} минут до старта марафона!";
-    }
+        public addedit()
+        {
+            InitializeComponent();
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1); 
+            timer.Tick += timer_Tick; 
+            timer.Start();
+        }
 
-    private void back_button_Click(object sender, RoutedEventArgs e)
-    {
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            var different = dateOfStart.Subtract(DateTime.Now);
+            if (different.TotalSeconds <= 0)
+            {
+                timer.Stop();
+                timerLabel.Text = "Марафон начался!";
+            }
+            else
+            {
+                timerLabel.Text = $"{different.Days} дней {different.Hours} часов и {different.Minutes} минут до старта марафона!";
+            }
+        }
+
+        private void back_button_Click(object sender, RoutedEventArgs e)
+        {
+            // Логика для кнопки "Назад"
+        }
+
+        private void save_button_Click(object sender, RoutedEventArgs e)
+        {
+            if (ValidateFields())
+            {
+                // Логика сохранения данных
+                MessageBox.Show("Данные сохранены успешно!");
+            }
+            else
+            {
+                MessageBox.Show("Пожалуйста, заполните все обязательные поля.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+
+        private bool ValidateFields()
+        {
+            // Проверка на обязательные поля
+            return !string.IsNullOrWhiteSpace(nameTextBox.Text) && !string.IsNullOrWhiteSpace(descriptionTextBox.Text);
+        }
     }
 }

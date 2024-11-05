@@ -6,10 +6,7 @@ using Npgsql;
 
 namespace marah_practic;
 
-/// <summary>
-///     Логика взаимодействия для registrationonma.xaml
-/// </summary>
-public partial class registrationonma : Window
+public partial class registrationonma
 {
     private static int cur_user_id;
 
@@ -57,6 +54,7 @@ public partial class registrationonma : Window
         charityLogo.Source =
             new BitmapImage(
                 new Uri($"pack://application:,,,/images/{charityList[charityComboBox.SelectedIndex].logo}"));
+        
     }
 
     private void total_amount()
@@ -106,6 +104,8 @@ public partial class registrationonma : Window
         menurunner.Show();
         Close();
     }
+    
+    
 
     private void varA_Checked(object sender, RoutedEventArgs e)
     {

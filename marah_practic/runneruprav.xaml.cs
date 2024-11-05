@@ -8,7 +8,7 @@ namespace marah_practic;
 /// </summary>
 public partial class runneruprav : Window
 {
-    private readonly DateTime dateOfStart = new(2024, 11, 02, 6, 0, 0);
+    private readonly DateTime dateOfStart = new(2024, 11, 02, 18, 0, 0);
     private readonly DispatcherTimer timer; // Объявляем таймер
 
     public runneruprav()
@@ -20,11 +20,16 @@ public partial class runneruprav : Window
         timer.Start(); // Запускаем таймер
     }
 
-    private void timer_Tick(object sender, EventArgs e)
-    {
+    private void timer_Tick(object sender, EventArgs e) {
         var different = dateOfStart.Subtract(DateTime.Now);
-        timerLabel.Text =
-            $"{different.Days} дней {different.Hours} часов и {different.Minutes} минут до старта марафона!";
+        if (different.TotalSeconds <= 0) {
+            timer.Stop();
+            timerLabel.Text = "Марафон начался!";
+        }
+        else {
+            timerLabel.Text =
+                $"{different.Days} дней {different.Hours} часов и {different.Minutes} минут до старта марафона!";
+        }
     }
 
     private void logout_button_Click(object sender, RoutedEventArgs e)

@@ -2,10 +2,7 @@
 
 namespace marah_practic;
 
-/// <summary>
-///     Логика взаимодействия для bmi_calc.xaml
-/// </summary>
-public partial class bmi_calc : Window
+public partial class bmi_calc
 {
     public bmi_calc()
     {

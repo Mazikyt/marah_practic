@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Login" Height="550" Width="800" ResizeMode="NoResize">
+        Title="Вход" Height="550" Width="800" ResizeMode="NoResize">
     <Grid>
         <Canvas>
             <Border Height="44" Width="800" Background="#FF6F6D6D" />
@@ -41,7 +41,6 @@
                         <Setter Property="BorderThickness" Value="1" />
                         <Setter Property="Padding" Value="5" />
                         <Style.Triggers>
-                            <!-- Триггер для отображения подсказки, если поле пустое -->
                             <Trigger Property="Text" Value="">
                                 <Setter Property="Template">
                                     <Setter.Value>
@@ -82,19 +81,16 @@
                         <Setter Property="BorderThickness" Value="1" />
                         <Setter Property="Padding" Value="5" />
                         <Style.Triggers>
-                            <!-- Триггер для отображения подсказки, если поле пустое -->
                             <Trigger Property="Text" Value="">
                                 <Setter Property="Template">
                                     <Setter.Value>
                                         <ControlTemplate TargetType="TextBox">
                                             <Grid>
-                                                <!-- Само поле для ввода -->
                                                 <Border BorderBrush="{TemplateBinding BorderBrush}"
                                                         BorderThickness="{TemplateBinding BorderThickness}"
                                                         Background="{TemplateBinding Background}">
                                                     <ScrollViewer x:Name="PART_ContentHost" />
                                                 </Border>
-                                                <!-- Подсказка -->
                                                 <TextBlock Text="Enter your password"
                                                            Foreground="Gray"
                                                            VerticalAlignment="Center"
@@ -131,7 +127,6 @@
             </Button>
             <Border Height="50" Width="800" Canvas.Top="484" Background="Gray" HorizontalAlignment="Left"
                     VerticalAlignment="Center" />
-
             <GroupBox x:Name="DebugPage" Visibility="Hidden" Height="350" Width="450" Background="White"
                       Canvas.Left="162" Canvas.Top="75">
                 <Canvas>

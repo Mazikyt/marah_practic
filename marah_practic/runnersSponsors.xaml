@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="runnersSponsors" Height="550" Width="800" ResizeMode="NoResize">
+        Title="Мои спонсоры" Height="550" Width="800" ResizeMode="NoResize">
     <Grid>
         <Canvas>
             <Border Height="95" Width="860" Background="#FF6F6D6D" HorizontalAlignment="Center" Canvas.Left="-40"

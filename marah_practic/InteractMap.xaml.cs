@@ -2,9 +2,6 @@
 
 namespace marah_practic;
 
-/// <summary>
-///     Логика взаимодействия для InteractMap.xaml
-/// </summary>
 public partial class InteractMap : Window
 {
     public InteractMap()

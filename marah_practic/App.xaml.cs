@@ -1,10 +1,2 @@
-﻿using System.Windows;
-
-namespace marah_practic;
-
-/// <summary>
-///     Interaction logic for App.xaml
-/// </summary>
-public partial class App : Application
-{
-}
+﻿namespace marah_practic;
+public partial class App { }

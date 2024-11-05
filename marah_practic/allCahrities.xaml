@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="allCahrities" Height="550" Width="800" ResizeMode="NoResize">
+        Title="Спиок организаций" Height="550" Width="800" ResizeMode="NoResize">
     <Grid>
         <Canvas>
             <Border Height="44" Width="800" Background="#FF6F6D6D" HorizontalAlignment="Left"
@@ -42,7 +42,7 @@
             <TextBlock FontSize="18" Canvas.Left="44" Canvas.Top="122" Height="72" TextWrapping="WrapWithOverflow"
                        TextAlignment="Center" Width="692" HorizontalAlignment="Center" VerticalAlignment="Top">
                 <Run Text="Это - список всех благотворительных учреждений, которые поддерживаются в" /><LineBreak />
-                <Run Text="Marathon Skills 2016. " />
+                <Run Text="Marathon Skills 2024. " />
                 <Run Language="ru-ru" Text="Спасибо за помощь, вы поддерживаете их, спонсируя " /><LineBreak />
                 <Run Language="ru-ru" Text="бегунов!" />
             </TextBlock>

@@ -2,9 +2,6 @@
 
 namespace marah_practic;
 
-/// <summary>
-///     Логика взаимодействия для adminmenu.xaml
-/// </summary>
 public partial class adminmenu : Window
 {
     private int cur_user_id;

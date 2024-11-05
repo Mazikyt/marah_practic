@@ -4,9 +4,6 @@ using Npgsql;
 
 namespace marah_practic;
 
-/// <summary>
-///     Логика взаимодействия для upravusersadmin.xaml
-/// </summary>
 public partial class upravusersadmin : Window
 {
     private static readonly string connStr = "Host=84.21.173.156:5435;Username=postgres;Password=DBDfJN3Vz9;Database=wss";

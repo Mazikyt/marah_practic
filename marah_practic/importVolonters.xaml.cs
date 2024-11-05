@@ -13,7 +13,6 @@ public partial class importVolonters : Window
     private static readonly string connStr = "Host=84.21.173.156:5435;Username=postgres;Password=DBDfJN3Vz9;Database=wss";
 
     private static readonly NpgsqlConnection conn = new(connStr);
-
     private string filePath = "";
 
     public importVolonters()

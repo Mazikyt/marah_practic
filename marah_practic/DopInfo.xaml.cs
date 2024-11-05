@@ -2,9 +2,6 @@
 
 namespace marah_practic;
 
-/// <summary>
-///     Логика взаимодействия для DopInfo.xaml
-/// </summary>
 public partial class DopInfo : Window
 {
     public DopInfo()

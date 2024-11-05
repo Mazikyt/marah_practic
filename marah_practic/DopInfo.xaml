@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="DopInfo" Height="570" Width="820" ResizeMode="NoResize">
+        Title="Подробная информация" Height="570" Width="820" ResizeMode="NoResize">
     <Grid>
         <Canvas>
             <Border Height="95" Width="860" Background="#FF6F6D6D" HorizontalAlignment="Center" Canvas.Left="-40"
@@ -38,7 +38,7 @@
                        TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="286">
                 Подробная информация
             </TextBlock>
-            <Button x:Name="aboutMarathon_button" Content="Marathon Skills 2016" HorizontalAlignment="Left"
+            <Button x:Name="aboutMarathon_button" Content="Marathon Skills 2024" HorizontalAlignment="Left"
                     VerticalAlignment="Center" Width="272" Height="81" Canvas.Left="92" Canvas.Top="136" FontSize="22"
                     FontStyle="Italic" Click="aboutMarathon_button_Click">
                 <Button.Template>

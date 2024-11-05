@@ -1,13 +1,11 @@
 ﻿using System.Data;
 using System.Globalization;
+using System.Text.RegularExpressions;
 using System.Windows;
 using Npgsql;
 
 namespace marah_practic;
 
-/// <summary>
-///     Логика взаимодействия для newrunner.xaml
-/// </summary>
 public partial class newrunner : Window
 {
     private static int cur_user_id;
@@ -45,8 +43,7 @@ public partial class newrunner : Window
         cmd = new NpgsqlCommand("select * from genders", conn);
         reader = cmd.ExecuteReader();
         if (reader.HasRows)
-            while (reader.Read())
-            {
+            while (reader.Read()) {
                 gendersListId.Add(reader.GetInt32(0));
                 gendersListName.Add(reader.GetString(1));
             }
@@ -55,8 +52,7 @@ public partial class newrunner : Window
         genderComboBox.ItemsSource = gendersListName;
     }
 
-    private void back_button_Click(object sender, RoutedEventArgs e)
-    {
+    private void back_button_Click(object sender, RoutedEventArgs e) {
         var mainWindow = new MainWindow();
         mainWindow.Left = Left;
         mainWindow.Top = Top;
@@ -64,25 +60,74 @@ public partial class newrunner : Window
         Close();
     }
 
-    private void registr_button_Click(object sender, RoutedEventArgs e)
-    {
-        var cmd = new NpgsqlCommand(
-            $"insert into users(first_name, last_name, birthday, email, password, country_id, gender_id) values ('{userFirstName.Text}','{userLastName.Text}','{DateFormat(userBirthDay.Text)}'::timestamp, '{userEmail.Text}', '{userPassword.Text}', {countryComboBox.SelectedIndex + 1},{genderComboBox.SelectedIndex + 1})",
-            conn);
-        cmd.ExecuteNonQuery();
+   private void registr_button_Click(object sender, RoutedEventArgs e)
+        {
+            // Проверка email
+            if (string.IsNullOrWhiteSpace(userEmail.Text) || !IsValidEmail(userEmail.Text))
+            {
+                MessageBox.Show("Введите корректный email.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
 
-        cmd = new NpgsqlCommand($"select id from users where email = '{userEmail}'", conn);
-        var reader = cmd.ExecuteReader();
-        if (reader.HasRows)
-            while (reader.Read())
-                cur_user_id = reader.GetInt32(0);
+            // Проверка пароля
+            if (string.IsNullOrWhiteSpace(userPassword.Text))
+            {
+                MessageBox.Show("Пароль не может быть пустым.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
 
-        var registrationonma = new registrationonma(cur_user_id);
-        registrationonma.Left = Left;
-        registrationonma.Top = Top;
-        registrationonma.Show();
-        Close();
-    }
+            // Проверка повторного ввода пароля
+            if (userPassword.Text != userRePassword.Text)
+            {
+                MessageBox.Show("Пароли не совпадают.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            // Проверка имени
+            if (string.IsNullOrWhiteSpace(userFirstName.Text))
+            {
+                MessageBox.Show("Введите имя.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            // Проверка фамилии
+            if (string.IsNullOrWhiteSpace(userLastName.Text))
+            {
+                MessageBox.Show("Введите фамилию.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            // Проверка выбора пола
+            if (genderComboBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Выберите пол.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            // Проверка даты рождения
+            if (!userBirthDay.SelectedDate.HasValue)
+            {
+                MessageBox.Show("Выберите дату рождения.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            // Проверка выбора страны
+            if (countryComboBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Выберите страну.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            // Если все проверки пройдены
+            MessageBox.Show("Регистрация прошла успешно!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private bool IsValidEmail(string email)
+        {
+            // Регулярное выражение для проверки корректности email
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, emailPattern);
+        }
 
     private string DateFormat(string dateString)
     {
@@ -94,6 +139,8 @@ public partial class newrunner : Window
 
         return formattedDate;
     }
+    
+    
 
     private class User
     {

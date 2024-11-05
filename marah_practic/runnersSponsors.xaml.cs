@@ -5,9 +5,6 @@ using Npgsql;
 
 namespace marah_practic;
 
-/// <summary>
-///     Логика взаимодействия для runnersSponsors.xaml
-/// </summary>
 public partial class runnersSponsors : Window
 {
     private static int cur_user_id;

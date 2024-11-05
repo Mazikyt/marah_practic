@@ -2,10 +2,7 @@
 
 namespace marah_practic;
 
-/// <summary>
-///     Логика взаимодействия для bmr_calc.xaml
-/// </summary>
-public partial class bmr_calc : Window
+public partial class bmr_calc 
 {
     public bmr_calc()
     {

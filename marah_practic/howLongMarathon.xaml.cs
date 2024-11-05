@@ -3,9 +3,6 @@ using System.Windows.Media.Imaging;
 
 namespace marah_practic;
 
-/// <summary>
-///     Логика взаимодействия для howLongMarathon.xaml
-/// </summary>
 public partial class howLongMarathon : Window
 {
     public howLongMarathon()

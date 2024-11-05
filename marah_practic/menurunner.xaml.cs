@@ -2,9 +2,6 @@
 
 namespace marah_practic;
 
-/// <summary>
-///     Логика взаимодействия для menurunner.xaml
-/// </summary>
 public partial class menurunner : Window
 {
     private static int cur_user_id;

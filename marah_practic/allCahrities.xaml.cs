@@ -6,9 +6,6 @@ using Npgsql;
 
 namespace marah_practic;
 
-/// <summary>
-///     Логика взаимодействия для allCahrities.xaml
-/// </summary>
 public partial class allCahrities : Window
 {
     private static readonly string connStr = "Host=84.21.173.156:5435;Username=postgres;Password=DBDfJN3Vz9;Database=wss";

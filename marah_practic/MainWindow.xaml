@@ -4,8 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="MainWindow" Height="570" Width="820" ResizeMode="NoResize">
-
+        Title="Главное меню" Height="570" Width="820" ResizeMode="NoResize">
     <Grid>
         <Canvas>
             <Border Height="164" Width="827" Background="Gray" HorizontalAlignment="Left" VerticalAlignment="Center"

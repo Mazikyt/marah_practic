@@ -3,12 +3,9 @@ using System.Windows.Threading;
 
 namespace marah_practic;
 
-/// <summary>
-///     Логика взаимодействия для reziltrunner.xaml
-/// </summary>
 public partial class reziltrunner : Window
 {
-    private readonly DateTime dateOfStart = new(2024, 11, 02, 6, 0, 0);
+    private readonly DateTime dateOfStart = new(2024, 11, 02, 18, 0, 0);
     private readonly DispatcherTimer timer; // Объявляем таймер
 
     public reziltrunner()
@@ -20,11 +17,16 @@ public partial class reziltrunner : Window
         timer.Start(); // Запускаем таймер
     }
 
-    private void timer_Tick(object sender, EventArgs e)
-    {
+    private void timer_Tick(object sender, EventArgs e) {
         var different = dateOfStart.Subtract(DateTime.Now);
-        timerLabel.Text =
-            $"{different.Days} дней {different.Hours} часов и {different.Minutes} минут до старта марафона!";
+        if (different.TotalSeconds <= 0) {
+            timer.Stop();
+            timerLabel.Text = "Марафон начался!";
+        }
+        else {
+            timerLabel.Text =
+                $"{different.Days} дней {different.Hours} часов и {different.Minutes} минут до старта марафона!";
+        }
     }
 
     private void back_button_Click(object sender, RoutedEventArgs e)

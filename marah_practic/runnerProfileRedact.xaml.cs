@@ -5,9 +5,6 @@ using Npgsql;
 
 namespace marah_practic;
 
-/// <summary>
-///     Логика взаимодействия для runnerProfileRedact.xaml
-/// </summary>
 public partial class runnerProfileRedact : Window
 {
     private static int cur_user_id;

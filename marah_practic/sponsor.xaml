@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="sponsor" Height="550" Width="800" ResizeMode="NoResize">
+        Title="Спонсор" Height="550" Width="800" ResizeMode="NoResize">
     <Grid>
         <Canvas>
             <Border Height="44" Width="800" Background="#FF6F6D6D" HorizontalAlignment="Center" VerticalAlignment="Top" />
@@ -101,8 +101,7 @@
             </TextBlock>
             <TextBlock FontSize="18" Foreground="#FF9C9999" TextWrapping="WrapWithOverflow" TextAlignment="Center"
                        Canvas.Left="67" Canvas.Top="98" HorizontalAlignment="Left" VerticalAlignment="Center">
-                <Run
-                    Text="Пожалуйста, выберите бегуна, которого вы хотели бы спонсировать и сумму,&#x0a; которую вы хотели бы спонсировать. Спасибо за вашу поддержку бегунов и их&#x0a; благотворительных учреждений." />
+                <Run Text="Пожалуйста, выберите бегуна, которого вы хотели бы спонсировать и сумму,&#x0a; которую вы хотели бы спонсировать. Спасибо за вашу поддержку бегунов и их&#x0a; благотворительных учреждений." />
             </TextBlock>
             <TextBlock FontSize="20" Foreground="#FF9C9999" TextWrapping="WrapWithOverflow" TextAlignment="Center"
                        Margin="65,198,447,304" FontWeight="Bold" Text="Информация о Спонсоре" />
@@ -122,12 +121,11 @@
             <TextBlock FontSize="20" Foreground="Black" TextWrapping="WrapWithOverflow" TextAlignment="Right"
                        Margin="10,298,634,204" Text="Карта:" />
             <TextBlock FontSize="20" Foreground="Black" TextWrapping="WrapWithOverflow" TextAlignment="Right"
-                       Margin="10,331,634,171" Text="Номер карты#:" />
+                       Margin="10,331,634,171" Text="Номер карты:" />
             <TextBlock FontSize="20" Foreground="Black" TextWrapping="WrapWithOverflow" TextAlignment="Right"
                        Margin="10,363,634,139" Text="Срок действия:" />
             <TextBlock FontSize="20" Foreground="Black" TextWrapping="WrapWithOverflow" TextAlignment="Right"
                        Margin="10,395,634,107" Text="CVC:" />
-
             <GroupBox x:Name="charityInfo" Visibility="Hidden" Height="350" Width="450" Background="White"
                       Canvas.Left="162" Canvas.Top="75">
                 <Canvas>
@@ -147,7 +145,6 @@
                                HorizontalAlignment="Left" VerticalAlignment="Top">
                         <Run Text="Описание" />
                     </TextBlock>
-
                 </Canvas>
             </GroupBox>
         </Canvas>

@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="insertnewuser" Height="550" Width="800">
+        Title="Добавление нового пользователя" Height="550" Width="800">
     <Grid>
         <Canvas>
             <Border Height="44" Width="800" Background="#FF6F6D6D" Margin="0,0,0,490" />
@@ -36,19 +36,16 @@
                         <Setter Property="BorderThickness" Value="1" />
                         <Setter Property="Padding" Value="5" />
                         <Style.Triggers>
-                            <!-- Триггер для отображения подсказки, если поле пустое -->
                             <Trigger Property="Text" Value="">
                                 <Setter Property="Template">
                                     <Setter.Value>
                                         <ControlTemplate TargetType="TextBox">
                                             <Grid>
-                                                <!-- Само поле для ввода -->
                                                 <Border BorderBrush="{TemplateBinding BorderBrush}"
                                                         BorderThickness="{TemplateBinding BorderThickness}"
                                                         Background="{TemplateBinding Background}">
                                                     <ScrollViewer x:Name="PART_ContentHost" />
                                                 </Border>
-                                                <!-- Подсказка -->
                                                 <TextBlock Text="Enter your email address"
                                                            Foreground="Gray"
                                                            VerticalAlignment="Center"
@@ -76,19 +73,16 @@
                         <Setter Property="BorderThickness" Value="1" />
                         <Setter Property="Padding" Value="5" />
                         <Style.Triggers>
-                            <!-- Триггер для отображения подсказки, если поле пустое -->
                             <Trigger Property="Text" Value="">
                                 <Setter Property="Template">
                                     <Setter.Value>
                                         <ControlTemplate TargetType="TextBox">
                                             <Grid>
-                                                <!-- Само поле для ввода -->
                                                 <Border BorderBrush="{TemplateBinding BorderBrush}"
                                                         BorderThickness="{TemplateBinding BorderThickness}"
                                                         Background="{TemplateBinding Background}">
                                                     <ScrollViewer x:Name="PART_ContentHost" />
                                                 </Border>
-                                                <!-- Подсказка -->
                                                 <TextBlock Text="Пароль"
                                                            Foreground="Gray"
                                                            VerticalAlignment="Center"
@@ -116,19 +110,16 @@
                         <Setter Property="BorderThickness" Value="1" />
                         <Setter Property="Padding" Value="5" />
                         <Style.Triggers>
-                            <!-- Триггер для отображения подсказки, если поле пустое -->
                             <Trigger Property="Text" Value="">
                                 <Setter Property="Template">
                                     <Setter.Value>
                                         <ControlTemplate TargetType="TextBox">
                                             <Grid>
-                                                <!-- Само поле для ввода -->
                                                 <Border BorderBrush="{TemplateBinding BorderBrush}"
                                                         BorderThickness="{TemplateBinding BorderThickness}"
                                                         Background="{TemplateBinding Background}">
                                                     <ScrollViewer x:Name="PART_ContentHost" />
                                                 </Border>
-                                                <!-- Подсказка -->
                                                 <TextBlock Text="Повторите пароль"
                                                            Foreground="Gray"
                                                            VerticalAlignment="Center"
@@ -156,19 +147,16 @@
                         <Setter Property="BorderThickness" Value="1" />
                         <Setter Property="Padding" Value="5" />
                         <Style.Triggers>
-                            <!-- Триггер для отображения подсказки, если поле пустое -->
                             <Trigger Property="Text" Value="">
                                 <Setter Property="Template">
                                     <Setter.Value>
                                         <ControlTemplate TargetType="TextBox">
                                             <Grid>
-                                                <!-- Само поле для ввода -->
                                                 <Border BorderBrush="{TemplateBinding BorderBrush}"
                                                         BorderThickness="{TemplateBinding BorderThickness}"
                                                         Background="{TemplateBinding Background}">
                                                     <ScrollViewer x:Name="PART_ContentHost" />
                                                 </Border>
-                                                <!-- Подсказка -->
                                                 <TextBlock Text="Имя"
                                                            Foreground="Gray"
                                                            VerticalAlignment="Center"
