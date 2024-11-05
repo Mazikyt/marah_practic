@@ -3,136 +3,96 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:marah_practic"
         mc:Ignorable="d"
         Title="Управление бегунами" Height="566" Width="800" ResizeMode="NoResize">
     <Grid>
         <Canvas>
-            <Border Height="95" Width="860" Background="#FF6F6D6D" HorizontalAlignment="Center" Canvas.Left="-40"
-                    VerticalAlignment="Top" Canvas.Top="-51" />
-            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81"
-                    Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
+            <Border Height="95" Width="860" Background="#FF6F6D6D" HorizontalAlignment="Center" Canvas.Left="-40" VerticalAlignment="Top" Canvas.Top="-51"/>
+            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold"
-                       HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">
-                MARATHON SKILL 2024
-            </TextBlock>
-            <Button x:Name="logout_button" Content="Logout" HorizontalAlignment="Center" VerticalAlignment="Top"
-                    Width="81" Height="24" Canvas.Left="709" Canvas.Top="10" FontSize="14" Click="logout_button_Click">
+            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">MARATHON SKILL 2024</TextBlock>
+            <Button x:Name="logout_button" Content="Logout" HorizontalAlignment="Center" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="709" Canvas.Top="10" FontSize="14" Click="logout_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="24" Foreground="#FF9C9999" Canvas.Left="263" Canvas.Top="69"
-                       HorizontalAlignment="Center" VerticalAlignment="Top" Height="39" TextWrapping="WrapWithOverflow"
-                       TextAlignment="Center" Width="271">
-                Управление бегунами
-            </TextBlock>
-            <TextBlock FontSize="22" Foreground="#FF9C9999" Canvas.Left="50" Canvas.Top="108"
-                       HorizontalAlignment="Left" VerticalAlignment="Center" Height="39"
-                       TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="272">
-                Сортировка и фильтрация
-            </TextBlock>
-            <TextBlock FontSize="22" Foreground="#FF9C9999" Canvas.Left="74" Canvas.Top="152"
-                       HorizontalAlignment="Left" VerticalAlignment="Top" Height="39" Width="77">
-                Статус:
-            </TextBlock>
-            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="162" Canvas.Left="156" Canvas.Top="156"
-                      Background="Gray">
+            <TextBlock FontSize="24" Foreground="#FF9C9999" Canvas.Left="263" Canvas.Top="69" HorizontalAlignment="Center" VerticalAlignment="Top" Height="39" TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="271">Управление бегунами</TextBlock>
+            <TextBlock FontSize="22" Foreground="#FF9C9999" Canvas.Left="50" Canvas.Top="108" HorizontalAlignment="Left" VerticalAlignment="Center" Height="39" TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="272">Сортировка и фильтрация</TextBlock>
+            <TextBlock FontSize="22" Foreground="#FF9C9999" Canvas.Left="74" Canvas.Top="152" HorizontalAlignment="Left" VerticalAlignment="Top" Height="39" Width="77">Статус:</TextBlock>
+            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="162" Canvas.Left="156" Canvas.Top="156" Background="Gray">
                 <ComboBoxItem>Оплата подтверждена</ComboBoxItem>
                 <ComboBoxItem>Оплата не подтверждена</ComboBoxItem>
             </ComboBox>
-            <TextBlock FontSize="22" Foreground="#FF9C9999" Canvas.Left="32" Canvas.Top="190"
-                       HorizontalAlignment="Center" VerticalAlignment="Top" Height="38" Width="119">
-                Дистанция:
-            </TextBlock>
-            <ComboBox HorizontalAlignment="Center" VerticalAlignment="Top" Width="162" Canvas.Left="156"
-                      Canvas.Top="198" Background="Gray">
+            <TextBlock FontSize="22" Foreground="#FF9C9999" Canvas.Left="32" Canvas.Top="190" HorizontalAlignment="Center" VerticalAlignment="Top" Height="38" Width="119">Дистанция:</TextBlock>
+            <ComboBox HorizontalAlignment="Center" VerticalAlignment="Top" Width="162" Canvas.Left="156" Canvas.Top="198" Background="Gray">
                 <ComboBoxItem>42km полный марафон</ComboBoxItem>
                 <ComboBoxItem>22</ComboBoxItem>
             </ComboBox>
-            <TextBlock FontSize="22" Foreground="#FF9C9999" Canvas.Left="12" Canvas.Top="228"
-                       HorizontalAlignment="Left" VerticalAlignment="Top" Height="39" Width="139">
-                Сортировать:
-            </TextBlock>
-            <ComboBox HorizontalAlignment="Center" VerticalAlignment="Top" Width="162" Canvas.Left="156"
-                      Canvas.Top="236" Background="Gray">
+            <TextBlock FontSize="22" Foreground="#FF9C9999" Canvas.Left="12" Canvas.Top="228" HorizontalAlignment="Left" VerticalAlignment="Top" Height="39" Width="139">Сортировать:</TextBlock>
+            <ComboBox HorizontalAlignment="Center" VerticalAlignment="Top" Width="162" Canvas.Left="156" Canvas.Top="236" Background="Gray">
                 <ComboBoxItem>Имя</ComboBoxItem>
                 <ComboBoxItem>Фамилия</ComboBoxItem>
             </ComboBox>
-            <Button Content="Обновить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="26"
-                    Canvas.Left="330" Canvas.Top="232" FontSize="14">
+            <Button Content="Обновить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="26" Canvas.Left="330" Canvas.Top="232" FontSize="14">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="22" Foreground="#FF9C9999" Canvas.Left="615" Canvas.Top="108"
-                       HorizontalAlignment="Left" VerticalAlignment="Top" Height="39" TextAlignment="Center"
-                       Width="114">
-                Выгрузка
-            </TextBlock>
+            <TextBlock FontSize="22" Foreground="#FF9C9999" Canvas.Left="615" Canvas.Top="108" HorizontalAlignment="Left" VerticalAlignment="Top" Height="39" TextAlignment="Center" Width="114">Выгрузка</TextBlock>
 
-            <Button Content="Детальная информация&#x0a;              (CSV)" HorizontalAlignment="Center"
-                    VerticalAlignment="Center" Width="214" Height="39" Canvas.Left="565" Canvas.Top="152">
+            <Button Content="Детальная информация&#x0a;              (CSV)" HorizontalAlignment="Center" VerticalAlignment="Center" Width="214" Height="39" Canvas.Left="565" Canvas.Top="152">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button Content="E-mail список" HorizontalAlignment="Center" VerticalAlignment="Top" Width="214"
-                    Height="35" Canvas.Left="565" Canvas.Top="202">
+            <Button Content="E-mail список" HorizontalAlignment="Center" VerticalAlignment="Top" Width="214" Height="35" Canvas.Left="565" Canvas.Top="202">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock Canvas.Left="280" Canvas.Top="273" Height="25" Width="118" FontSize="18"
-                       HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Gray" FontWeight="Bold">
-                Total runners:
-            </TextBlock>
-            <TextBlock Canvas.Left="403" Canvas.Top="273" Height="25" Width="32" FontSize="18"
-                       HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Gray">
-                123
-            </TextBlock>
-            <ListView x:Name="actionsListView1" Height="197" Width="757" HorizontalAlignment="Left" Canvas.Left="22"
-                      VerticalAlignment="Center" Background="#FFDDDDDD" BorderBrush="#FF383737" Canvas.Top="300"
-                      Foreground="#FF8C8C8E">
+            <TextBlock Canvas.Left="280" Canvas.Top="273" Height="25" Width="118" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Gray" FontWeight="Bold">Total runners:</TextBlock>
+            <TextBlock Canvas.Left="403" Canvas.Top="273" Height="25" Width="32" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Gray">123</TextBlock>
+            <ListView x:Name="actionsListView1" Height="197" Width="757" HorizontalAlignment="Left" Canvas.Left="22" VerticalAlignment="Center" Background="#FFDDDDDD" BorderBrush="#FF383737" Canvas.Top="300" Foreground="#FF8C8C8E">
                 <ListView.Resources>
                     <!-- Цвет выделенных строк -->
-                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="LightGray" />
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="LightGray"/>
                     <!-- Стиль для ячеек -->
                     <Style TargetType="ListViewItem">
-                        <Setter Property="BorderBrush" Value="Gray" />
-                        <Setter Property="BorderThickness" Value="1" />
+                        <Setter Property="BorderBrush" Value="Gray"/>
+                        <Setter Property="BorderThickness" Value="1"/>
                     </Style>
                     <!-- Стиль для заголовков столбцов -->
                     <Style TargetType="GridViewColumnHeader">
-                        <Setter Property="Background" Value="LightGray" />
-                        <Setter Property="Foreground" Value="Black" />
-                        <Setter Property="FontWeight" Value="Bold" />
-                        <Setter Property="HorizontalContentAlignment" Value="Center" />
-                        <Setter Property="BorderBrush" Value="Gray" />
-                        <Setter Property="BorderThickness" Value="1" />
+                        <Setter Property="Background" Value="LightGray"/>
+                        <Setter Property="Foreground" Value="Black"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        <Setter Property="BorderBrush" Value="Gray"/>
+                        <Setter Property="BorderThickness" Value="1"/>
                     </Style>
                 </ListView.Resources>
 
@@ -147,7 +107,7 @@
                             <!-- Кнопка "Edit" для каждой строки -->
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button Content="Edit" Width="50" />
+                                    <Button Content="Edit" Width="50"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
@@ -156,10 +116,10 @@
             </ListView>
 
 
-            <Border Height="68" Width="995" Canvas.Top="484" Background="Gray" HorizontalAlignment="Center"
-                    VerticalAlignment="Top" Canvas.Left="-117" />
-            <TextBlock x:Name="timerLabel" Canvas.Left="212" Canvas.Top="497" FontSize="18" Foreground="White"
-                       HorizontalAlignment="Left" VerticalAlignment="Center" Width="401" />
+
+            
+            <Border Height="68" Width="995" Canvas.Top="484" Background="Gray" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="-117"/>
+            <TextBlock x:Name="timerLabel" Canvas.Left="212" Canvas.Top="497" FontSize="18" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" Width="401"/>
         </Canvas>
 
 

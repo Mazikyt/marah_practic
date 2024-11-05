@@ -3,63 +3,44 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:marah_practic"
         mc:Ignorable="d"
         Title="Конец регистрации" Height="550" Width="800" ResizeMode="NoResize">
     <Grid>
         <Canvas>
-            <Border Height="44" Width="800" Background="#FF6F6D6D" HorizontalAlignment="Left"
-                    VerticalAlignment="Center" />
-            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81"
-                    Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
+            <Border Height="44" Width="800" Background="#FF6F6D6D" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold"
-                       HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">
-                MARATHON SKILL 2024
-            </TextBlock>
-            <Button x:Name="logout_button" Content="Logout" HorizontalAlignment="Center" VerticalAlignment="Top"
-                    Width="81" Height="24" Canvas.Left="709" Canvas.Top="10" FontSize="14" Click="logout_button_Click">
+            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">MARATHON SKILL 2024</TextBlock>
+            <Button x:Name="logout_button" Content="Logout" HorizontalAlignment="Center" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="709" Canvas.Top="10" FontSize="14" Click="logout_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="24" Foreground="#FF9C9999" Canvas.Left="165" Canvas.Top="71"
-                       HorizontalAlignment="Left" VerticalAlignment="Top" Height="67" TextWrapping="WrapWithOverflow"
-                       TextAlignment="Center" Width="470">
-                Спасибо за вашу регистрацию в качестве бегуна!
-            </TextBlock>
-            <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center" Height="44" Width="750" FontSize="20"
-                       HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="25" Canvas.Top="138"
-                       Foreground="#FF9C9999">
-                Спасибо за вашу регистрацию в качестве бегуна в Marathon 2016!
-            </TextBlock>
-            <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center" Height="44" Width="750" FontSize="20"
-                       HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="25" Canvas.Top="182"
-                       Foreground="#FF9C9999">
-                С вами свяжутся по поводу оплаты.
-            </TextBlock>
-            <Button Content="ОК" HorizontalAlignment="Center" VerticalAlignment="Top" Width="64" Height="24"
-                    Canvas.Left="368" Canvas.Top="255" FontSize="14" Click="back_button_Click">
+            <TextBlock FontSize="24" Foreground="#FF9C9999" Canvas.Left="165" Canvas.Top="71" HorizontalAlignment="Left" VerticalAlignment="Top" Height="67" TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="470">Спасибо за вашу регистрацию в качестве бегуна!</TextBlock>
+            <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center" Height="44" Width="750" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="25" Canvas.Top="138" Foreground="#FF9C9999">Спасибо за вашу регистрацию в качестве бегуна в Marathon 2016!</TextBlock>
+            <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center" Height="44" Width="750" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="25" Canvas.Top="182" Foreground="#FF9C9999">С вами свяжутся по поводу оплаты.</TextBlock>
+            <Button Content="ОК" HorizontalAlignment="Center" VerticalAlignment="Top" Width="64" Height="24" Canvas.Left="368" Canvas.Top="255" FontSize="14" Click="back_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Border Height="50" Width="800" Canvas.Top="484" Background="Gray" HorizontalAlignment="Center"
-                    VerticalAlignment="Top" />
+            <Border Height="50" Width="800" Canvas.Top="484" Background="Gray" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         </Canvas>
     </Grid>
 </Window>

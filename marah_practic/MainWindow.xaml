@@ -3,71 +3,53 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:marah_practic"
         mc:Ignorable="d"
         Title="Главное меню" Height="570" Width="820" ResizeMode="NoResize">
     <Grid>
         <Canvas>
-            <Border Height="164" Width="827" Background="Gray" HorizontalAlignment="Left" VerticalAlignment="Center"
-                    Canvas.Left="-7" />
-            <TextBlock Canvas.Left="188" Canvas.Top="17" Height="65" Width="422" FontSize="36"
-                       HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontWeight="Bold">
-                MARATHON SKILLS 2024
-            </TextBlock>
-            <TextBlock FontSize="22" Foreground="#FFBEBDBD" Canvas.Left="314" Canvas.Top="79" FontStyle="Italic"
-                       HorizontalAlignment="Left" VerticalAlignment="Center">
-                Москва, Россия
-            </TextBlock>
-            <TextBlock Canvas.Left="284" Canvas.Top="108" FontSize="22" Foreground="#FFBCBDBD" FontStyle="Italic"
-                       HorizontalAlignment="Left" VerticalAlignment="Top">
-                суббота 12 октября 2024
-            </TextBlock>
-            <Button x:Name="wannaBeRunner_button" Content="Я хочу стать бегуном" HorizontalAlignment="Center"
-                    VerticalAlignment="Top" Width="292" Height="72" Canvas.Left="267" Canvas.Top="186" FontSize="20"
-                    Click="wannaBeRunner_button_Click">
+            <Border Height="164" Width="827" Background="Gray" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="-7"></Border>
+            <TextBlock Canvas.Left="188" Canvas.Top="17" Height="65" Width="422" FontSize="36" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontWeight="Bold">MARATHON SKILLS 2024</TextBlock>
+            <TextBlock FontSize="22" Foreground="#FFBEBDBD" Canvas.Left="314" Canvas.Top="79" FontStyle="Italic" HorizontalAlignment="Left" VerticalAlignment="Center">Москва, Россия</TextBlock>
+            <TextBlock Canvas.Left="284" Canvas.Top="108" FontSize="22" Foreground="#FFBCBDBD" FontStyle="Italic" HorizontalAlignment="Left" VerticalAlignment="Top">суббота 12 октября 2024</TextBlock>
+            <Button x:Name="wannaBeRunner_button" Content="Я хочу стать бегуном" HorizontalAlignment="Center" VerticalAlignment="Top" Width="292" Height="72" Canvas.Left="267" Canvas.Top="186" FontSize="20" Click="wannaBeRunner_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="15">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button x:Name="iwantbesponsor" Content="Я хочу стать спонсором бегуном" HorizontalAlignment="Center"
-                    VerticalAlignment="Center" Width="292" Height="72" Canvas.Left="267" Canvas.Top="275" FontSize="18"
-                    Click="iwantbesponsor_Click">
+            <Button x:Name="iwantbesponsor" Content="Я хочу стать спонсором бегуном" HorizontalAlignment="Center" VerticalAlignment="Center" Width="292" Height="72" Canvas.Left="267" Canvas.Top="275" FontSize="18" Click="iwantbesponsor_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="15">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button x:Name="DopInfo_button" Content="Я хочу узнать больше о событии" HorizontalAlignment="Center"
-                    VerticalAlignment="Top" Width="292" Height="72" Canvas.Left="267" Canvas.Top="367" FontSize="18"
-                    Click="DopInfo_button_Click">
+            <Button x:Name="DopInfo_button" Content="Я хочу узнать больше о событии" HorizontalAlignment="Center" VerticalAlignment="Top" Width="292" Height="72" Canvas.Left="267" Canvas.Top="367" FontSize="18" Click="DopInfo_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="15">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Border Height="70" Width="825" Canvas.Top="484" Background="Gray" HorizontalAlignment="Center"
-                    VerticalAlignment="Top" Canvas.Left="-5" />
-            <Button x:Name="login_button" Content="Login" HorizontalAlignment="Center" VerticalAlignment="Top"
-                    Width="107" Height="45" Canvas.Left="683" Canvas.Top="422" FontSize="18" Click="login_button_Click">
+            <Border Height="70" Width="825" Canvas.Top="484" Background="Gray" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="-5"/>
+            <Button x:Name="login_button" Content="Login" HorizontalAlignment="Center" VerticalAlignment="Top" Width="107" Height="45" Canvas.Left="683" Canvas.Top="422" FontSize="18" Click="login_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="10">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock x:Name="timerLabel" Canvas.Left="212" Canvas.Top="497" FontSize="18" Foreground="White"
-                       HorizontalAlignment="Left" VerticalAlignment="Center" Width="401" />
+            <TextBlock x:Name="timerLabel" Canvas.Left="212" Canvas.Top="497" FontSize="18" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" Width="401"/>
 
         </Canvas>
 

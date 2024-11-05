@@ -3,105 +3,77 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:marah_practic"
         mc:Ignorable="d"
         Title="Импорт волонтеров" Height="550" Width="800" ResizeMode="NoResize">
     <Grid>
         <Canvas>
-            <Border Height="95" Width="860" Background="#FF6F6D6D" HorizontalAlignment="Center" Canvas.Left="-40"
-                    VerticalAlignment="Top" Canvas.Top="-51" />
-            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81"
-                    Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
+            <Border Height="95" Width="860" Background="#FF6F6D6D" HorizontalAlignment="Center" Canvas.Left="-40" VerticalAlignment="Top" Canvas.Top="-51"/>
+            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold"
-                       HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">
-                MARATHON SKILL 2024
-            </TextBlock>
-            <Button x:Name="logout_button" Content="Logout" HorizontalAlignment="Center" VerticalAlignment="Top"
-                    Width="81" Height="24" Canvas.Left="709" Canvas.Top="10" FontSize="14" Click="logout_button_Click">
+            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">MARATHON SKILL 2024</TextBlock>
+            <Button x:Name="logout_button"  Content="Logout" HorizontalAlignment="Center" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="709" Canvas.Top="10" FontSize="14" Click="logout_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="24" Foreground="#FF9C9999" Canvas.Left="263" Canvas.Top="69"
-                       HorizontalAlignment="Center" VerticalAlignment="Top" Height="39" TextWrapping="WrapWithOverflow"
-                       TextAlignment="Center" Width="271">
-                Загрузка волонтеров
-            </TextBlock>
-            <TextBlock Canvas.Left="95" Canvas.Top="137" FontSize="16" Foreground="Gray" HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Width="173">
-                CSV файл волонтеров:
-            </TextBlock>
-            <TextBox x:Name="filePath_text" Canvas.Left="268" FontSize="18" Foreground="#FF9C9999"
-                     Text="volunteer_list.csv" Canvas.Top="135" Width="184" Height="25" TextAlignment="Left"
-                     HorizontalAlignment="Left" VerticalAlignment="Center" FontStyle="Italic" />
+            <TextBlock FontSize="24" Foreground="#FF9C9999" Canvas.Left="263" Canvas.Top="69" HorizontalAlignment="Center" VerticalAlignment="Top" Height="39" TextWrapping="WrapWithOverflow" TextAlignment="Center" Width="271">Загрузка волонтеров</TextBlock>
+            <TextBlock Canvas.Left="95" Canvas.Top="137" FontSize="16" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Top" Width="173">CSV файл волонтеров:</TextBlock>
+            <TextBox x:Name="filePath_text" Canvas.Left="268" FontSize="18" Foreground="#FF9C9999" Text="volunteer_list.csv" Canvas.Top="135" Width="184" Height="25" TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Center" FontStyle="Italic"/>
 
-            <Button x:Name="insertVolonters_button" Content="Просмотр..." HorizontalAlignment="Left"
-                    VerticalAlignment="Top" Width="105" Height="34" Canvas.Left="466" Canvas.Top="131" FontSize="16"
-                    Click="insertVolonters_button_Click">
+            <Button x:Name="insertVolonters_button" Content="Просмотр..." HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Height="34" Canvas.Left="466" Canvas.Top="131" FontSize="16" Click="insertVolonters_button_Click" >
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button x:Name="importVolonters_button" Content="Загрузка" HorizontalAlignment="Center"
-                    VerticalAlignment="Top" Width="129" Height="40" Canvas.Left="231" Canvas.Top="200" FontSize="18"
-                    Click="importVolonters_button_Click">
+            <Button x:Name="importVolonters_button" Content="Загрузка" HorizontalAlignment="Center" VerticalAlignment="Top" Width="129" Height="40" Canvas.Left="231" Canvas.Top="200" FontSize="18" Click="importVolonters_button_Click" >
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button Content="Отмена" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="40"
-                    Canvas.Left="398" Canvas.Top="200" FontSize="16" Click="back_button_Click">
+            <Button Content="Отмена" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="40" Canvas.Left="398" Canvas.Top="200" FontSize="16" Click="back_button_Click" >
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock Canvas.Left="222" Canvas.Top="277" FontSize="16" Foreground="Gray" HorizontalAlignment="Center"
-                       VerticalAlignment="Top" Width="316">
-                CSV файл должен иметь следующие поля:
-            </TextBlock>
-            <TextBlock Canvas.Left="287" Canvas.Top="315" FontSize="16" Foreground="Gray" HorizontalAlignment="Center"
-                       VerticalAlignment="Top" Width="173">
-                поле1: имя
-            </TextBlock>
-            <TextBlock Canvas.Left="287" Canvas.Top="336" FontSize="16" Foreground="Gray" HorizontalAlignment="Center"
-                       VerticalAlignment="Top" Width="173">
-                поле2: фамилия
-            </TextBlock>
-            <TextBlock Canvas.Left="287" Canvas.Top="357" FontSize="16" Foreground="Gray" HorizontalAlignment="Center"
-                       VerticalAlignment="Top" Width="173">
-                поле3: страна
-            </TextBlock>
-            <TextBlock Canvas.Left="287" Canvas.Top="378" FontSize="16" Foreground="Gray" HorizontalAlignment="Center"
-                       VerticalAlignment="Top" Width="173">
-                поле4: пол
-            </TextBlock>
+            <TextBlock Canvas.Left="222" Canvas.Top="277" FontSize="16" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Top" Width="316">CSV файл должен иметь следующие поля:</TextBlock>
+            <TextBlock Canvas.Left="287" Canvas.Top="315" FontSize="16" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Top" Width="173">поле1: имя</TextBlock>
+            <TextBlock Canvas.Left="287" Canvas.Top="336" FontSize="16" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Top" Width="173">поле2: фамилия</TextBlock>
+            <TextBlock Canvas.Left="287" Canvas.Top="357" FontSize="16" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Top" Width="173">поле3: страна</TextBlock>
+            <TextBlock Canvas.Left="287" Canvas.Top="378" FontSize="16" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Top" Width="173">поле4: пол</TextBlock>
 
 
-            <Border Height="68" Width="995" Canvas.Top="484" Background="Gray" HorizontalAlignment="Center"
-                    VerticalAlignment="Top" Canvas.Left="-117" />
+
+
+
+
+
+
+
+            <Border Height="68" Width="995" Canvas.Top="484" Background="Gray" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="-117"/>
         </Canvas>
 
     </Grid>

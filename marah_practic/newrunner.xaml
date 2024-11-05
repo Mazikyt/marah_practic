@@ -3,43 +3,33 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:marah_practic"
         mc:Ignorable="d"
         Title="Новый бегун" Height="550" Width="800" ResizeMode="NoResize">
     <Grid>
         <Canvas>
-            <Border Height="44" Width="800" Background="#FF6F6D6D" Margin="0,0,0,490" />
-            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81"
-                    Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
+            <Border Height="44" Width="800" Background="#FF6F6D6D" Margin="0,0,0,490"></Border>
+            <Button x:Name="back_button" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Height="24" Canvas.Left="10" Canvas.Top="10" FontSize="14" Click="back_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold"
-                       HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">
-                MARATHON SKILL 2024
-            </TextBlock>
+            <TextBlock FontSize="18" Foreground="White" Canvas.Left="137" Canvas.Top="10" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Width="227">MARATHON SKILL 2024</TextBlock>
             <TextBlock Margin="290,49,290,443" FontSize="24" Foreground="#FF575656">Регистрация бегуна</TextBlock>
-            <TextBlock FontSize="16" Foreground="#FF575656" TextWrapping="WrapWithOverflow" TextAlignment="Center"
-                       Height="54" Canvas.Left="108" Canvas.Top="94" HorizontalAlignment="Left" VerticalAlignment="Top"
-                       Width="610">
-                Пожалуйста заполните всю информацию, чтобы зарегестрироваться в качестве бегуна
-            </TextBlock>
-            <TextBlock FontSize="18" Foreground="#FF575656" Canvas.Left="98" Canvas.Top="161"
-                       HorizontalAlignment="Left" VerticalAlignment="Top">
-                Email:
-            </TextBlock>
+            <TextBlock FontSize="16" Foreground="#FF575656" TextWrapping="WrapWithOverflow" TextAlignment="Center" Height="54" Canvas.Left="108" Canvas.Top="94" HorizontalAlignment="Left" VerticalAlignment="Top" Width="610">Пожалуйста заполните всю информацию, чтобы зарегестрироваться в качестве бегуна</TextBlock>
+            <TextBlock FontSize="18" Foreground="#FF575656" Canvas.Left="98" Canvas.Top="161" HorizontalAlignment="Left" VerticalAlignment="Top">Email:</TextBlock>
             <TextBox x:Name="userEmail" Width="282" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left"
-                     BorderBrush="Black" BorderThickness="1" Padding="5" Canvas.Left="159" Canvas.Top="158">
+        BorderBrush="Black" BorderThickness="1" Padding="5" Canvas.Left="159" Canvas.Top="158">
                 <TextBox.Style>
                     <Style TargetType="TextBox">
-                        <Setter Property="Background" Value="White" />
-                        <Setter Property="BorderBrush" Value="Black" />
-                        <Setter Property="BorderThickness" Value="1" />
-                        <Setter Property="Padding" Value="5" />
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="BorderBrush" Value="Black"/>
+                        <Setter Property="BorderThickness" Value="1"/>
+                        <Setter Property="Padding" Value="5"/>
                         <Style.Triggers>
                             <!-- Триггер для отображения подсказки, если поле пустое -->
                             <Trigger Property="Text" Value="">
@@ -49,16 +39,16 @@
                                             <Grid>
                                                 <!-- Само поле для ввода -->
                                                 <Border BorderBrush="{TemplateBinding BorderBrush}"
-                                                        BorderThickness="{TemplateBinding BorderThickness}"
-                                                        Background="{TemplateBinding Background}">
+                                           BorderThickness="{TemplateBinding BorderThickness}"
+                                           Background="{TemplateBinding Background}">
                                                     <ScrollViewer x:Name="PART_ContentHost" />
                                                 </Border>
                                                 <!-- Подсказка -->
-                                                <TextBlock Text="Enter your email address"
-                                                           Foreground="Gray"
-                                                           VerticalAlignment="Center"
-                                                           IsHitTestVisible="False"
-                                                           Margin="5,0,0,0" />
+                                                <TextBlock Text="Enter your email address" 
+                                              Foreground="Gray" 
+                                              VerticalAlignment="Center" 
+                                              IsHitTestVisible="False"
+                                              Margin="5,0,0,0"/>
                                             </Grid>
                                         </ControlTemplate>
                                     </Setter.Value>
@@ -68,19 +58,15 @@
                     </Style>
                 </TextBox.Style>
             </TextBox>
-            <TextBlock FontSize="18" Foreground="#FF575656" Canvas.Left="79" Canvas.Top="206"
-                       HorizontalAlignment="Center" VerticalAlignment="Top">
-                Пароль:
-            </TextBlock>
-            <TextBox x:Name="userPassword" Width="282" Height="30" VerticalAlignment="Center"
-                     HorizontalAlignment="Left"
-                     BorderBrush="Black" BorderThickness="1" Padding="5" Canvas.Left="159" Canvas.Top="206">
+            <TextBlock FontSize="18" Foreground="#FF575656" Canvas.Left="79" Canvas.Top="206" HorizontalAlignment="Center" VerticalAlignment="Top">Пароль:</TextBlock>
+            <TextBox x:Name="userPassword" Width="282" Height="30" VerticalAlignment="Center" HorizontalAlignment="Left"
+  BorderBrush="Black" BorderThickness="1" Padding="5" Canvas.Left="159" Canvas.Top="206">
                 <TextBox.Style>
                     <Style TargetType="TextBox">
-                        <Setter Property="Background" Value="White" />
-                        <Setter Property="BorderBrush" Value="Black" />
-                        <Setter Property="BorderThickness" Value="1" />
-                        <Setter Property="Padding" Value="5" />
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="BorderBrush" Value="Black"/>
+                        <Setter Property="BorderThickness" Value="1"/>
+                        <Setter Property="Padding" Value="5"/>
                         <Style.Triggers>
                             <!-- Триггер для отображения подсказки, если поле пустое -->
                             <Trigger Property="Text" Value="">
@@ -90,16 +76,16 @@
                                             <Grid>
                                                 <!-- Само поле для ввода -->
                                                 <Border BorderBrush="{TemplateBinding BorderBrush}"
-                                                        BorderThickness="{TemplateBinding BorderThickness}"
-                                                        Background="{TemplateBinding Background}">
+                                     BorderThickness="{TemplateBinding BorderThickness}"
+                                     Background="{TemplateBinding Background}">
                                                     <ScrollViewer x:Name="PART_ContentHost" />
                                                 </Border>
                                                 <!-- Подсказка -->
-                                                <TextBlock Text="Пароль"
-                                                           Foreground="Gray"
-                                                           VerticalAlignment="Center"
-                                                           IsHitTestVisible="False"
-                                                           Margin="5,0,0,0" />
+                                                <TextBlock Text="Пароль" 
+                                        Foreground="Gray" 
+                                        VerticalAlignment="Center" 
+                                        IsHitTestVisible="False"
+                                        Margin="5,0,0,0"/>
                                             </Grid>
                                         </ControlTemplate>
                                     </Setter.Value>
@@ -109,18 +95,15 @@
                     </Style>
                 </TextBox.Style>
             </TextBox>
-            <TextBlock FontSize="16" Foreground="#FF575656" Canvas.Left="11" Canvas.Top="257"
-                       HorizontalAlignment="Left" VerticalAlignment="Top" Width="148">
-                Повторите пароль:
-            </TextBlock>
+            <TextBlock FontSize="16" Foreground="#FF575656" Canvas.Left="11" Canvas.Top="257" HorizontalAlignment="Left" VerticalAlignment="Top" Width="148">Повторите пароль:</TextBlock>
             <TextBox x:Name="userRePassword" Width="282" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left"
-                     BorderBrush="Black" BorderThickness="1" Padding="5" Canvas.Left="159" Canvas.Top="253">
+  BorderBrush="Black" BorderThickness="1" Padding="5" Canvas.Left="159" Canvas.Top="253">
                 <TextBox.Style>
                     <Style TargetType="TextBox">
-                        <Setter Property="Background" Value="White" />
-                        <Setter Property="BorderBrush" Value="Black" />
-                        <Setter Property="BorderThickness" Value="1" />
-                        <Setter Property="Padding" Value="5" />
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="BorderBrush" Value="Black"/>
+                        <Setter Property="BorderThickness" Value="1"/>
+                        <Setter Property="Padding" Value="5"/>
                         <Style.Triggers>
                             <!-- Триггер для отображения подсказки, если поле пустое -->
                             <Trigger Property="Text" Value="">
@@ -130,16 +113,16 @@
                                             <Grid>
                                                 <!-- Само поле для ввода -->
                                                 <Border BorderBrush="{TemplateBinding BorderBrush}"
-                                                        BorderThickness="{TemplateBinding BorderThickness}"
-                                                        Background="{TemplateBinding Background}">
+                                     BorderThickness="{TemplateBinding BorderThickness}"
+                                     Background="{TemplateBinding Background}">
                                                     <ScrollViewer x:Name="PART_ContentHost" />
                                                 </Border>
                                                 <!-- Подсказка -->
-                                                <TextBlock Text="Повторите пароль"
-                                                           Foreground="Gray"
-                                                           VerticalAlignment="Center"
-                                                           IsHitTestVisible="False"
-                                                           Margin="5,0,0,0" />
+                                                <TextBlock Text="Повторите пароль" 
+                                        Foreground="Gray" 
+                                        VerticalAlignment="Center" 
+                                        IsHitTestVisible="False"
+                                        Margin="5,0,0,0"/>
                                             </Grid>
                                         </ControlTemplate>
                                     </Setter.Value>
@@ -149,18 +132,15 @@
                     </Style>
                 </TextBox.Style>
             </TextBox>
-            <TextBlock FontSize="18" Foreground="#FF575656" Canvas.Left="105" Canvas.Top="303"
-                       HorizontalAlignment="Left" VerticalAlignment="Center">
-                Имя:
-            </TextBlock>
+            <TextBlock FontSize="18" Foreground="#FF575656" Canvas.Left="105" Canvas.Top="303" HorizontalAlignment="Left" VerticalAlignment="Center">Имя:</TextBlock>
             <TextBox x:Name="userFirstName" Width="282" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left"
-                     BorderBrush="Black" BorderThickness="1" Padding="5" Canvas.Left="159" Canvas.Top="303">
+  BorderBrush="Black" BorderThickness="1" Padding="5" Canvas.Left="159" Canvas.Top="303">
                 <TextBox.Style>
                     <Style TargetType="TextBox">
-                        <Setter Property="Background" Value="White" />
-                        <Setter Property="BorderBrush" Value="Black" />
-                        <Setter Property="BorderThickness" Value="1" />
-                        <Setter Property="Padding" Value="5" />
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="BorderBrush" Value="Black"/>
+                        <Setter Property="BorderThickness" Value="1"/>
+                        <Setter Property="Padding" Value="5"/>
                         <Style.Triggers>
                             <!-- Триггер для отображения подсказки, если поле пустое -->
                             <Trigger Property="Text" Value="">
@@ -170,16 +150,16 @@
                                             <Grid>
                                                 <!-- Само поле для ввода -->
                                                 <Border BorderBrush="{TemplateBinding BorderBrush}"
-                                                        BorderThickness="{TemplateBinding BorderThickness}"
-                                                        Background="{TemplateBinding Background}">
+                                     BorderThickness="{TemplateBinding BorderThickness}"
+                                     Background="{TemplateBinding Background}">
                                                     <ScrollViewer x:Name="PART_ContentHost" />
                                                 </Border>
                                                 <!-- Подсказка -->
-                                                <TextBlock Text="Имя"
-                                                           Foreground="Gray"
-                                                           VerticalAlignment="Center"
-                                                           IsHitTestVisible="False"
-                                                           Margin="5,0,0,0" />
+                                                <TextBlock Text="Имя" 
+                                        Foreground="Gray" 
+                                        VerticalAlignment="Center" 
+                                        IsHitTestVisible="False"
+                                        Margin="5,0,0,0"/>
                                             </Grid>
                                         </ControlTemplate>
                                     </Setter.Value>
@@ -189,18 +169,15 @@
                     </Style>
                 </TextBox.Style>
             </TextBox>
-            <TextBlock FontSize="18" Foreground="#FF575656" Canvas.Left="66" Canvas.Top="347"
-                       HorizontalAlignment="Left" VerticalAlignment="Center">
-                Фамилия:
-            </TextBlock>
+            <TextBlock FontSize="18" Foreground="#FF575656" Canvas.Left="66" Canvas.Top="347" HorizontalAlignment="Left" VerticalAlignment="Center">Фамилия:</TextBlock>
             <TextBox x:Name="userLastName" Width="282" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left"
-                     BorderBrush="Black" BorderThickness="1" Padding="5" Canvas.Left="159" Canvas.Top="347">
+  BorderBrush="Black" BorderThickness="1" Padding="5" Canvas.Left="159" Canvas.Top="347">
                 <TextBox.Style>
                     <Style TargetType="TextBox">
-                        <Setter Property="Background" Value="White" />
-                        <Setter Property="BorderBrush" Value="Black" />
-                        <Setter Property="BorderThickness" Value="1" />
-                        <Setter Property="Padding" Value="5" />
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="BorderBrush" Value="Black"/>
+                        <Setter Property="BorderThickness" Value="1"/>
+                        <Setter Property="Padding" Value="5"/>
                         <Style.Triggers>
                             <!-- Триггер для отображения подсказки, если поле пустое -->
                             <Trigger Property="Text" Value="">
@@ -210,16 +187,16 @@
                                             <Grid>
                                                 <!-- Само поле для ввода -->
                                                 <Border BorderBrush="{TemplateBinding BorderBrush}"
-                                                        BorderThickness="{TemplateBinding BorderThickness}"
-                                                        Background="{TemplateBinding Background}">
+                                     BorderThickness="{TemplateBinding BorderThickness}"
+                                     Background="{TemplateBinding Background}">
                                                     <ScrollViewer x:Name="PART_ContentHost" />
                                                 </Border>
                                                 <!-- Подсказка -->
-                                                <TextBlock Text="Фамилия"
-                                                           Foreground="Gray"
-                                                           VerticalAlignment="Center"
-                                                           IsHitTestVisible="False"
-                                                           Margin="5,0,0,0" />
+                                                <TextBlock Text="Фамилия" 
+                                        Foreground="Gray" 
+                                        VerticalAlignment="Center" 
+                                        IsHitTestVisible="False"
+                                        Margin="5,0,0,0"/>
                                             </Grid>
                                         </ControlTemplate>
                                     </Setter.Value>
@@ -229,45 +206,32 @@
                     </Style>
                 </TextBox.Style>
             </TextBox>
-            <TextBlock FontSize="18" Foreground="#FF575656" Canvas.Left="107" Canvas.Top="395"
-                       HorizontalAlignment="Left" VerticalAlignment="Center">
-                Пол:
-            </TextBlock>
-            <ComboBox x:Name="genderComboBox" Text="Пол" IsEditable="True" IsReadOnly="True" Canvas.Left="159"
-                      Canvas.Top="397" HorizontalAlignment="Left" VerticalAlignment="Center" />
-            <TextBlock Canvas.Left="498" Canvas.Top="361" Height="28" Width="122" FontSize="16"
-                       HorizontalAlignment="Left" VerticalAlignment="Top">
-                Дата рождения:
-            </TextBlock>
-            <DatePicker x:Name="userBirthDay" Canvas.Left="625" Canvas.Top="363" HorizontalAlignment="Left"
-                        VerticalAlignment="Center" Width="159" />
+            <TextBlock FontSize="18" Foreground="#FF575656" Canvas.Left="107" Canvas.Top="395" HorizontalAlignment="Left" VerticalAlignment="Center">Пол:</TextBlock>
+            <ComboBox x:Name="genderComboBox" Text="Пол" IsEditable="True" IsReadOnly="True" Canvas.Left="159" Canvas.Top="397" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBlock Canvas.Left="498" Canvas.Top="361" Height="28" Width="122" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top">Дата рождения:</TextBlock>
+            <DatePicker x:Name="userBirthDay" Canvas.Left="625" Canvas.Top="363" HorizontalAlignment="Left" VerticalAlignment="Center" Width="159"></DatePicker>
             <TextBlock Height="22" Width="70" FontSize="16" Canvas.Left="544" Canvas.Top="401">Страна:</TextBlock>
-            <ComboBox x:Name="countryComboBox" HorizontalAlignment="Left" Height="22" VerticalAlignment="Center"
-                      Width="159" Canvas.Left="625" Canvas.Top="397" Text="Russia" IsEditable="True" />
+            <ComboBox x:Name="countryComboBox" HorizontalAlignment="Left" Height="22" VerticalAlignment="Center" Width="159" Canvas.Left="625" Canvas.Top="397" Text="Russia" IsEditable="True"/>
 
-            <Button x:Name="registr_button" Content="Регистрация" HorizontalAlignment="Left" VerticalAlignment="Center"
-                    Width="102" Height="24" Canvas.Left="278" Canvas.Top="449" FontSize="14"
-                    Click="registr_button_Click">
+            <Button x:Name="registr_button" Content="Регистрация" HorizontalAlignment="Left" VerticalAlignment="Center" Width="102" Height="24" Canvas.Left="278" Canvas.Top="449" FontSize="14" Click="registr_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button Content="Отмена" HorizontalAlignment="Left" VerticalAlignment="Center" Width="86" Height="24"
-                    Canvas.Left="398" Canvas.Top="449" FontSize="14" Click="back_button_Click">
+            <Button Content="Отмена" HorizontalAlignment="Left" VerticalAlignment="Center" Width="86" Height="24" Canvas.Left="398" Canvas.Top="449" FontSize="14" Click="back_button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="#FFEDEDED" BorderBrush="LightGray" BorderThickness="2" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Border Height="50" Width="800" Canvas.Top="484" Background="Gray" HorizontalAlignment="Left"
-                    VerticalAlignment="Center" />
+            <Border Height="50" Width="800" Canvas.Top="484" Background="Gray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </Canvas>
     </Grid>
 </Window>
